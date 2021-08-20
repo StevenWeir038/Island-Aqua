@@ -16,7 +16,23 @@
 body {
     margin: 0;
     height: 100vh;
-    background: red;
-    font-family: 'Cormorant Garamond', 'Montserrat', sans-serif;
+    font-family: 'Arial', 'Cormorant Garamond', 'Montserrat', sans-serif;
     font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    margin: 0;
+}
+
+#hero-bg {
+    height : 900px;
+    width: 100%;
+    background: url(../images/hero-bg.jpg) no-repeat center center;
+}
+
+nav ul li {
+    list-style: none;
 }
