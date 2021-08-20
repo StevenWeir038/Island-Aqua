@@ -2,11 +2,11 @@
 
 :root {
     /* universal colour styling variables */
-    --theme1: color: #60731a;
-    --theme2: color: #8C4830;
-    --theme3: color: #AEBF88;
-    --theme4: color: #70A61F;
-    --theme5: color: #70A61F;
+    --theme-one: rgba(96, 115, 26, 0.85);
+    --theme-two: rgba(140, 72, 48, 0.85);
+    --theme-three: rgba(174,191,136, 0.85);
+    --theme-four: rgba(112, 166, 31, 0.85);
+    --theme-five: rgba(112, 166, 31, 0.85);
 }
 
 *, *::before, *::after {              /* box sizing reset */
@@ -22,6 +22,15 @@ body {
     margin: 0;
 }
 
+header {
+    background: var(--theme-one);
+    text-align: center;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+
+}
+
 footer {
     text-align: center;
     margin: 0;
@@ -33,6 +42,15 @@ footer {
     background: url(../images/hero-bg.jpg) no-repeat center center;
 }
 
-nav ul li {
+/* nav styling */
+
+nav ul {
     list-style: none;
+}
+
+
+
+
+.images {
+    border-radius: 10px;
 }
