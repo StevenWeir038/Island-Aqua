@@ -202,6 +202,11 @@ table {
     margin-right: auto;
 }
 
+table th {
+    background-color: rgba(var(--theme-two), 1);
+    color: white;
+}
+
 table th, table td {
     border: 1px solid rgba(var(--theme-two), 1);
     border-radius: 10px;
