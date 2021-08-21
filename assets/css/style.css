@@ -20,7 +20,7 @@ body {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    padding: 0px 0.5rem;
+    padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
 }
 
 footer {
@@ -42,18 +42,23 @@ footer {
 
 .images {
     border-radius: 10px;
-    border: 2px solid var(--theme-one);
+    border: 2px solid var(--theme-two);
+}
+
+hr {
+    border: 1px solid var(--theme-two);
 }
 
 /* fix header to top of page so menu is accessible to user rather than having to scroll all the way to top or bottom for nav links when in middle of page */
 
 header {
     background: var(--theme-five);
-    position: fixed;
+    position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
+    transform: translateX(-0.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered */
     z-index: 50;
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 0; 
 }
 
 .logo {
