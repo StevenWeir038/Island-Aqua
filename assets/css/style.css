@@ -117,19 +117,21 @@ header > a {                             /* target only the fa fas seedling head
     display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
     font-family: 'Cormorant Garamond';
     color: rgba(var(--theme-two), 1);
+    font-size: 4.5em;
     background-color: white;
     padding: 0.25rem;
     border: 2px solid rgba(var(--theme-two), 1);
     border-radius: 10px;
     margin-right: 1rem;
     position: absolute;
-    top: 16%;
+    top: 12%;
     right: 6%;                          /* position from right to prevent text being going outside right of image */
 }
 
 h1 span {
     font-family: 'Montserrat';
     color: rgba(var(--theme-three), 1);
+    font-size: 0.6em;                          /*  take advantage of em cascading effect */
 }
 
 /* nav styling ======================================================================================================================================== */
