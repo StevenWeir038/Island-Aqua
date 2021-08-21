@@ -23,6 +23,21 @@ body {
     padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
 }
 
+h2 {
+    background-color: rgba(var(--theme-five), 1);
+    border-radius: 10px;
+    font-family: 'Cormorant';
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+
+h3 {
+    background-color: rgba(var(--theme-two), 1);
+    border-radius: 10px;
+    font-family: 'Cormorant';
+    padding: 0.25rem 0;
+}
+
 footer {
     background: rgba(var(--theme-two), 0.85);
     text-align: center;
