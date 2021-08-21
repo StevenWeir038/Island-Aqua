@@ -25,6 +25,7 @@ body {
 
 h2 {
     background-color: rgba(var(--theme-five), 1);
+    color: white;
     border-radius: 10px;
     font-family: 'Cormorant';
     text-transform: uppercase;
@@ -33,6 +34,7 @@ h2 {
 
 h3 {
     background-color: rgba(var(--theme-two), 1);
+    color: white;
     border-radius: 10px;
     font-family: 'Cormorant';
     padding: 0.25rem 0;
@@ -49,6 +51,7 @@ footer {
     margin: 0;
     border-top: 2px solid rgba(var(--theme-five), 1);
     border-bottom: 2px solid rgba(var(--theme-five), 1);
+    border-radius: 10px 10px 0 0;
 
 }
 
@@ -93,6 +96,7 @@ header {
     margin: 0;
     border-top: 2px solid rgba(var(--theme-two), 1);
     border-bottom: 2px solid rgba(var(--theme-two), 1);
+    border-radius: 0 0 10px 10px;
 }
 
 header > a {                             /* target only the fa fas seedling header link that navs user back to top of page. Don't want it to show clicked link formatting */
@@ -191,4 +195,15 @@ When check box is checked display:block will show menu which is defaulted to hid
     display: block;
 }
 
-/*============================================================================================================ */
+/*table styling====================================================================================================== */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th, table td {
+    border: 1px solid rgba(var(--theme-two), 1);
+    border-radius: 10px;
+    padding: 5px;
+    }
