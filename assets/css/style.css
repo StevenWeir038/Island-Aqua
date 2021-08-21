@@ -2,11 +2,11 @@
 
 :root {
     /* universal colour styling variables */
-    --theme-one: rgba(96, 115, 26, 1);
-    --theme-two: rgba(140, 72, 48, 1);
-    --theme-three: rgba(174,191,136, 1);
-    --theme-four: rgba(112, 166, 31, 1);
-    --theme-five: rgba(112, 166, 31, 1);
+    --theme-one: 96, 115, 26;
+    --theme-two: 140, 72, 48;
+    --theme-three: 174,191,136;
+    --theme-four: 112, 166, 31;
+    --theme-five: 112, 166, 31;
 }
 
 *, *::before, *::after {              /* box sizing reset */
@@ -24,25 +24,25 @@ body {
 }
 
 footer {
-    background: var(--theme-two);
+    background: rgba(var(--theme-two), 0.85);
     text-align: center;
     z-index: 50;
     width: 100%;
     text-align: center;
     margin: 0;
     color: white;
+    margin: 0;
 }
 
-#hero-bg {
-    height : 900px;
-    width: 100%;
-    background: url(../images/hero-bg.jpg) no-repeat center center;
+.link-home {
+    color: white;
+    font-size: 1.75rem;
+    padding: 1rem;
 }
-
 
 .images {
     border-radius: 10px;
-    border: 2px solid var(--theme-two);
+    border: 2px solid rgba(var(--theme-two), 1);
 }
 
 hr {
@@ -52,24 +52,25 @@ hr {
 /* fix header to top of page so menu is accessible to user rather than having to scroll all the way to top or bottom for nav links when in middle of page */
 
 header {
-    background: var(--theme-five);
+    background: rgba(var(--theme-five), 0.85);
     position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
     transform: translateX(-0.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered */
     z-index: 50;
     width: 100%;
     text-align: left;
     margin: 0;
-    border-top: 2px solid var(--theme-two);
-    border-bottom: 2px solid var(--theme-two);
+    border-top: 2px solid rgba(var(--theme-two), 1);
+    border-bottom: 2px solid rgba(var(--theme-two), 1);
 }
 
 header > a {                             /* target only the fa fas seedling header link that navs user back to top of page. Don't want it to show clicked link formatting */
-    color: white;
+    color: white;                       /* note could have reuse .link-home class but wanted to demonstrate knowledge of using a first child ( > ) selector */
     font-size: 1.75rem;
     margin: 1rem;
 }
 
 .hero-bg {
+    background: url(../images/hero-bg.jpg) no-repeat center center;
     position: relative;
     overflow: hidden;
     height: 900px;
@@ -106,7 +107,7 @@ header > a {                             /* target only the fa fas seedling head
 }
 
 nav {
-    background: var(--theme-five);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
+    background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
     width: 100%;
     position: absolute;
     text-align: right;
