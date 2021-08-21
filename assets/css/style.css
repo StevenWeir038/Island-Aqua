@@ -65,12 +65,20 @@ footer > form {
 footer a {
     color: white;
     font-size: 3rem;
+    padding: 0 1rem;
 }
 
 .social {
     display: inline;
-    margin: 0 1%;
-    padding: 0 5%;
+}
+
+/* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
+/* 10% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+website for social media */
+/* NB. keyframes not required for this simple action*/
+
+.footer-link-zoom :hover {
+    transform: scale(1.2);
 }
 
 footer p {
