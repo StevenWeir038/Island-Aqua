@@ -2,7 +2,7 @@
 
 :root {
     /* universal colour styling variables */
-    --theme-one: 96, 115, 26;
+    --theme-one: 96, 115, 26;           /* Feed vars insto rgba, give addiional control over opacity is desired */
     --theme-two: 140, 72, 48;
     --theme-three: 174,191,136;
     --theme-four: 112, 166, 31;
@@ -16,7 +16,7 @@
 body {
     margin: 0;
     height: 100vh;
-    font-family: 'Arial', 'Cormorant Garamond', 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     text-align: center;
     margin: 0;
@@ -32,12 +32,29 @@ footer {
     margin: 0;
     color: white;
     margin: 0;
+    border-top: 2px solid rgba(var(--theme-five), 1);
+    border-bottom: 2px solid rgba(var(--theme-five), 1);
+
 }
 
-.link-home {
+footer > form {
+    padding: 0 0.5rem;
+}
+
+footer a {
     color: white;
-    font-size: 1.75rem;
-    padding: 1rem;
+    font-size: 3rem;
+}
+
+.social {
+    display: inline;
+    margin: 0 1%;
+    padding: 0 5%;
+}
+
+footer p {
+     color: white;
+    margin: 0.5rem 0;
 }
 
 .images {
@@ -54,7 +71,7 @@ hr {
 header {
     background: rgba(var(--theme-five), 0.85);
     position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
-    transform: translateX(-0.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered */
+    transform: translateX(-0.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
     z-index: 50;
     width: 100%;
     text-align: left;
@@ -79,17 +96,26 @@ header > a {                             /* target only the fa fas seedling head
 
 .logo {
     display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
-    color: red;
-    border: 1px solid red;
+    font-family: 'Cormorant Garamond';
+    color: rgba(var(--theme-two), 1);
+    background-color: white;
+    padding: 0.25rem;
+    border: 2px solid rgba(var(--theme-two), 1);
+    border-radius: 10px;
     margin-right: 1rem;
     position: absolute;
     top: 16%;
     right: 6%;                          /* position from right to prevent text being going outside right of image */
 }
 
+h1 span {
+    font-family: 'Montserrat';
+    color: rgba(var(--theme-three), 1);
+}
+
 /* nav styling ======================================================================================================================================== */
 
-.nav-toggle {
+#nav-toggle {
     display: none;
 }                        /* hide unsightly nav-toggle checkbox */
 
@@ -101,7 +127,7 @@ header > a {                             /* target only the fa fas seedling head
     font-size: 1.5rem;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     color: white;
     border-radius: 1rem;
 }
@@ -115,7 +141,6 @@ nav {
     right: 0;
     display: none;
 }
-
 
 nav ul {
     margin: 0;
@@ -137,16 +162,18 @@ nav a {
 }
 
 nav a:hover {
-    color: black;
+    color: white;
+    border-top: 5px solid rgba(var(--theme-two), 1);
+    border-bottom: 5px solid rgba(var(--theme-two), 1);
 }
-
 
 /* 
 Look for nav which is a sibling of nav toggle (ie the checkbox added to the index html code.
 When check box is checked display:block will show menu which is defaulted to hidden by display: none in nav
 */
+
 .nav-toggle:checked ~ nav {
     display: block;
 }
 
-/* ============================================================================================================ */
+/*============================================================================================================ */
