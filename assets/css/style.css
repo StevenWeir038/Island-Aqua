@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat&display=swap');
 
+/* code mobile site 1st */
+
 :root {
     /* universal colour styling variables */
     --theme-one: 96, 115, 26;           /* Feed vars insto rgba, give addiional control over opacity is desired */
@@ -14,6 +16,7 @@
 }
 
 body {
+    min-width: 480px;
     margin: 0;
     height: 100vh;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -109,7 +112,7 @@ header > a {                             /* target only the fa fas seedling head
     background: url(../images/hero-bg.jpg) no-repeat center center;
     position: relative;
     overflow: hidden;
-    height: 900px;
+    min-height: 900px;
     width: 100%;
 }
 
@@ -117,7 +120,8 @@ header > a {                             /* target only the fa fas seedling head
     display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
     font-family: 'Cormorant Garamond';
     color: rgba(var(--theme-two), 1);
-    font-size: 4.5em;
+    font-size: clamp(0.5rem, 6vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+
     background-color: white;
     padding: 0.25rem;
     border: 2px solid rgba(var(--theme-two), 1);
@@ -216,7 +220,7 @@ table th, table td {
     }
 
 table tr:nth-child(even) {
-    background-color: rgba(var(--theme-three), 1)
+    background-color: rgba(var(--theme-three), 1)   /* alternate cover every 2nd row for improved readability */
 }
 
 table tr:hover {
