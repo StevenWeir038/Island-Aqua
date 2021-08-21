@@ -22,15 +22,6 @@ body {
     margin: 0;
 }
 
-header {
-    background: var(--theme-one);
-    text-align: center;
-    position: fixed;
-    z-index: 50;
-    width: 100%;
-
-}
-
 footer {
     text-align: center;
     margin: 0;
@@ -44,13 +35,71 @@ footer {
 
 /* nav styling */
 
+header {
+    background: var(--theme-five);
+    text-align: center;
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+
+}
+
+.logo {
+    margin: 0;
+}
+
+.nav-toggle {
+    display: none;
+}                        /* hide unsightly nav-toggle checkbox */
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    background: var(--theme-five);
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
 nav ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
     list-style: none;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: black;
+}
 
 
-
-.images {
-    border-radius: 10px;
+/* 
+Look for nav which is a sibling of nav toggle (ie the checkbox added to the index html code.
+When check box is checked display:block will show menu which is defaulted to hidden by display: none in nav
+*/
+.nav-toggle:checked ~ nav {
+    display: block;
 }

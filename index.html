@@ -12,6 +12,7 @@
         <header>
             <a href="index.html"><i class="fas fa-seedling"></a></i>
             <h1 class="logo"> islandAQUA</h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">   <!-- nav-toggle id to work with hamburger favicon label as we will hide unsightly checkbox -->
             <nav>
                 <ul>
                     <li><a href="#aquascaping" aria-label="Go to aquascaping">Aquascaping</a></li>
@@ -21,6 +22,9 @@
                     <li><a href="#plants" aria-label="Go to plants">Plants</a></li>
                 </ul>
             </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span><i class="fas fa-bars"></i></span>
+            </label>   <!-- classic menu hamburger icon from fontawesome. As span inside label inherits nav-toggle-label then used in css -->
         </header>
         
         <div id="hero-bg">
