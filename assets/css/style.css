@@ -2,11 +2,11 @@
 
 :root {
     /* universal colour styling variables */
-    --theme-one: rgba(96, 115, 26, 0.85);
-    --theme-two: rgba(140, 72, 48, 0.85);
-    --theme-three: rgba(174,191,136, 0.85);
-    --theme-four: rgba(112, 166, 31, 0.85);
-    --theme-five: rgba(112, 166, 31, 0.85);
+    --theme-one: rgba(96, 115, 26, 1);
+    --theme-two: rgba(140, 72, 48, 1);
+    --theme-three: rgba(174,191,136, 1);
+    --theme-four: rgba(112, 166, 31, 1);
+    --theme-five: rgba(112, 166, 31, 1);
 }
 
 *, *::before, *::after {              /* box sizing reset */
@@ -20,11 +20,17 @@ body {
     font-weight: 400;
     text-align: center;
     margin: 0;
+    padding: 0px 0.5rem;
 }
 
 footer {
+    background: var(--theme-two);
+    text-align: center;
+    z-index: 50;
+    width: 100%;
     text-align: center;
     margin: 0;
+    color: white;
 }
 
 #hero-bg {
@@ -33,20 +39,29 @@ footer {
     background: url(../images/hero-bg.jpg) no-repeat center center;
 }
 
-/* nav styling */
+
+.images {
+    border-radius: 10px;
+    border: 2px solid var(--theme-one);
+}
+
+/* fix header to top of page so menu is accessible to user rather than having to scroll all the way to top or bottom for nav links when in middle of page */
 
 header {
     background: var(--theme-five);
-    text-align: center;
     position: fixed;
     z-index: 50;
     width: 100%;
-
+    text-align: center;
+    margin: 0;
 }
 
 .logo {
     margin: 0;
+    display: hidden;
 }
+
+/* nav styling ======================================================================================================================================== */
 
 .nav-toggle {
     display: none;
@@ -63,7 +78,7 @@ header {
 }
 
 nav {
-    background: var(--theme-five);
+    background: var(--theme-five);         /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
     width: 100%;
     position: absolute;
     text-align: left;
@@ -71,6 +86,7 @@ nav {
     left: 0;
     display: none;
 }
+
 
 nav ul {
     margin: 0;
@@ -103,3 +119,7 @@ When check box is checked display:block will show menu which is defaulted to hid
 .nav-toggle:checked ~ nav {
     display: block;
 }
+
+}
+
+/* ================================================================================================================================================= */
