@@ -219,5 +219,6 @@ table tr:nth-child(even) {
     background-color: rgba(var(--theme-three), 1)
 }
 
-table tr:hover {background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
+table tr:hover {
+    background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
 }
