@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 /* ROOT DEFAULT */
 :root {
     /* universal colour styling variables */
@@ -47,6 +47,14 @@
         border-radius: 10px;
         font-family: 'Cormorant';
         padding: 0.25rem 0;
+    }
+
+    .main-quote {
+        background-color: rgba(var(--theme-three), 0.85);
+        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        padding: 0.5em;
+        border-radius: 10px;
     }
 
     .images {
@@ -139,7 +147,7 @@
     }
 
     /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
-    /* 10% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+    /* 20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
     website for social media */
     /* NB. keyframes not required for this simple action*/
 
@@ -181,7 +189,7 @@
     header {
         background: rgba(var(--theme-five), 0.85);
         position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
-        transform: translateX(-0.55%);        /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
+        transform: translateX(-1.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
         z-index: 50;
         width: 100%;
         text-align: left;
@@ -279,6 +287,6 @@
 
 
 @media only screen and (min-width: 75em) {
-    
+
 }
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
