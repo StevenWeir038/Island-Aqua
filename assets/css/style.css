@@ -290,12 +290,12 @@
 
 @media only screen and (min-width: 75em) {
     .container {
-        display: grid;
+        display: grid;                                /* the power of grid is that you don't rely on html order of elements to display.  You can move things about the page with ease! */
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(11, 1fr);
         height: 100vh;
         margin: 0.5rem;
-        grid-template-areas:                      /* set up grid areas for differnt site sections. NB extra dots not needed, just easier to visualise final grid layout */
+        grid-template-areas:        /* set up grid areas for differnt site sections. NB extra dots not needed, just easier to visualise final grid layout, mirror template area name s for easoier referral to named classes */
             "header.............    header................    header.............."
             "hero-bg............    hero-bg...............    hero-bg............."
             "aquascaping........    aquascaping...........    aquascaping........."
@@ -308,5 +308,70 @@
             "fish-amano-shrimp..    fish-neocardina-davidi    plants.............."
             "footer.............    footer................    footer.............."
     }
+
+    .header {
+
+    }
+
+    .hero-bg {
+
+    }
+
+    .aquascaping {
+
+    }
+
+    .components {
+
+    }
+
+    .components-wood {
+
+    }
+
+    .components-rock {
+        
+    }
+    .components-substrate {
+        
+    }
+
+    .styles {
+
+    }
+
+    .styles-dutch {
+        
+    }
+
+    .styles-iwagumi {
+        
+    }
+    .styles-nature {
+        
+    }
+
+    .fish {
+        
+    }
+
+    .fish-cardinal-tetra {
+        
+    }
+
+    .fish-dwarf-gourami {
+        
+    }
+    .fish-amamo-shrimp {
+        
+    }
+    .fish-neocardina-davidi {
+        
+    }
+    .footer {
+        
+    }
+
 }
+
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
