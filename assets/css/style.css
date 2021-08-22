@@ -285,10 +285,28 @@
 /*end of media query min-width: 640px/40em (tablet)==========================================================*/
 
 
-/*code tablet site 3rd ca. 1200px/75em=======================================================================*/
-
+/*code desktop site 3rd ca. 1200px/75em=======================================================================*/
+/*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
 
 @media only screen and (min-width: 75em) {
-
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        height: 100vh;
+        margin: 0.5rem;
+        grid-template-areas:                      /* set up grid areas for differnt site sections. NB extra dots not needed, just easier to visualise final grid layout */
+            "header.............    header................    header.............."
+            "hero-bg............    hero-bg...............    hero-bg............."
+            "aquascaping........    aquascaping...........    aquascaping........."
+            "components.........    components............    components.........."
+            "components-wood....    components-rock.......    components-substrate"
+            "styles.............    styles................    styles.............."
+            "styles-dutch.......    styles-iwagumi........    styles-nature......."
+            "fish...............    fish..................    fish................"
+            "fish-cardinal-tetra    fish-dwarf-gourami....    plants.............."
+            "fish-amano-shrimp..    fish-neocardina-davidi    plants.............."
+            "footer.............    footer................    footer.............."
+    }
 }
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
