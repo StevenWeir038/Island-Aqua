@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 /* code mobile site 1st */
 
@@ -20,7 +21,7 @@
 /*BODY========================================================================================*/
 
 body {
-    min-width: 480px;
+    min-width: 300px;
     margin: 0;
     height: 100vh;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -45,6 +46,15 @@ h3 {
     border-radius: 10px;
     font-family: 'Cormorant';
     padding: 0.25rem 0;
+}
+.main-quote {
+    background-color: rgba(var(--theme-three), 0.85);
+    font-family: 'Caveat', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
+    color: white;
 }
 
 .images {
