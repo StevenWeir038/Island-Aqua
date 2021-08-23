@@ -4,7 +4,6 @@
 /* code mobile site 1st */
 
 /* ROOT DEFAULT */
-
 :root {
     /* universal colour styling variables */
     --theme-one: 96, 115, 26;           /* Feed vars insto rgba, give addiional control over opacity is desired */
@@ -18,7 +17,23 @@
     box-sizing: border-box;           /* Add box sizing to include padding and border in measurements */
 }
 
+
+
+/*code mobile site 1st =======================================================================*/
+
+
 /*BODY========================================================================================*/
+@media only screen and (max-width: 40em) {
+    body {
+        min-width: 480px;
+        margin: 0;
+        height: 100vh;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+        padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
+    }
 
 body {
     min-width: 300px;
@@ -31,14 +46,13 @@ body {
     padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
 }
 
-h2 {
-    background-color: rgba(var(--theme-five), 1);
-    color: white;
-    border-radius: 10px;
-    font-family: 'Cormorant';
-    text-transform: uppercase;
-    padding: 0.5rem 0;
-}
+    h3 {
+        background-color: rgba(var(--theme-two), 1);
+        color: white;
+        border-radius: 10px;
+        font-family: 'Cormorant';
+        padding: 0.25rem 0;
+    }
 
 h3 {
     background-color: rgba(var(--theme-two), 1);
@@ -57,216 +71,319 @@ h3 {
     color: white;
 }
 
-.images {
-    border-radius: 10px;
-    border: 2px solid rgba(var(--theme-two), 1);
-}
-.hero-bg {
-    background: url(../images/hero-bg.jpg) no-repeat center center;
-    position: relative;
-    overflow: hidden;
-    min-height: 900px;
-    width: 100%;
-}
-
-.logo {
-    display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
-    font-family: 'Cormorant Garamond';
-    color: rgba(var(--theme-two), 1);
-    font-size: clamp(0.5rem, 6vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
-
-    background-color: white;
-    padding: 0.25rem;
-    border: 2px solid rgba(var(--theme-two), 1);
-    border-radius: 10px;
-    margin-right: 1rem;
-    position: absolute;
-    top: 12%;
-    right: 6%;                          /* position from right to prevent text being going outside right of image */
-}
-
-h1 span {
-    font-family: 'Montserrat';
-    color: rgba(var(--theme-three), 1);
-    font-size: 0.6em;                          /*  take advantage of em cascading effect */
-}
-
-/*TABLES=================================================================================================== */
-
-table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table th {
-    background-color: rgba(var(--theme-two), 1);
-    color: white;
-}
-
-table th, table td {
-    border: 1px solid rgba(var(--theme-two), 1);
-    border-radius: 10px;
-    padding: 5px;
+    .images {
+        border-radius: 10px;
+        border: 2px solid rgba(var(--theme-two), 1);
+    }
+    .hero-bg {
+        background: url(../images/hero-bg.jpg) no-repeat center center;
+        position: relative;
+        overflow: hidden;
+        min-height: 900px;
+        width: 100%;
     }
 
-table tr:nth-child(even) {
-    background-color: rgba(var(--theme-three), 1)   /* alternate cover every 2nd row for improved readability */
+    .logo {
+        display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
+        font-family: 'Cormorant Garamond';
+        color: rgba(var(--theme-two), 1);
+        font-size: clamp(0.5rem, 6vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+
+        background-color: white;
+        padding: 0.25rem;
+        border: 2px solid rgba(var(--theme-two), 1);
+        border-radius: 10px;
+        margin-right: 1rem;
+        position: absolute;
+        top: 12%;
+        right: 6%;                          /* position from right to prevent text being going outside right of image */
+    }
+
+    h1 span {
+        font-family: 'Montserrat';
+        color: rgba(var(--theme-three), 1);
+        font-size: 0.6em;                          /*  take advantage of em cascading effect */
+    }
+
+    /*TABLES=================================================================================================== */
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table th {
+        background-color: rgba(var(--theme-two), 1);
+        color: white;
+    }
+
+    table th, table td {
+        border: 1px solid rgba(var(--theme-two), 1);
+        border-radius: 10px;
+        padding: 5px;
+        }
+
+    table tr:nth-child(even) {
+        background-color: rgba(var(--theme-three), 1)   /* alternate cover every 2nd row for improved readability */
+    }
+
+    table tr:hover {
+        background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
+    }
+
+    /* FOOTER ==========================================================================================*/
+
+    footer {
+        background: rgba(var(--theme-two), 0.85);
+        text-align: center;
+        z-index: 50;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        color: white;
+        margin: 0;
+        border: 2px solid rgba(var(--theme-five), 1);
+        border-radius: 10px 10px 0 0;
+    }
+
+    footer > form {
+        padding: 0 0.5rem;
+    }
+
+    footer a {
+        color: white;
+        font-size: 3rem;
+        padding: 0 1rem;
+    }
+
+    .social {
+        display: inline;
+    }
+
+    /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
+    /* 20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+    website for social media */
+    /* NB. keyframes not required for this simple action*/
+
+    .footer-link-zoom :hover {
+        transform: scale(1.2);
+    }
+
+    footer p {
+        color: white;
+        margin: 0.5rem 0;
+    }
+
+    footer input {
+        font-size: 1.2em;
+        padding: 0.25em;
+        margin-top: 0.5em;
+        border-radius: 10px;
+    }
+
+    footer input:focus {
+        border: 4px solid rgba(var(--theme-five), 1);
+    }
+
+    footer input[type="submit"] {
+        /* color: white; */
+        background: rgba(var(--theme-five), 1);
+        font-size: 1.2em;
+    }
+
+    footer input[type="submit"]:hover {
+        color: white;
+        background: rgba(var(--theme-one), 1);
+    }
+
+    /*HEADER========================================================================================
+    */
+    /* fix header to top of page so menu is accessible to user rather than having to scroll all the way to top or bottom for nav links when in middle of page */
+
+    header {
+        background: rgba(var(--theme-five), 0.85);
+        position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
+        transform: translateX(-1.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
+        z-index: 50;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        border: 2px solid rgba(var(--theme-two), 1);
+        border-radius: 0 0 10px 10px;
+    }
+
+    header > a {                             /* target only the fa fas seedling header link that navs user back to top of page. Don't want it to show clicked link formatting */
+        color: white;                       /* note could have reuse .link-home class but wanted to demonstrate knowledge of using a first child ( > ) selector */
+        font-size: 1.65rem;
+        margin: 1rem;
+    }
+
+    header > a :hover, .nav-toggle-label :hover {
+        transform: scale(1.2);
+    }
+
+    /*NAV================================================================================================================================ */
+
+    #nav-toggle {
+        display: none;
+    }                        /* hide unsightly nav-toggle checkbox */
+
+    .nav-toggle-label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        color: white;
+        border-radius: 1rem;
+    }
+
+    nav {
+        background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
+        width: 100%;
+        position: absolute;
+        text-align: right;
+        top: 100%;
+        right: 0;
+        display: none;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 1rem;
+
+    }
+
+    nav li {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        list-style: none;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    nav a:hover {
+        color: white;
+        border-top: 5px solid rgba(var(--theme-two), 1);
+        border-bottom: 5px solid rgba(var(--theme-two), 1);
+    }
+
+    /* 
+    Look for nav which is a sibling of nav toggle (ie the checkbox added to the index html code.
+    When check box is checked display:block will show menu which is defaulted to hidden by display: none in nav
+    */
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+
+    }
+}
+/*end of media query max-width: 40em(mobile)=================================================================*/
+
+/*code tablet site 2nd ca. 640px/40em =======================================================================*/
+
+
+@media only screen and (min-width: 40em) {
+
+}
+/*end of media query min-width: 640px/40em (tablet)==========================================================*/
+
+
+/*code desktop site 3rd ca. 1200px/75em=======================================================================*/
+/*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
+
+@media only screen and (min-width: 75em) {
+    .container {
+        display: grid;                                /* the power of grid is that you don't rely on html order of elements to display.  You can move things about the page with ease! */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        height: 100vh;
+        margin: 0.5rem;
+        grid-template-areas:        /* set up grid areas for differnt site sections. NB extra dots not needed, just easier to visualise final grid layout, mirror template area name s for easoier referral to named classes */
+            "header.............    header................    header.............."
+            "hero-bg............    hero-bg...............    hero-bg............."
+            "aquascaping........    aquascaping...........    aquascaping........."
+            "components.........    components............    components.........."
+            "components-wood....    components-rock.......    components-substrate"
+            "styles.............    styles................    styles.............."
+            "styles-dutch.......    styles-iwagumi........    styles-nature......."
+            "fish...............    fish..................    fish................"
+            "fish-cardinal-tetra    fish-dwarf-gourami....    plants.............."
+            "fish-amano-shrimp..    fish-neocardina-davidi    plants.............."
+            "footer.............    footer................    footer.............."
+    }
+
+    .header {
+
+    }
+
+    .hero-bg {
+
+    }
+
+    .aquascaping {
+
+    }
+
+    .components {
+
+    }
+
+    .components-wood {
+
+    }
+
+    .components-rock {
+        
+    }
+    .components-substrate {
+        
+    }
+
+    .styles {
+
+    }
+
+    .styles-dutch {
+        
+    }
+
+    .styles-iwagumi {
+        
+    }
+    .styles-nature {
+        
+    }
+
+    .fish {
+        
+    }
+
+    .fish-cardinal-tetra {
+        
+    }
+
+    .fish-dwarf-gourami {
+        
+    }
+    .fish-amamo-shrimp {
+        
+    }
+    .fish-neocardina-davidi {
+        
+    }
+    .footer {
+        
+    }
+
 }
 
-table tr:hover {
-    background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
-}
-
-/* FOOTER ==========================================================================================*/
-
-footer {
-    background: rgba(var(--theme-two), 0.85);
-    text-align: center;
-    z-index: 50;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    color: white;
-    margin: 0;
-    border: 2px solid rgba(var(--theme-five), 1);
-    border-radius: 10px 10px 0 0;
-}
-
-footer > form {
-    padding: 0 0.5rem;
-}
-
-footer a {
-    color: white;
-    font-size: 3rem;
-    padding: 0 1rem;
-}
-
-.social {
-    display: inline;
-}
-
-/* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
-/* 10% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
-website for social media */
-/* NB. keyframes not required for this simple action*/
-
-.footer-link-zoom :hover {
-    transform: scale(1.2);
-}
-
-footer p {
-    color: white;
-    margin: 0.5rem 0;
-}
-
-footer input {
-    font-size: 1.2em;
-    padding: 0.25em;
-    margin-top: 0.5em;
-    border-radius: 10px;
-}
-
-footer input:focus {
-    border: 4px solid rgba(var(--theme-five), 1);
-}
-
-footer input[type="submit"] {
-    /* color: white; */
-    background: rgba(var(--theme-five), 1);
-    font-size: 1.2em;
-}
-
-footer input[type="submit"]:hover {
-    color: white;
-    background: rgba(var(--theme-one), 1);
-}
-
-/*HEADER========================================================================================
-  */
-/* fix header to top of page so menu is accessible to user rather than having to scroll all the way to top or bottom for nav links when in middle of page */
-
-header {
-    background: rgba(var(--theme-five), 0.85);
-    position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
-    transform: translateX(-0.85%);        /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
-    z-index: 50;
-    width: 100%;
-    text-align: left;
-    margin: 0;
-    border: 2px solid rgba(var(--theme-two), 1);
-    border-radius: 0 0 10px 10px;
-}
-
-header > a {                             /* target only the fa fas seedling header link that navs user back to top of page. Don't want it to show clicked link formatting */
-    color: white;                       /* note could have reuse .link-home class but wanted to demonstrate knowledge of using a first child ( > ) selector */
-    font-size: 1.65rem;
-    margin: 1rem;
-}
-
-header > a :hover, .nav-toggle-label :hover {
-    transform: scale(1.2);
-}
-
-/*NAV================================================================================================================================ */
-
-#nav-toggle {
-    display: none;
-}                        /* hide unsightly nav-toggle checkbox */
-
-.nav-toggle-label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 1rem;
-    font-size: 1.5rem;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    color: white;
-    border-radius: 1rem;
-}
-
-nav {
-    background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
-    width: 100%;
-    position: absolute;
-    text-align: right;
-    top: 100%;
-    right: 0;
-    display: none;
-}
-
-nav ul {
-    margin: 0;
-    padding: 1rem;
-
-}
-
-nav li {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    list-style: none;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    color: white;
-    border-top: 5px solid rgba(var(--theme-two), 1);
-    border-bottom: 5px solid rgba(var(--theme-two), 1);
-}
-
-/* 
-Look for nav which is a sibling of nav toggle (ie the checkbox added to the index html code.
-When check box is checked display:block will show menu which is defaulted to hidden by display: none in nav
-*/
-
-.nav-toggle:checked ~ nav {
-    display: block;
-}
+/*end of media query min-width: 1200px/75em (desktop)========================================================*/
