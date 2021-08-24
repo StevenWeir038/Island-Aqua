@@ -25,7 +25,7 @@
 /*BODY========================================================================================*/
 @media only screen and (max-width: 40em) {
     body {
-        min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. */
+        min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
         height: 100vh;
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -76,7 +76,7 @@ h3 {
         display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
         font-family: 'Cormorant Garamond';
         color: rgba(var(--theme-two), 1);
-        font-size: clamp(0.5rem, 6vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+        font-size: clamp(0.5rem, 5vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
 
         background-color: white;
         padding: 0.25rem;
@@ -85,7 +85,7 @@ h3 {
         margin-right: 1rem;
         position: absolute;
         top: 12%;
-        right: 6%;                          /* position from right to prevent text being going outside right of image */
+        right: 2%;                          /* position from right to prevent text being going outside right of image */
     }
 
     h1 span {
