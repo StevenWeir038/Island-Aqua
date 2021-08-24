@@ -302,86 +302,110 @@ h3 {
 
 @media only screen and (min-width: 75em) {
     .container {
+        all: unset;
         display: grid;                                /* the power of grid is that you don't rely on html order of elements to display.  You can move things about the page with ease! */
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(11, 1fr);
         height: 100vh;
         margin: 0.5rem;
         grid-template-areas:        /* set up grid areas for differnt site sections. NB extra dots not needed, just easier to visualise final grid layout, mirror template area name s for easoier referral to named classes */
-            "header.............    header................    header.............."
-            "hero-bg............    hero-bg...............    hero-bg............."
-            "aquascaping........    aquascaping...........    aquascaping........."
-            "components.........    components............    components.........."
-            "components-wood....    components-rock.......    components-substrate"
-            "styles.............    styles................    styles.............."
-            "styles-dutch.......    styles-iwagumi........    styles-nature......."
-            "fish...............    fish..................    fish................"
-            "fish-cardinal-tetra    fish-dwarf-gourami....    plants.............."
-            "fish-amano-shrimp..    fish-neocardina-davidi    plants.............."
-            "footer.............    footer................    footer.............."
-    }
+            "header header header"
+            "hero-bg hero-bg hero-bg"
+            "aquascaping aquascaping aquascaping"
+            "components components components"
+            "components-wood components-rock components-substrate"
+            "styles styles styles"
+            "styles-dutch styles-iwagumi styles-nature"
+            "fish fish fish"
+            "fish-cardinal-tetra fish-dwarf-gourami plants"
+            "fish-amano-shrimp fish-neocardina-davidi plants"
+            "footer footer footer"
+    }  /* still to fix grid plants and logo out of flow? */
 
     .header {
-
+        grid-area: header;
+        background-color: lightslategray;
     }
 
     .hero-bg {
-
+        grid-area: header-bg;
+        background-color: azure;
     }
 
     .aquascaping {
-
+        grid-area: aquascaping;
+        background-color: violet;
     }
 
     .components {
-
+        grid-area: components;
+        background-color: indianred;
     }
 
     .components-wood {
-
+        grid-area: components-wood;
+        background-color: powderblue;
     }
 
     .components-rock {
-        
+        grid-area: components-rock;
+        background-color: yellow;
     }
     .components-substrate {
-        
+        grid-area: components-substrate;
+        background-color: lemonchiffon;
     }
 
     .styles {
-
+        grid-area: styles;
+        background-color: wheat;
     }
 
     .styles-dutch {
-        
+        grid-area: styles-dutch;
+        background-color: cyan;
     }
 
     .styles-iwagumi {
-        
+        grid-area: styles-iwagumi;
+        background-color: red;
     }
     .styles-nature {
-        
+        grid-area: styles-nature;
+        background-color: pink;
     }
 
     .fish {
-        
+        grid-area: fish;
+        background-color: aqua;
     }
 
     .fish-cardinal-tetra {
-        
+        grid-area: fish-cardinal-tetra;
+        background-color: skyblue;
     }
 
     .fish-dwarf-gourami {
-        
+        grid-area: fish-dwarf-gourami;
+        background-color: yellowgreen;
     }
-    .fish-amamo-shrimp {
-        
+    .fish-amano-shrimp {
+        grid-area: fish-amano-shrimp;
+        background-color: red;
     }
     .fish-neocardina-davidi {
-        
+        grid-area: fish-neocardina-davidi;
+        background-color: blue;
     }
+
+    .plants {
+        grid-area: plants;
+        background-color: purple;
+    }
+
     .footer {
-        
+        grid-area: footer;
+        background-color: mediumseagreen;
     }
 
 }
