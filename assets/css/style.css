@@ -62,6 +62,7 @@ h3 {
     .images {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
+        width: 80%
     }
     .hero-bg {
         background: url(../images/hero-bg.jpg) no-repeat center center;
@@ -218,12 +219,12 @@ h3 {
     .logo {                  /* display inline removes space from around text - easier to position stock horizontal bar!*/
         font-family: 'Garamond';
         color: rgba(var(--theme-two), 1);
-        font-size: clamp(0.5rem, 5vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+        font-size: clamp(0.5rem, 4vw + 1rem, 4rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
         background-color: white;
         padding: 0.5rem;
         border: 2px solid rgba(var(--theme-two), 1);
         border-radius: 10px;
-        margin: 0.5rem 4rem;
+        margin: 0.5rem 3rem;
         text-align: center;
     }
 
