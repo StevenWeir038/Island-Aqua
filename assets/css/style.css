@@ -191,29 +191,7 @@ h3 {
         margin: 0;
         border: 2px solid rgba(var(--theme-two), 1);
         border-radius: 0 0 10px 10px;
-    }
-
-    .left-heading {
-        float: left;
-        color: white;                       /* note could have reuse .link-home class but wanted to demonstrate knowledge of using a first child ( > ) selector */
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: 1rem; 
-        font-size: 1.65rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
-
-        border-radius: 1rem;
-    }
-
-    .middle-heading {
-        float: center;
-    }
-
-    .right-heading {
-        float: right;
+        color: white;
     }
 
     .logo {                  /* display inline removes space from around text - easier to position stock horizontal bar!*/
@@ -224,16 +202,8 @@ h3 {
         padding: 0.5rem;
         border: 2px solid rgba(var(--theme-two), 1);
         border-radius: 10px;
-        margin: 0.5rem 3rem;
-        text-align: center;
-    }
-
-    header a {
-        color: white;                     /* note could have reuse .link-home class but wanted to demonstrate knowledge of using a first child ( > ) selector */
-    }
-
-    .left-heading :hover, .nav-toggle-label :hover {
-        transform: scale(1.2);
+        margin: 1rem 1rem;
+        float: left;
     }
 
     /*NAV================================================================================================================================ */
