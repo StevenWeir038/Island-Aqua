@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:ital,wght@1,300&family=Montserrat&display=swap');
 
 /* code mobile site 1st */
 
@@ -75,7 +74,7 @@ h3 {
 
     .logo {
         display: inline;                    /* display inline removes space from around text - easier to position stock horizontal bar!*/
-        font-family: 'Cormorant Garamond';
+        font-family: 'Garamond';
         color: rgba(var(--theme-two), 1);
         font-size: clamp(0.5rem, 5vw + 1rem, 4.5rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
 
