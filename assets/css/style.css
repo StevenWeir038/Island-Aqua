@@ -312,12 +312,12 @@ h3 {
         grid-row: 1 / 1;
         
         z-index: 50;                                      /* set index to display in front of hero-bg */
-        background: rgba(var(--theme-five), 0.05);
+        /* background: rgba(var(--theme-five), 0.05); */
         text-align: center;
         margin: 0;
-        ?
         border-radius: 10px 10px 0 0;
         color: white;
+        background: linear-gradient(to bottom, rgba(var(--theme-five),0.5), rgba(var(--theme-five),0.1));
     }
 
     .nav-toggle, .nav-toggle-label {
