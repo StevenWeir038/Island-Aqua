@@ -345,9 +345,10 @@ h3 {
     }
 
     .aquascaping {
-        background-color: violet;
+        /* background-color: violet; */
+        
         grid-column: 1 / 4;
-        grid-row: 3 / 4;  
+        grid-row: 3 / 4;
     }
 
     .components {
@@ -436,14 +437,7 @@ h3 {
         grid-row: 12 / 13;
     }
 
-}
-
-/*end of media query min-width: 1200px/75em (desktop)========================================================*/
-
-
-
-
-/*BODY========================================================================================*/
+    /*BODY========================================================================================*/
     body {
         min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
@@ -455,22 +449,23 @@ h3 {
         padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
     }
 
-h2 {
+    h2 {
     background-color: rgba(var(--theme-five), 1);
     color: white;
     border-radius: 10px;
     font-family: 'Cormorant';
     padding: 0.25rem 0;
-}
+    }
 
-h3 {
+    h3 {
     background-color: rgba(var(--theme-two), 1);
     color: white;
     border-radius: 10px;
     font-family: 'Cormorant';
     padding: 0.25rem 0;
-}
-.main-quote {
+    }
+
+    .main-quote {
     background-color: rgba(var(--theme-three), 0.85);
     font-family: 'Caveat', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
@@ -478,7 +473,15 @@ h3 {
     border-radius: 10px;
     background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
     color: white;
+    }
+
 }
+/*end of media query min-width: 1200px/75em (desktop)========================================================*/
+
+
+
+
+
 
     .images {
         border-radius: 10px;
