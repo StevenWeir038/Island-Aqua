@@ -16,8 +16,6 @@
     box-sizing: border-box;           /* Add box sizing to include padding and border in measurements */
 }
 
-
-
 /*code mobile site 1st =======================================================================*/
 
 
@@ -281,119 +279,130 @@ h3 {
 /*end of media query min-width: 640px/40em (tablet)==========================================================*/
 
 
-/*code desktop site 3rd ca. 1200px/75em=======================================================================*/
+/*code desktop site 3rd ca. 1200px/70em=======================================================================*/
 /*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 70em) {
     .container {
-        all: unset;
+        /* all: unset;                                   having .logo in bg-hero not working with grid, move .logo class to header in html then move absolute in mobile site. Give it its own div! */
         display: grid;                                /* the power of grid is that you don't rely on html order of elements to display.  You can move things about the page with ease! */
-        grid-template-columns: repeat(3, 1fr);        /* having .logo in bg-hero not working with grid, move .logo class to header in html then move absolute in mobile site. Give it its own div! */
-        grid-template-rows: repeat(11, 1fr);
+        grid-auto-flow: row;
+        grid-template-columns: 33% 33% 33%;
+        /* grid-template-rows: auto; */
         height: 100vh;
         margin: 0.5rem;
-        grid-template-areas:        /* set up grid areas for differnt site sections. NB extra dots not needed, just easier to visualise final grid layout, mirror template area name s for easoier referral to named classes */
-            "header header header"
-            "hero-bg hero-bg hero-bg"
-            "aquascaping aquascaping aquascaping"
-            "components components components"
-            "components-wood components-rock components-substrate"
-            "styles styles styles"
-            "styles-dutch styles-iwagumi styles-nature"
-            "fish fish fish"
-            "fish-cardinal-tetra fish-dwarf-gourami plants"
-            "fish-amano-shrimp fish-neocardina-davidi plants-video"
-            "footer footer footer"
-    }  /* still to fix grid plants and logo out of flow? */
+    }
 
     .header {
-        grid-area: header;
         background-color: lightslategray;
+        grid-column: 1 / 4;
+        grid-row: 1 / 1;
     }
 
     .hero-bg {
-        grid-area: header-bg;
         background-color: azure;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;        
+        background: url(../images/hero-bg.jpg) no-repeat center center;
+        min-height: 900px;
+        border-radius: 0 0 10px 10px;
     }
 
     .aquascaping {
-        grid-area: aquascaping;
         background-color: violet;
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;  
     }
 
     .components {
-        grid-area: components;
         background-color: indianred;
+        grid-column: 1 / 4;
+        grid-row: 4 / 5; 
     }
 
     .components-wood {
-        grid-area: components-wood;
         background-color: powderblue;
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
     }
 
     .components-rock {
-        grid-area: components-rock;
         background-color: yellow;
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
     }
     .components-substrate {
-        grid-area: components-substrate;
         background-color: lemonchiffon;
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
     }
 
     .styles {
-        grid-area: styles;
         background-color: wheat;
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
     }
 
     .styles-dutch {
-        grid-area: styles-dutch;
         background-color: cyan;
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
     }
 
     .styles-iwagumi {
-        grid-area: styles-iwagumi;
         background-color: red;
+        grid-column: 2 / 3;
+        grid-row: 7 / 8;
     }
     .styles-nature {
-        grid-area: styles-nature;
         background-color: pink;
+        grid-column: 3 / 4;
+        grid-row: 7 / 8;
     }
 
     .fish {
-        grid-area: fish;
-        background-color: aqua;
+        background-color: antiquewhite;
+        grid-column: 1 / 4;
+        grid-row: 8 / 9;
     }
 
     .fish-cardinal-tetra {
-        grid-area: fish-cardinal-tetra;
         background-color: skyblue;
+        grid-column: 1 / 2;
+        grid-row: 9 / 10;
     }
 
     .fish-dwarf-gourami {
-        grid-area: fish-dwarf-gourami;
         background-color: yellowgreen;
+        grid-column: 2 / 3;
+        grid-row: 9 / 10;
     }
     .fish-amano-shrimp {
-        grid-area: fish-amano-shrimp;
         background-color: red;
+        grid-column: 1 / 3;
+        grid-row: 10 / 11;
     }
     .fish-neocardina-davidi {
-        grid-area: fish-neocardina-davidi;
         background-color: blue;
+        grid-column: 1 / 3;
+        grid-row: 9 / 11;
     }
 
     .plants {
-        grid-area: plants;
         background-color: purple;
+        grid-column: 1 / 2;
+        grid-row: 11 / 12;
     }
     .plants-video {
-        grid-area: plants;
         background-color: grey;
+        grid-column: 2 / 4;
+        grid-row: 11 / 12;
     }
 
     .footer {
-        grid-area: footer;
         background-color: mediumseagreen;
+        grid-column: 1 / 4;
+        grid-row: 12 / 13;
     }
 
 }
