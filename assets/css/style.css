@@ -298,6 +298,7 @@ h3 {
     .container {
         
         display: grid;
+        gap: 0.5rem;                           /*elements touching, gap needed. Add gap to .container grid instead of margin: 0 0.5rem; to each section*/
         grid-auto-flow: row;
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: min-content(1fr);
@@ -314,6 +315,7 @@ h3 {
         text-align: center;
         margin: 0;
         border: 2px solid rgba(var(--theme-two), 1);
+        border-radius: 10px;
         color: white;
     }
 
@@ -341,38 +343,53 @@ h3 {
         background: url(../images/hero-bg.jpg) no-repeat center center;
         overflow: hidden;
         min-height: 900px;
-        border-radius: 0 0 10px 10px;
+        border-radius: 10px;
     }
 
     .aquascaping {
         /* background-color: violet; */
-        
         grid-column: 1 / 4;
         grid-row: 3 / 4;
     }
 
     .components {
-        background-color: indianred;
+        /* background-color: indianred; */
         grid-column: 1 / 4;
         grid-row: 4 / 5;
     }
 
     .components-wood {
-        background-color: powderblue;
+        /* background-color: powderblue; */
         grid-column: 1 / 2;
         grid-row: 5 / 6;
+
+        border: 10px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
 
     .components-rock {
-        background-color: yellow;
+        /* background-color: yellow; */
         grid-column: 2 / 3;
         grid-row: 5 / 6;
+
+        border: 10px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;  
+        background-color: rgba(var(--theme-three), 1); 
     }
     .components-substrate {
-        background-color: lemonchiffon;
+        /* background-color: lemonchiffon; */
         grid-column: 3 / 4;
         grid-row: 5 / 6;
+
+        border: 10px solid rgba(var(--theme-one), 1);
+        border-radius: 10px; 
+        background-color: rgba(var(--theme-three), 1);  
     }
+        .components-wood p, .components-rock p,.components-substrate p {
+            color: white;
+            padding: 0 20px;
+        }
 
     .styles {
         background-color: wheat;
@@ -439,7 +456,6 @@ h3 {
 
     /*BODY========================================================================================*/
     body {
-        min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
         height: 100vh;
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -447,6 +463,12 @@ h3 {
         text-align: center;
         margin: 0;
         padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
+    }
+
+    h1 span {
+        font-family: 'Montserrat';
+        color: rgba(var(--theme-three), 1);
+        font-size: 0.6em;                          /*  take advantage of em cascading effect */
     }
 
     h2 {
@@ -460,23 +482,37 @@ h3 {
     h3 {
     background-color: rgba(var(--theme-two), 1);
     color: white;
-    border-radius: 10px;
     font-family: 'Cormorant';
+    margin: 0;
     padding: 0.25rem 0;
     }
 
     .main-quote {
     background-color: rgba(var(--theme-three), 0.85);
     font-family: 'Caveat', Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.5em;
     border-radius: 10px;
     background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
     color: white;
     }
 
+    figcaption {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+
 }
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
+
+
+
+
+
 
 
 
@@ -494,18 +530,9 @@ h3 {
         width: 80%;
     }
 
-    h1 span {
-        font-family: 'Montserrat';
-        color: rgba(var(--theme-three), 1);
-        font-size: 0.6em;                          /*  take advantage of em cascading effect */
-    }
 
-    figcaption {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: bold;
-        color: slategrey;
-    }
+
+
 
     /*TABLES=================================================================================================== */
 
