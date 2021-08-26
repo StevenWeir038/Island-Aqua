@@ -311,11 +311,12 @@ h3 {
         grid-column: 1 / 4;
         grid-row: 1 / 1;
         
-        background: rgba(var(--theme-five), 1);
+        z-index: 50;                                      /* set index to display in front of hero-bg */
+        background: rgba(var(--theme-five), 0.85);
         text-align: center;
         margin: 0;
         border: 2px solid rgba(var(--theme-two), 1);
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
         color: white;
     }
 
@@ -338,11 +339,11 @@ h3 {
     .hero-bg {
         /* background-color: azure; */
         grid-column: 1 / 4;
-        grid-row: 2 / 3; 
+        grid-row: 1 / 3; 
 
         background: url(../images/hero-bg.jpg) no-repeat center center;
         overflow: hidden;
-        min-height: 900px;
+        min-height: 925px;
         border-radius: 10px;
     }
 
@@ -455,7 +456,7 @@ h3 {
         background-color: rgba(var(--theme-three), 1);
     }
     .fish-amano-shrimp {
-        background-color: red;
+        /* background-color: red; */
         grid-column: 3 / 4;
         grid-row: 10 / 11;
         
@@ -473,8 +474,8 @@ h3 {
         background-color: rgba(var(--theme-three), 1);
     }
         .fish-cardinal-tetra p, .fish-dwarf-gourami p, .fish-amano-shrimp p, .fish-neocardina-davidi p {
+            padding: 0 5%;
             color: white;
-            padding: 0 20px;
         }
 
     .plants {
@@ -540,7 +541,7 @@ h3 {
         font-family: 'Montserrat';
         font-style: italic;
         font-weight: bold;
-        color: white;
+        color: grey;
         text-decoration: none;
     }
 
@@ -548,117 +549,116 @@ h3 {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
         width: 90%;
-
-
-    /*TABLES====increase the specifity to override section formatting=================================================================================*/
-    table {
-        margin-left: auto;
-        margin-right: auto;
     }
 
-    table th {
-        background-color: rgba(var(--theme-two), 1);
-        color: white;
-    }
+    /*TABLE====increase the specifity to override section formatting=================================================================================*/
 
-    table th, table td {
-        border: 1px solid rgba(var(--theme-two), 1);
-        border-radius: 10px;
-        padding: 5px;
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%
         }
+    
+        table th {
+            background-color: rgba(var(--theme-two), 1);
+            color: white;
+        }
+    
+        table th, table td {
+            border: 1px solid rgba(var(--theme-two), 1);
+            border-radius: 10px;
+            padding: 5px;
+            }
 
-    table tr:nth-child(even) {
-        background-color: rgba(var(--theme-three), 1)   /* alternate cover every 2nd row for improved readability */
-    }
-
-    table tr:hover {
-        background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
-    }
+            table tr:nth-child(odd) {
+                background-color: whitesmoke;   /* alternate cover every 2nd row for improved readability */
+            }
+        table tr:nth-child(even) {
+            background-color: rgba(var(--theme-four), 1);   /* alternate cover every 2nd row for improved readability */
+            color: white;
+        }
+    
+        table tr:hover {
+            background-color: rgba(var(--theme-one), 1);    /* help user focus on table content */
+            color: white;
+        }
 }
+
+   /* FOOTER ==========================================================================================*/
+
+   footer {
+    background: rgba(var(--theme-two), 0.85);
+    text-align: center;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: white;
+    margin: 0;
+    border: 2px solid rgba(var(--theme-five), 1);
+    border-radius: 10px 10px 0 0;
+}
+
+footer > form {
+    padding: 0 0.5rem;
+}
+
+footer a {
+    color: white;
+    font-size: 3rem;
+    padding: 0 1rem;
+}
+
+.social {
+    display: inline;
+}
+
+/* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
+/* 20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+website for social media */
+/* NB. keyframes not required for this simple action*/
+
+.footer-link-zoom :hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+footer input {
+    font-size: 1.2em;
+    padding: 0.25em;
+    margin-top: 0.5em;
+    border-radius: 10px;
+}
+
+footer input:focus {
+    border: 4px solid rgba(var(--theme-five), 1);
+}
+
+footer input[type="submit"] {
+    /* color: white; */
+    background: rgba(var(--theme-five), 1);
+    font-size: 1.2em;
+}
+
+footer input[type="submit"]:hover {
+    color: white;
+    background: rgba(var(--theme-one), 1);
+}
+
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
 
 
-
-
-
-
-
-
-
-
-
-    
-    }
     .video {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
         width: 80%;
     }
 
-    /* FOOTER ==========================================================================================*/
 
-    footer {
-        background: rgba(var(--theme-two), 0.85);
-        text-align: center;
-        z-index: 50;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        color: white;
-        margin: 0;
-        border: 2px solid rgba(var(--theme-five), 1);
-        border-radius: 10px 10px 0 0;
-    }
-
-    footer > form {
-        padding: 0 0.5rem;
-    }
-
-    footer a {
-        color: white;
-        font-size: 3rem;
-        padding: 0 1rem;
-    }
-
-    .social {
-        display: inline;
-    }
-
-    /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
-    /* 20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
-    website for social media */
-    /* NB. keyframes not required for this simple action*/
-
-    .footer-link-zoom :hover {
-        transform: scale(1.2);
-    }
-
-    footer p {
-        color: white;
-        margin: 0.5rem 0;
-    }
-
-    footer input {
-        font-size: 1.2em;
-        padding: 0.25em;
-        margin-top: 0.5em;
-        border-radius: 10px;
-    }
-
-    footer input:focus {
-        border: 4px solid rgba(var(--theme-five), 1);
-    }
-
-    footer input[type="submit"] {
-        /* color: white; */
-        background: rgba(var(--theme-five), 1);
-        font-size: 1.2em;
-    }
-
-    footer input[type="submit"]:hover {
-        color: white;
-        background: rgba(var(--theme-one), 1);
-    }
 
 
     /*header NAV================================================================================================================================ */
