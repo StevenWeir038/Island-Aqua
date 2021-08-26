@@ -312,10 +312,10 @@ h3 {
         grid-row: 1 / 1;
         
         z-index: 50;                                      /* set index to display in front of hero-bg */
-        background: rgba(var(--theme-five), 0.85);
+        background: rgba(var(--theme-five), 0.05);
         text-align: center;
         margin: 0;
-        border: 2px solid rgba(var(--theme-two), 1);
+        ?
         border-radius: 10px 10px 0 0;
         color: white;
     }
