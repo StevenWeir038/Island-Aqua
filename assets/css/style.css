@@ -479,7 +479,7 @@ h3 {
         }
 
     .plants {
-        background-color: purple;
+        /* background-color: purple; */
         grid-column: 2 / 4;
         grid-row: 11 / 12;
     }
@@ -498,7 +498,7 @@ h3 {
         font-weight: 400;
         text-align: center;
         margin: 0;
-        padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
+        padding: 0px 0.25rem;                                                       /* padding to keep elements away from very edge of screen */
     }
 
     h1 span {
@@ -524,8 +524,23 @@ h3 {
     padding: 0.25rem 0;
     }
 
+    .plants h3 {                                                /* introduced this class as grid layout out of alignment from cherry shrimp to plants on row 11 */
+    background-color: rgba(var(--theme-five), 1);
+    color: white;
+    border-radius: 10px;
+    font-family: 'Cormorant';
+    padding: 0.5rem 0;
+    }
+    
+    .video {
+        border-radius: 10px;
+        border: 2px solid rgba(var(--theme-two), 1);
+        width: 90%;
+        height: 850px;
+    }
+
     .main-quote {
-    background-color: rgba(var(--theme-three), 0.85);
+    background-color: rgba(var(--theme-three), 1);
     font-family: 'Caveat', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     padding: 0.5em;
@@ -650,16 +665,6 @@ footer input[type="submit"]:hover {
 }
 
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
-
-
-    .video {
-        border-radius: 10px;
-        border: 2px solid rgba(var(--theme-two), 1);
-        width: 80%;
-    }
-
-
-
 
     /*header NAV================================================================================================================================ */
                       
