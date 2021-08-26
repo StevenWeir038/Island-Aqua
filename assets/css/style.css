@@ -472,10 +472,10 @@ h3 {
         border-radius: 10px;
         background-color: rgba(var(--theme-three), 1);
     }
-    .fish-cardinal-tetra, .fish-dwarf-gourami, .fish-amano-shrimp, .fish-neocardina-davidi p {
-        color: white;
-        padding: 0 20px;
-    }
+        .fish-cardinal-tetra p, .fish-dwarf-gourami p, .fish-amano-shrimp p, .fish-neocardina-davidi p {
+            color: white;
+            padding: 0 20px;
+        }
 
     .plants {
         background-color: purple;
@@ -484,7 +484,7 @@ h3 {
     }
 
     .footer {
-        background-color: mediumseagreen;
+        /* background-color: mediumseagreen; */
         grid-column: 1 / 4;
         grid-row: 12 / 13;
     }
@@ -547,11 +547,10 @@ h3 {
     .images {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
-        width: 90%
+        width: 90%;
 
 
-    /*TABLES====increased specifity to override section formatting================================================================================= */
-
+    /*TABLES====increase the specifity to override section formatting=================================================================================*/
     table {
         margin-left: auto;
         margin-right: auto;
