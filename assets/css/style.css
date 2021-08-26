@@ -285,16 +285,16 @@ h3 {
 /*code tablet site 2nd ca. 640px/40em =======================================================================*/
 
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 640px) {
 
 }
 /*end of media query min-width: 640px/40em (tablet)==========================================================*/
 
 
-/*code desktop site 3rd ca. 1200px/70em=======================================================================*/
+/*code desktop site 3rd ca. 1200px/75em=======================================================================*/
 /*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
 
-@media only screen and (min-width: 70em) {
+@media only screen and (min-width: 1200px) {
     .container {
         /* all: unset;                                   having .logo in bg-hero not working with grid, move .logo class to header in html then move absolute in mobile site. Give it its own div! */
         display: grid;                                /* the power of grid is that you don't rely on html order of elements to display.  You can move things about the page with ease! */
@@ -322,14 +322,8 @@ h3 {
 
     .aquascaping {
         background-color: violet;
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
         grid-row: 3 / 4;  
-    }
-
-    .plants {
-        background-color: purple;
-        grid-column: 3 / 4;
-        grid-row: 3 / 4;
     }
 
     .components {
@@ -357,49 +351,65 @@ h3 {
 
     .styles {
         background-color: wheat;
-        
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
     }
 
     .styles-dutch {
         background-color: cyan;
-        
+        grid-column: 1 / 3;
+        grid-row: 7 / 8;
     }
 
     .styles-iwagumi {
         background-color: red;
-        
+        grid-column: 3 / 4;
+        grid-row: 7 / 9;
     }
     .styles-nature {
         background-color: pink;
-        
+        grid-column: 1 / 3;
+        grid-row: 8 / 9;
     }
 
     .fish {
         background-color: antiquewhite;
-        
+        grid-column: 1 / 4;
+        grid-row: 9 / 10;
     }
 
     .fish-cardinal-tetra {
         background-color: skyblue;
-        
+        grid-column: 1 / 2;
+        grid-row: 10 / 11;
     }
 
     .fish-dwarf-gourami {
         background-color: yellowgreen;
-        
+        grid-column: 2 / 3;
+        grid-row: 10 / 11;
     }
     .fish-amano-shrimp {
         background-color: red;
-        
+        grid-column: 3 / 4;
+        grid-row: 10 / 11;
     }
     .fish-neocardina-davidi {
         background-color: blue;
-        
+        grid-column: 1 / 2;
+        grid-row: 11 / 12;
+    }
+
+    .plants {
+        background-color: purple;
+        grid-column: 2 / 4;
+        grid-row: 11 / 12;
     }
 
     .footer {
         background-color: mediumseagreen;
-        
+        grid-column: 1 / 4;
+        grid-row: 12 / 13;
     }
 
 }
