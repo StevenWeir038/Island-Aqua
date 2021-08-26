@@ -363,7 +363,7 @@ h3 {
         grid-column: 1 / 2;
         grid-row: 5 / 6;
 
-        border: 10px solid rgba(var(--theme-one), 1);
+        border: 7px solid rgba(var(--theme-one), 1);
         border-radius: 10px;
         background-color: rgba(var(--theme-three), 1);
     }
@@ -373,18 +373,18 @@ h3 {
         grid-column: 2 / 3;
         grid-row: 5 / 6;
 
-        border: 10px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;  
-        background-color: rgba(var(--theme-three), 1); 
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
     .components-substrate {
         /* background-color: lemonchiffon; */
         grid-column: 3 / 4;
         grid-row: 5 / 6;
-
-        border: 10px solid rgba(var(--theme-one), 1);
-        border-radius: 10px; 
-        background-color: rgba(var(--theme-three), 1);  
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
         .components-wood p, .components-rock p,.components-substrate p {
             color: white;
@@ -392,54 +392,89 @@ h3 {
         }
 
     .styles {
-        background-color: wheat;
+        /* background-color: wheat; */
         grid-column: 1 / 4;
         grid-row: 6 / 7;
     }
 
     .styles-dutch {
-        background-color: cyan;
+        /* background-color: cyan; */
         grid-column: 1 / 3;
         grid-row: 7 / 8;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
 
     .styles-iwagumi {
-        background-color: red;
+        /* background-color: red; */
         grid-column: 3 / 4;
         grid-row: 7 / 9;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
     .styles-nature {
-        background-color: pink;
+        /* background-color: pink; */
         grid-column: 1 / 3;
         grid-row: 8 / 9;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
-
+        .styles-dutch p, .styles-iwagumi p,.styles-nature p {
+            color: white;
+            padding: 0 20px;
+        }
     .fish {
-        background-color: antiquewhite;
+        /* background-color: antiquewhite; */
         grid-column: 1 / 4;
         grid-row: 9 / 10;
     }
 
     .fish-cardinal-tetra {
-        background-color: skyblue;
+        /* background-color: skyblue; */
         grid-column: 1 / 2;
         grid-row: 10 / 11;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
 
     .fish-dwarf-gourami {
-        background-color: yellowgreen;
+        /* background-color: yellowgreen; */
         grid-column: 2 / 3;
         grid-row: 10 / 11;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
     .fish-amano-shrimp {
         background-color: red;
         grid-column: 3 / 4;
         grid-row: 10 / 11;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
     }
     .fish-neocardina-davidi {
-        background-color: blue;
+        /* background-color: blue; */
         grid-column: 1 / 2;
         grid-row: 11 / 12;
+        
+        border: 7px solid rgba(var(--theme-one), 1);
+        border-radius: 10px;
+        background-color: rgba(var(--theme-three), 1);
+    }
+    .fish-cardinal-tetra, .fish-dwarf-gourami, .fish-amano-shrimp, .fish-neocardina-davidi p {
+        color: white;
+        padding: 0 20px;
     }
 
     .plants {
@@ -484,6 +519,7 @@ h3 {
     color: white;
     font-family: 'Cormorant';
     margin: 0;
+    border-radius: 3px 3px 0 0;
     padding: 0.25rem 0;
     }
 
@@ -495,6 +531,9 @@ h3 {
     border-radius: 10px;
     background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
     color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     }
 
     figcaption {
@@ -505,36 +544,13 @@ h3 {
         text-decoration: none;
     }
 
-
-}
-/*end of media query min-width: 1200px/75em (desktop)========================================================*/
-
-
-
-
-
-
-
-
-
-
-
     .images {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
         width: 90%
-    }
-    .video {
-        border-radius: 10px;
-        border: 2px solid rgba(var(--theme-two), 1);
-        width: 80%;
-    }
 
 
-
-
-
-    /*TABLES=================================================================================================== */
+    /*TABLES====increased specifity to override section formatting================================================================================= */
 
     table {
         margin-left: auto;
@@ -558,6 +574,26 @@ h3 {
 
     table tr:hover {
         background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
+    }
+}
+/*end of media query min-width: 1200px/75em (desktop)========================================================*/
+
+
+
+
+
+
+
+
+
+
+
+    
+    }
+    .video {
+        border-radius: 10px;
+        border: 2px solid rgba(var(--theme-two), 1);
+        width: 80%;
     }
 
     /* FOOTER ==========================================================================================*/
