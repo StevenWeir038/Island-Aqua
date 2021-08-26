@@ -295,6 +295,10 @@ h3 {
 /*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
 
 @media only screen and (min-width: 1200px) {
+    .formdump {
+        float:left;   /* juist really basic formatting for formdump.  Not a target of abilioty to professionally style, more than I can direct to a location, in this case GER method but with backend in place use POST method */
+    }
+    
     .container {
         
         display: grid;
@@ -600,7 +604,6 @@ h3 {
 }
 
    /* FOOTER ==========================================================================================*/
-
    footer {
     background: rgba(var(--theme-two), 0.85);
     text-align: center;
@@ -629,7 +632,7 @@ footer a {
 }
 
 /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
-/* 20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+/* 20% zooms in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
 website for social media */
 /* NB. keyframes not required for this simple action*/
 
@@ -664,43 +667,44 @@ footer input[type="submit"]:hover {
     background: rgba(var(--theme-one), 1);
 }
 
-/*end of media query min-width: 1200px/75em (desktop)========================================================*/
 
-    /*header NAV================================================================================================================================ */
+ /*header NAV================================================================================================================================ */
                       
 
-    nav {
-        background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
-        width: 100%;
-        position: absolute;
-        text-align: right;
-        top: 100%;
-        right: 0;
-        display: none;
-    }
+ nav {
+    background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
+    width: 100%;
+    position: absolute;
+    text-align: right;
+    top: 100%;
+    right: 0;
+    display: none;
+}
 
-    nav ul {
-        margin: 0;
-        padding: 1rem;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-    }
+}
 
-    nav li {
-        margin-bottom: 1rem;
-        margin-left: 1rem;
-        list-style: none;
-    }
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
 
-    nav a:hover {
-        color: white;
-        border-top: 5px solid rgba(var(--theme-two), 1);
-        border-bottom: 5px solid rgba(var(--theme-two), 1);
-    }
+nav a:hover {
+    color: white;
+    border-top: 5px solid rgba(var(--theme-two), 1);
+    border-bottom: 5px solid rgba(var(--theme-two), 1);
+}
 
+/*end of media query min-width: 1200px/75em (desktop)========================================================*/
