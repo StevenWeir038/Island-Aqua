@@ -296,7 +296,7 @@ h3 {
 
 @media only screen and (min-width: 1250px) {
     .formdump {
-        float:left;   /* juist really basic formatting for formdump.  Not a target of abilioty to professionally style, more than I can direct to a location, in this case GER method but with backend in place use POST method */
+        float:left;   /* juist really basic formatting for formdump.  Not a target of ability to professionally style, more than I can direct to a location, in this case GET method but with a backend in place use POST method */
     }
     
     .container {
@@ -670,27 +670,34 @@ footer input[type="submit"]:hover {
 
  /*header NAV================================================================================================================================ */
 
- #menu {
+#menu {
     background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
     letter-spacing: 2px;
  }
 
-#menu li {
+#menu ul {
     float: right;
+}
+#menu li {
+    float: left;
     list-style-type: none;
     margin-right: 1rem;
 }
 
 nav a {
-    color: white;
+    color: black;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
 }
 
 nav a:hover {
     color: white;
     border-bottom: 5px solid rgba(var(--theme-two), 1);
-}
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 4px;
+}  
 
 /*end of media query min-width: 1200px/75em (desktop)========================================================*/
