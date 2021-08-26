@@ -291,10 +291,10 @@ h3 {
 /*end of media query min-width: 640px/40em (tablet)==========================================================*/
 
 
-/*code desktop site 3rd ca. 1200px/75em=======================================================================*/
+/*code desktop site 3rd ca. 1250px/ca. 75em=======================================================================*/
 /*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1250px) {
     .formdump {
         float:left;   /* juist really basic formatting for formdump.  Not a target of abilioty to professionally style, more than I can direct to a location, in this case GER method but with backend in place use POST method */
     }
@@ -669,41 +669,27 @@ footer input[type="submit"]:hover {
 
 
  /*header NAV================================================================================================================================ */
-                      
 
- nav {
+ #menu {
     background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
-    width: 100%;
-    position: absolute;
-    text-align: right;
-    top: 100%;
-    right: 0;
-    display: none;
-}
+    letter-spacing: 2px;
+ }
 
-nav ul {
+#menu li {
+    float: right;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-}
-
-nav li {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    
+    margin-right: 1rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
 nav a:hover {
     color: white;
-    border-top: 5px solid rgba(var(--theme-two), 1);
     border-bottom: 5px solid rgba(var(--theme-two), 1);
 }
 
