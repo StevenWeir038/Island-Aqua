@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:ital,wght@1,300&family=Montserrat&display=swap');
 
-/* code mobile site 1st */
-
-/* ROOT DEFAULT */
 :root {
-    /* universal colour styling variables */
-    --theme-one: 96, 115, 26;           /* Feed vars insto rgba, give addiional control over opacity is desired */
+    /* universal colour styling variables, Feed vars insto rgba to give addiional control over opacity*/
+
+    --theme-one: 96, 115, 26;
     --theme-two: 140, 72, 48;
     --theme-three: 174,191,136;
     --theme-four: 112, 166, 31;
     --theme-five: 112, 166, 31;
 }
 
-*, *::before, *::after {              /* box sizing reset */
-    box-sizing: border-box;           /* Add box sizing to include padding and border in measurements */
+/* Add box sizing to include padding and border in measurements */
+
+*, *::before, *::after {
+    box-sizing: border-box;           
 }
 
-/*code mobile site 1st =======================================================================*/
+/*MOBILE SITE =================================================================================*/
+/*BODY ========================================================================================*/
 
-/*BODY========================================================================================*/
 @media only screen and (max-width: 40em) {
     body {
         min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
@@ -149,7 +149,7 @@ h3 {
     website for social media */
     /* NB. keyframes not required for this simple action*/
 
-    .footer-link-zoom :hover {
+    .social :hover {
         transform: scale(1.2);
     }
 
@@ -281,12 +281,6 @@ h3 {
 }
 /*end of media query max-width: 40em(mobile)=================================================================*/
 
-/*code tablet site 2nd ca. 640px/40em =======================================================================*/
-
-
-@media only screen and (min-width: 640px) {
-
-}
 /*end of media query min-width: 640px/40em (tablet)==========================================================*/
 
 
@@ -323,7 +317,7 @@ h3 {
         margin: 0;
         border-radius: 10px 10px 0 0;
         color: white;
-        background: linear-gradient(to bottom, rgba(var(--theme-five),0.5), rgba(var(--theme-five),0.1));
+        background: linear-gradient(to bottom, rgba(var(--theme-five), 0.5), rgba(var(--theme-five), 0.1));
         position: relative;
     }
 
@@ -673,12 +667,10 @@ footer a {
     display: inline;
 }
 
-/* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
-/* 20% zooms in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
-website for social media */
+/*Increase link icon size by 20% when hovered over - intuitive for user to then click. Associate with social class in html*/
 /* NB. keyframes not required for this simple action*/
 
-.footer-link-zoom :hover {
+.social :hover {
     transform: scale(1.2);
 }
 
