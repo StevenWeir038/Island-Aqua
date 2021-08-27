@@ -13,9 +13,10 @@ Existing Features
 
     Validator Testing
         HTML
-            Passed through the offical W3C validator - any erors?
+            Passed through the offical W3C validator - 11 errors cleared pon 217.8.21 17:30
         CSS
-            Passed through the offical Jigswa validator
+            Passed through the offical Jigswa validator - 66 errors to clear on 27.8.21 18:00
+                mostly invalid rgb functiont using variable - root:  --theme-five: 112, 166, 31;   background-color: rgba(var(--theme-five), 1);
 
     Unfixed Bugs
         Mobile nav menu
