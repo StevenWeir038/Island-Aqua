@@ -446,7 +446,7 @@ h3 {
 
     .styles-dutch {
         /* background-color: cyan; */
-        grid-column: 1 / 3;
+        grid-column: 1 / 2;
         grid-row: 7 / 8;
         
         border: 7px solid rgba(var(--theme-one), 1);
@@ -456,8 +456,8 @@ h3 {
 
     .styles-iwagumi {
         /* background-color: red; */
-        grid-column: 3 / 4;
-        grid-row: 7 / 9;
+        grid-column: 2 / 3;
+        grid-row: 7 / 8;
         
         border: 7px solid rgba(var(--theme-one), 1);
         border-radius: 10px;
@@ -465,8 +465,8 @@ h3 {
     }
     .styles-nature {
         /* background-color: pink; */
-        grid-column: 1 / 3;
-        grid-row: 8 / 9;
+        grid-column: 3 / 4;
+        grid-row: 7 / 8;
         
         border: 7px solid rgba(var(--theme-one), 1);
         border-radius: 10px;
