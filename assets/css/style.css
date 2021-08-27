@@ -295,13 +295,10 @@
 
 
 /*TABLET SITE > 640px < 1250px =================================================================================*/
-
-
+     
+    /* use tablet site to included larger resolution version of mobile images to minimise distortion*/
 
 /*end of media query min-width: > 640px < 1250px (tablet)==========================================================*/
-
-
-
 
 
 /*DESKTOP 1250px/ca. 75em=======================================================================*/
@@ -358,43 +355,44 @@
         float: left;
     }
 
- /*NAVIGATION (desktop) ============================================================================================================ */
+    /*NAVIGATION (desktop) ============================================================================================================ */
 
- #menu {
-    background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
-    letter-spacing: 3px;
- }
 
-#menu ul {
-    float: right;
-    position: absolute;
-    top: 25px;
-    right: 8px;
+    #menu {
+        background: rgba(var(--theme-five), 0.85);
+        letter-spacing: 3px;
+    }
 
-}
-#menu li {
-    float: left;
-    list-style-type: none;
-    margin-right: 0.5rem;
-}
+    #menu ul {
+        float: right;
+        position: absolute;
+        top: 25px;
+        right: 8px;
 
-#menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+    }
+    #menu li {
+        float: left;
+        list-style-type: none;
+        margin-right: 0.5rem;
+    }
 
-#menu a:hover {
-    color: black;
-    border-bottom: 5px solid rgba(var(--theme-two), 1);
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 4px;
-    transform: scale(1.1);
-}
+    #menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    #menu a:hover {
+        color: black;
+        border-bottom: 5px solid rgba(var(--theme-two), 1);
+        background: white;
+        color: black;
+        border-radius: 10px;
+        padding: 4px;
+        transform: scale(1.1);
+    }
 
     .hero-bg {
         /* background-color: azure; */
@@ -490,6 +488,7 @@
             color: white;
             padding: 0 20px;
         }
+
     .fish {
         /* background-color: antiquewhite; */
         grid-column: 1 / 4;
@@ -515,6 +514,7 @@
         border-radius: 10px;
         background-color: rgba(var(--theme-three), 1);
     }
+
     .fish-amano-shrimp {
         /* background-color: red; */
         grid-column: 3 / 4;
@@ -524,6 +524,7 @@
         border-radius: 10px;
         background-color: rgba(var(--theme-three), 1);
     }
+
     .fish-neocardina-davidi {
         /* background-color: blue; */
         grid-column: 1 / 2;
@@ -560,7 +561,11 @@
         margin: 0;
         padding: 0px 0.25rem;                                                       /* padding to keep elements away from very edge of screen */
     }
-
+    
+    a {
+        text-decoration: none;
+    }
+    
     h1 span {
         font-family: 'Montserrat';
         color: rgba(var(--theme-three), 1);
