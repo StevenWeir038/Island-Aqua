@@ -19,7 +19,7 @@
 /*MOBILE SITE =================================================================================*/
 /*BODY ========================================================================================*/
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 640px) {
     body {
         min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
@@ -31,36 +31,41 @@
         padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
     }
 
-h2 {
-    background-color: rgba(var(--theme-five), 1);
-    color: white;
-    border-radius: 10px;
-    font-family: 'Cormorant';
-    padding: 0.25rem 0;
-}
+    a {
+        text-decoration: none;
+    }
 
-h3 {
-    background-color: rgba(var(--theme-two), 1);
-    color: white;
-    border-radius: 10px;
-    font-family: 'Cormorant';
-    padding: 0.25rem 0;
+    h2 {
+        background-color: rgba(var(--theme-five), 1);
+        color: white;
+        border-radius: 10px;
+        font-family: 'Cormorant';
+        padding: 0.25rem 0;
+    }
+
+    h3 {
+        background-color: rgba(var(--theme-two), 1);
+        color: white;
+        border-radius: 10px;
+        font-family: 'Cormorant';
+        padding: 0.25rem 0;
 }
-.main-quote {
-    background-color: rgba(var(--theme-three), 0.85);
-    font-family: 'Caveat', Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    padding: 0.5em;
-    border-radius: 10px;
-    background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
-    color: white;
-}
+    .main-quote {
+        background-color: rgba(var(--theme-three), 0.85);
+        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        padding: 0.5em;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
+        color: white;
+    }
 
     .images {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
         width: 90%
     }
+
     .video {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
@@ -87,9 +92,10 @@ h3 {
         font-style: italic;
         font-weight: bold;
         color: slategrey;
+        text-decoration: none;
     }
 
-    /*TABLES=================================================================================================== */
+    /*TABLES ========================================================================================*/
 
     table {
         margin-left: auto;
@@ -144,10 +150,9 @@ h3 {
         display: inline;
     }
 
-    /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html */
-    /* 20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+    /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html
+    20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
     website for social media */
-    /* NB. keyframes not required for this simple action*/
 
     .social :hover {
         transform: scale(1.2);
@@ -180,14 +185,16 @@ h3 {
         background: rgba(var(--theme-one), 1);
     }
 
-    /*HEADER========================================================================================
-    */
-    /* fix header to top of page so menu is accessible to user rather than having to scroll all the way to top or bottom for nav links when in middle of page */
+    /*HEADER ========================================================================================*/
+    /* fix header to top of page so menu is accessible to user rather than having to scroll all the 
+    way to top or bottom for nav links when in middle of page */
+    /* take header out of the flow therefore loses padding applied to whole body */
+    /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
 
     header {
         background: rgba(var(--theme-five), 0.90);
-        position: fixed;                     /* takes header out of the flow therefore loses padding applied to whole body */
-        transform: translateX(-1.5%);        /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
+        position: fixed;
+        transform: translateX(-1.5%);
         z-index: 50;
         width: 100%;
         text-align: center;
@@ -197,10 +204,11 @@ h3 {
         color: white;
     }
 
-    .logo {                  /* display inline removes space from around text - easier to position stock horizontal bar!*/
-        font-family: 'Garamond';
-        color: rgba(var(--theme-two), 1);
-        font-size: clamp(0.5rem, 4vw + 1rem, 4rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+    /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+    .logo {
+        font-family: 'Garamond'
+        color: rgba(var(--theme-two), 1)
+        font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
         background-color: white;
         padding: 0.5rem;
         border: 2px solid rgba(var(--theme-two), 1);
@@ -209,15 +217,16 @@ h3 {
         float: left;
     }
 
-.logo:hover {
-    transform: scale(1.1);
-}
+    .logo:hover {
+        transform: scale(1.1);
+    }
 
-    /*header NAV================================================================================================================================ */
-
+    /*NAVIGATION (mobile) ========================================================================================================= */
+    /* nav toggle using textbox courtesy of Kevin Powel tutorial @ https://www.youtube.com/watch?v=8QKOaTYvYUA */
+    /* hide unsightly nav-toggle checkbox */
     #nav-toggle {
         display: none;
-    }                        /* hide unsightly nav-toggle checkbox */
+    }                        
 
     .nav-toggle-label {
         position: absolute;
@@ -231,11 +240,14 @@ h3 {
         color: white;
         border-radius: 1rem;
     }
+
     .nav-toggle-label:hover {
         transform: scale(1.2);
     }
+
+    /* problem with nav after selecting option in menu it doesn't automatically hide. Have to click nav toggle-label to uncheck hidden nav-toggle */
     nav {
-        background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
+        background: rgba(var(--theme-five), 0.85);
         width: 100%;
         position: absolute;
         text-align: right;
@@ -277,28 +289,37 @@ h3 {
     .nav-toggle:checked ~ nav {
         display: block;
 
-    }
+    } 
 }
-/*end of media query max-width: 40em(mobile)=================================================================*/
-
-/*end of media query min-width: 640px/40em (tablet)==========================================================*/
+/*end of media query max-width: 640px(mobile)=================================================================*/ 
 
 
+/*TABLET SITE > 640px < 1250px =================================================================================*/
 
 
 
-/*code desktop site 3rd ca. 1250px/ca. 75em=======================================================================*/
+/*end of media query min-width: > 640px < 1250px (tablet)==========================================================*/
+
+
+
+
+
+/*DESKTOP 1250px/ca. 75em=======================================================================*/
 /*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
 
 @media only screen and (min-width: 1250px) {
+    /* Basic formatting for formdump.  Not a target of ability to professionally style, 
+    more than I can direct to a location, in this case GET method but with a backend in 
+    place use POST method */
     .formdump {
-        float:left;   /* juist really basic formatting for formdump.  Not a target of ability to professionally style, more than I can direct to a location, in this case GET method but with a backend in place use POST method */
+        float:left;   
     }
     
+    /*elements touching, gap needed. Add gap to .container explicit grid set up */
     .container {
         
         display: grid;
-        gap: 0.5rem;                           /*elements touching, gap needed. Add gap to .container grid instead of margin: 0 0.5rem; to each section*/
+        gap: 0.5rem;                           
         grid-auto-flow: row;
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: min-content(1fr);
@@ -310,8 +331,7 @@ h3 {
         /* background-color: lightslategray; */
         grid-column: 1 / 4;
         grid-row: 1 / 1;
-        
-        z-index: 50;                                      /* set index to display in front of hero-bg */
+        z-index: 50;                                      /* set index # high to display in front of hero-bg */
         /* background: rgba(var(--theme-five), 0.05); */
         text-align: center;
         margin: 0;
@@ -321,11 +341,12 @@ h3 {
         position: relative;
     }
 
+    /* hide unsightly nav-toggle checkbox on desktop, hamburger icon no longer needed as space for full menu format */
     .nav-toggle, .nav-toggle-label {
-        display: none;   /* hide unsightly nav-toggle checkbox on desktop, hamberger icon no longer needed as space for full menu format */
+        display: none;
     }
 
-    .logo {                  /* display inline removes space from around text - easier to position stock horizontal bar!*/
+    .logo {
         font-family: 'Garamond';
         color: rgba(var(--theme-two), 1);
         font-size: clamp(0.5rem, 4vw + 1rem, 4rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
@@ -337,8 +358,7 @@ h3 {
         float: left;
     }
 
-
- /*header NAV================================================================================================================================ */
+ /*NAVIGATION (desktop) ============================================================================================================ */
 
  #menu {
     background: rgba(var(--theme-five), 0.85);    /* problem with nav after selecting option in menu it doesn't automatically hide.  Need JS function for this or other peusdo class in css... */
