@@ -323,6 +323,8 @@
         margin: 0.5rem;
     }
 
+
+    
     .header {
         /* background-color: lightslategray; */
         grid-column: 1 / 4;
@@ -402,6 +404,27 @@
         overflow: hidden;
         min-height: 925px;
         border-radius: 10px;
+        
+        /* include LOVE RUNNING hero animation.  Nice effect. Adapt from grey filtered image to colour image 
+        instead of zoom. Also don't want to make outer container to hide zoom effect.  Will hav to change 
+        html and grid code written for css. Something for another time perhaps*/
+
+        filter: grayscale(100%);
+        animation-name: colour-increase;
+        animation-timing-function: ease-out;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;    /* retain colour animation after running on webpage opening */
+    }
+
+    @keyframes colour-increase {
+        from{
+            /* transform: scale(1); */
+            filter: grayscale(100%);
+        }
+        to{
+            /* transform: scale(1.05); */
+            filter: grayscale(0%);
+        }
     }
 
     .aquascaping {
