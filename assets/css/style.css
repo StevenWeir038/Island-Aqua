@@ -193,7 +193,7 @@
     header {
         background: rgba(var(--theme-five), 0.90);
         position: fixed;
-        transform: translateX(-1.5%);
+        /* transform: translateX(-1.5%); */            /* removed as semantics wrong in html */
         z-index: 50;
         width: 100%;
         text-align: center;
@@ -335,7 +335,7 @@
         margin: 0;
         border-radius: 10px 10px 0 0;
         color: white;
-        background: linear-gradient(to bottom, rgba(var(--theme-five), 0.5), rgba(var(--theme-five), 0.1));
+        background: linear-gradient(to bottom, rgba(var(--theme-five), 1), rgba(var(--theme-five), 0.5));
         position: relative;
     }
 
@@ -360,7 +360,7 @@
 
 
     #menu {
-        background: rgba(var(--theme-five), 0.85);
+        background: rgba(var(--theme-five), 1);
         letter-spacing: 3px;
     }
 
@@ -575,6 +575,10 @@
     }
 
     /*BODY========================================================================================*/
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         margin: 0;
         height: 100vh;
