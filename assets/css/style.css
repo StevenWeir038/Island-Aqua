@@ -18,7 +18,8 @@
 /*MOBILE SITE =================================================================================*/
 /*BODY ========================================================================================*/
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 640px)
+{
     body {
         min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
@@ -191,11 +192,12 @@
     way to top or bottom for nav links when in middle of page */
     /* take header out of the flow therefore loses padding applied to whole body */
     /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
+     /* removed as semantics wrong in html */
 
     .header {
         background: rgba(var(--theme-one), 1);
-        /* position: fixed; */
-        /* transform: translateX(-1.5%); */            /* removed as semantics wrong in html */
+        position: fixed;
+        transform: translateX(-1.5%);           
         z-index: 50;
         width: 100%;
         text-align: center;
@@ -248,7 +250,7 @@
 
     /* problem with nav after selecting option in menu it doesn't automatically hide. Have to click nav toggle-label to uncheck hidden nav-toggle */
     nav {
-        background: rgba(var(--theme-one), 0.85);
+        background: rgba(var(--theme-one), 1);
         width: 100%;
         position: absolute;
         text-align: right;
@@ -368,7 +370,7 @@
         margin: 0;
         border-radius: 10px 10px 0 0;
         color: white;
-        background: linear-gradient(to left, rgba(var(--theme-one), 1), rgba(var(--theme-one), 0.85));
+        background: linear-gradient(to bottom, rgba(var(--theme-one), 1), rgba(var(--theme-one), 0.8));
         position: relative;
     }
 
