@@ -9,38 +9,38 @@
     <title>island AQUA design</title>
 </head>
 <body>
+    <header class="header">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">   <!-- nav-toggle id to work with hamburger favicon label as we will hide unsightly checkbox -->
+        <a href="index.html">
+        <h1 class="logo"> <span>island</span>AQUA<span>design</span></h1>
+        </a>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="#aquascaping" aria-label="Go to aquascaping">Aquascaping</a>
+                </li>
+                <li>
+                    <a href="#components" aria-label="Go to components">Components</a>
+                </li>
+                <li>
+                    <a href="#styles" aria-label="Go to styles">Styles</a>
+                </li>
+                <li>
+                    <a href="#fish" aria-label="Go to fish">Fish</a>
+                </li>
+                <li>
+                    <a href="#plants" aria-label="Go to plants">Plants</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+        <span><i class="fas fa-bars"></i></span>
+        </label>   <!-- classic menu hamburger icon from fontawesome. As span inside label inherits nav-toggle-label then used in css -->
+    </header>
+    
     <main class="container">
-        <header class="header">
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">   <!-- nav-toggle id to work with hamburger favicon label as we will hide unsightly checkbox -->
-            <a href="index.html">
-            <h1 class="logo"> <span>island</span>AQUA<span>design</span></h1>
-            </a>
-                <nav id="menu">
-                    <ul>
-                        <li>
-                            <a href="#aquascaping" aria-label="Go to aquascaping">Aquascaping</a>
-                        </li>
-                        <li>
-                            <a href="#components" aria-label="Go to components">Components</a>
-                        </li>
-                        <li>
-                            <a href="#styles" aria-label="Go to styles">Styles</a>
-                        </li>
-                        <li>
-                            <a href="#fish" aria-label="Go to fish">Fish</a>
-                        </li>
-                        <li>
-                            <a href="#plants" aria-label="Go to plants">Plants</a>
-                        </li>
-                    </ul>
-                </nav>
-            <label for="nav-toggle" class="nav-toggle-label">
-            <span><i class="fas fa-bars"></i></span>
-            </label>   <!-- classic menu hamburger icon from fontawesome. As span inside label inherits nav-toggle-label then used in css -->
-        </header>
-        
-        <div id="hero-bg" class="hero-bg">
-        </div>
+        <section id="hero-bg" class="hero-bg">
+        </section>
 
         <section id="aquascaping" class="aquascaping">
             <h2>What is Aquascaping?</h2>
@@ -538,6 +538,7 @@
             </iframe>
         </section>
     </main>
+
     <footer class="footer">
         <form action="formdump.html" method="get" target="_blank">  <!-- change to page 2 signup relative URL - No backend which would use POST method, use the CI challenge as formdump.html unsupported-->
             <br>
@@ -561,9 +562,9 @@
             &copy;2021 islandAQUAdesign
         </p>
         <a href="index.html" class="social"><i class="fas fa-seedling"></i></a>
-    </footer>
 
+    </footer>
     <!-- font awesome script [at bottom of code for faster page loading] -->
-        <script src="https://kit.fontawesome.com/c7dbda0798.js"></script>
+    <script src="https://kit.fontawesome.com/c7dbda0798.js"></script>
 </body>
 </html>

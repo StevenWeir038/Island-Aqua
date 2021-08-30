@@ -124,7 +124,7 @@
     /* FOOTER ==========================================================================================*/
 
     footer {
-        background: rgba(var(--theme-two), 0.85);
+        background: rgba(var(--theme-two), 1);
         text-align: center;
         z-index: 50;
         width: 100%;
@@ -192,9 +192,9 @@
     /* take header out of the flow therefore loses padding applied to whole body */
     /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
 
-    header {
-        background: rgba(var(--theme-one), 0.90);
-        position: fixed;
+    .header {
+        background: rgba(var(--theme-one), 1);
+        /* position: fixed; */
         /* transform: translateX(-1.5%); */            /* removed as semantics wrong in html */
         z-index: 50;
         width: 100%;
@@ -309,35 +309,66 @@
     /* Basic formatting for formdump.  Not a target of ability to professionally style, 
     more than I can direct to a location, in this case GET method but with a backend in 
     place use POST method */
-    .formdump {
-        float:left;   
-    }
+
+        /*BODY========================================================================================*/
+        html {
+            scroll-behavior: smooth;  /* mentor Timmy Nelson feedback - better user experience especially in one page sites with multiple sections */
+        }
     
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;                         
+            grid-auto-flow: row;
+            height: 100vh;
+            font-family: 'Montserrat'
+        }
+
+        a {
+            text-decoration: none;
+        }
+    
+        h1 span {
+            font-family: 'Montserrat';
+            color: rgba(var(--theme-three), 1);
+            font-size: 0.6em;                          /*  take advantage of em cascading effect */
+        }
+    
+        h2 {
+        background-color: rgba(var(--theme-one), 1);
+        color: white;
+        border-radius: 10px;
+        font-family: 'Cormorant';
+        padding: 0.25rem 0;
+        }
+    
+        h3 {
+        background-color: rgba(var(--theme-two), 1);
+        color: white;
+        font-family: 'Cormorant';
+        margin: 0;
+        border-radius: 3px 3px 0 0;
+        padding: 0.25rem 0;
+        }
+
     /*elements touching, gap needed. Add gap to .container explicit grid set up */
     .container {
-        
         display: grid;
-        gap: 0.5rem;                           
-        grid-auto-flow: row;
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: auto;
-        height: 100vh;
-        margin: 0.5rem;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        text-align: center;
     }
-
-
-    
-    .header {
-        /* background-color: lightslategray; */
+ 
+        .header {
         grid-column: 1 / 4;
-        grid-row: 1 / 1;
+        grid-row: 1 / 2;
         z-index: 50;                                      /* set index # high to display in front of hero-bg */
-        /* background: rgba(var(--theme-five), 0.05); */
+        background: rgba(var(--theme-five), 1);
         text-align: center;
         margin: 0;
         border-radius: 10px 10px 0 0;
         color: white;
-        background: linear-gradient(to bottom, rgba(var(--theme-one), 1), rgba(var(--theme-one), 0.8));
+        background: linear-gradient(to left, rgba(var(--theme-one), 1), rgba(var(--theme-one), 0.85));
         position: relative;
     }
 
@@ -370,13 +401,13 @@
         float: right;
         position: absolute;
         top: 25px;
-        right: 8px;
+        right: 4px;
 
     }
     #menu li {
         float: left;
         list-style-type: none;
-        margin-right: 0.5rem;
+        margin-right: 1rem;
     }
 
     #menu a {
@@ -400,12 +431,12 @@
     .hero-bg {
         /* background-color: azure; */
         grid-column: 1 / 4;
-        grid-row: 1 / 3; 
+        grid-row: 1 / 2;
 
         background: url(../images/hero-bg.jpg) no-repeat center center;
         overflow: hidden;
         min-height: 925px;
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px;
         
         /* include LOVE RUNNING hero animation.  Nice effect. Adapt from grey filtered image to colour image 
         instead of zoom. Also don't want to make outer container to hide zoom effect.  Will hav to change 
@@ -430,199 +461,151 @@
     }
 
     .aquascaping {
-        /* background-color: violet; */
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .components {
         grid-column: 1 / 4;
         grid-row: 3 / 4;
     }
 
-    .components {
-        /* background-color: indianred; */
-        grid-column: 1 / 4;
-        grid-row: 4 / 5;
-    }
-
     .components-wood {
-        /* background-color: powderblue; */
         grid-column: 1 / 2;
-        grid-row: 5 / 6;
+        grid-row: 4 / 5;
 
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
 
     .components-rock {
-        /* background-color: yellow; */
         grid-column: 2 / 3;
-        grid-row: 5 / 6;
+        grid-row: 4 / 5;
 
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
     .components-substrate {
-        /* background-color: lemonchiffon; */
         grid-column: 3 / 4;
-        grid-row: 5 / 6;
+        grid-row: 4 / 5;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
         .components-wood p, .components-rock p,.components-substrate p {
-            color: white;
+            color: black;
             padding: 0 20px;
         }
 
     .styles {
-        /* background-color: wheat; */
         grid-column: 1 / 4;
-        grid-row: 6 / 7;
+        grid-row: 5 / 6;
     }
 
     .styles-dutch {
-        /* background-color: cyan; */
         grid-column: 1 / 2;
-        grid-row: 7 / 8;
+        grid-row: 6 / 7;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
 
     .styles-iwagumi {
-        /* background-color: red; */
         grid-column: 2 / 3;
-        grid-row: 7 / 8;
+        grid-row: 6 / 7;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
     .styles-nature {
-        /* background-color: pink; */
         grid-column: 3 / 4;
-        grid-row: 7 / 8;
+        grid-row: 6 / 7;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
         .styles-dutch p, .styles-iwagumi p,.styles-nature p {
-            color: white;
+            color: black;
             padding: 0 20px;
         }
 
     .fish {
-        /* background-color: antiquewhite; */
         grid-column: 1 / 4;
-        grid-row: 9 / 10;
+        grid-row: 7 / 8;
     }
 
     .fish-cardinal-tetra {
-        /* background-color: skyblue; */
         grid-column: 1 / 2;
-        grid-row: 10 / 11;
+        grid-row: 9 / 10;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
 
     .fish-dwarf-gourami {
-        /* background-color: yellowgreen; */
         grid-column: 2 / 3;
-        grid-row: 10 / 11;
+        grid-row: 9 / 10;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
 
     .fish-amano-shrimp {
-        /* background-color: red; */
         grid-column: 3 / 4;
-        grid-row: 10 / 11;
+        grid-row: 9 / 10;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
 
     .fish-neocardina-davidi {
-        /* background-color: blue; */
         grid-column: 2 / 3;
-        grid-row: 11 / 12;
+        grid-row: 10 / 11;
         
         border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 10px;
+        border-radius: 5px;
+        margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
         .fish-cardinal-tetra p, .fish-dwarf-gourami p, .fish-amano-shrimp p, .fish-neocardina-davidi p {
             padding: 0 5%;
-            color: white;
+            color: black;
         }
 
     .plants {
-        /* background-color: purple; */
         grid-column: 1 / 4;
-        grid-row: 12 / 13;
+        grid-row: 11 / 12;
 
     }
 
     .footer {
-        /* background-color: mediumseagreen; */
         grid-column: 1 / 4;
         grid-row: 13 / 14;
-    }
-
-    /*BODY========================================================================================*/
-    html {
-        scroll-behavior: smooth;  /* mentor feedback - better user experience especially in one page sites with multiple sections */
-    }
-    
-    body {
-        margin: 0;
-        height: 100vh;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0px 0.25rem;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-
-    h1 span {
-        font-family: 'Montserrat';
-        color: rgba(var(--theme-three), 1);
-        font-size: 0.6em;                          /*  take advantage of em cascading effect */
-    }
-
-    h2 {
-    background-color: rgba(var(--theme-one), 1);
-    color: white;
-    border-radius: 10px;
-    font-family: 'Cormorant';
-    padding: 0.25rem 0;
-    }
-
-    h3 {
-    background-color: rgba(var(--theme-two), 1);
-    color: white;
-    font-family: 'Cormorant';
-    margin: 0;
-    border-radius: 3px 3px 0 0;
-    padding: 0.25rem 0;
     }
     
     .video {
         border-radius: 10px;
-        border: 2px solid rgba(var(--theme-two), 1);
         width: 90%;
-        height: 850px;
+        height: 600px;
+        margin-bottom: 1rem;
     }
 
     .main-quote {
@@ -642,7 +625,7 @@
         font-family: 'Montserrat';
         font-style: italic;
         font-weight: bold;
-        color: grey;
+        color: black;
         text-decoration: none;
     }
 
