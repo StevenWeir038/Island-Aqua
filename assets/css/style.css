@@ -576,6 +576,24 @@
         background-color: rgba(var(--theme-three), 1);
     }
 
+    .left-fish-background {       /* poor planning. noticed whitespace.  Filled in with backgrounf until future content update */
+        grid-column: 1 / 4;
+        grid-row: 10 / 11;
+        background: url(../images/AquascapeWallpapers.jpg);
+        background-size: cover;
+        overflow: hidden;
+        min-height: 800px;
+        border-radius: 10px;
+        width: 100%;
+        z-index: -50;
+        border-radius: 10px;
+        /* include LOVE RUNNING hero animation.  Nice effect. Adapt from grey filtered image to colour image 
+        instead of zoom. Also don't want to make outer container to hide zoom effect.  Will hav to change 
+        html and grid code written for css. Something for another time perhaps*/
+
+        filter: grayscale(100%);
+    }
+
     .fish-neocardina-davidi {
         grid-column: 2 / 3;
         grid-row: 10 / 11;
@@ -585,6 +603,7 @@
         margin: 4px;
         background-color: rgba(var(--theme-three), 1);
     }
+
         .fish-cardinal-tetra p, .fish-dwarf-gourami p, .fish-amano-shrimp p, .fish-neocardina-davidi p {
             padding: 0 5%;
             color: black;
