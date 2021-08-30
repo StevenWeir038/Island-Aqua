@@ -35,7 +35,7 @@
     }
 
     h2 {
-        background-color: rgba(var(--theme-five),1);
+        background-color: rgba(var(--theme-one),1);
         color:white;
         border-radius: 10px;
         font-family: 'Cormorant';
@@ -50,13 +50,13 @@
         padding: 0.25rem 0;
 }
     .main-quote {
-        background-color: rgba(var(--theme-three), 0.85);
+        background-color: rgba(var(--theme-five), 0.85);
         font-family: 'Caveat', Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         padding: 0.5em;
         border-radius: 10px;
-        background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
-        color: white;
+        background-image: linear-gradient(to bottom right, rgba(var(--theme-five)), rgba(var(--theme-four)));
+        color: black;
     }
 
     .images {
@@ -69,6 +69,7 @@
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
         width: 80%;
+        height: 300px;
     }
 
     .hero-bg {
@@ -90,7 +91,7 @@
         font-family: 'Montserrat';
         font-style: italic;
         font-weight: bold;
-        color: slategrey;
+        color: black;
         text-decoration: none;
     }
 
@@ -170,12 +171,13 @@
     }
 
     footer input:focus {
-        border: 4px solid rgba(var(--theme-five), 1);
+        border: 4px solid rgba(var(--theme-one), 1);
     }
 
     footer input[type="submit"] {
         /* color: white; */
-        background: rgba(var(--theme-five), 1);
+        background: rgba(var(--theme-one), 1);
+        color: white;
         font-size: 1.2em;
     }
 
@@ -191,7 +193,7 @@
     /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
 
     header {
-        background: rgba(var(--theme-five), 0.90);
+        background: rgba(var(--theme-one), 0.90);
         position: fixed;
         /* transform: translateX(-1.5%); */            /* removed as semantics wrong in html */
         z-index: 50;
@@ -246,7 +248,7 @@
 
     /* problem with nav after selecting option in menu it doesn't automatically hide. Have to click nav toggle-label to uncheck hidden nav-toggle */
     nav {
-        background: rgba(var(--theme-five), 0.85);
+        background: rgba(var(--theme-one), 0.85);
         width: 100%;
         position: absolute;
         text-align: right;
@@ -335,7 +337,7 @@
         margin: 0;
         border-radius: 10px 10px 0 0;
         color: white;
-        background: linear-gradient(to bottom, rgba(var(--theme-five), 1), rgba(var(--theme-five), 0.5));
+        background: linear-gradient(to bottom, rgba(var(--theme-one), 1), rgba(var(--theme-one), 0.8));
         position: relative;
     }
 
@@ -360,8 +362,8 @@
 
 
     #menu {
-        background: rgba(var(--theme-five), 1);
-        letter-spacing: 3px;
+        background: rgba(var(--theme-one), 1);
+        letter-spacing: 2px;
     }
 
     #menu ul {
@@ -576,7 +578,7 @@
 
     /*BODY========================================================================================*/
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: smooth;  /* mentor feedback - better user experience especially in one page sites with multiple sections */
     }
     
     body {
@@ -600,7 +602,7 @@
     }
 
     h2 {
-    background-color: rgba(var(--theme-five), 1);
+    background-color: rgba(var(--theme-one), 1);
     color: white;
     border-radius: 10px;
     font-family: 'Cormorant';
@@ -624,13 +626,13 @@
     }
 
     .main-quote {
-    background-color: rgba(var(--theme-three), 1);
+    background-color: rgba(var(--theme-two), 1);
     font-family: 'Caveat', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     padding: 0.5em;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom right, rgba(var(--theme-one)), rgba(var(--theme-four)));
-    color: white;
+    background-image: linear-gradient(to bottom right, rgba(var(--theme-four)), rgba(var(--theme-five)));
+    color: black;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -736,6 +738,7 @@
     footer input[type="submit"] {
         /* color: white; */
         background: rgba(var(--theme-five), 1);
+        color: white;
         font-size: 1.2em;
     }
 
