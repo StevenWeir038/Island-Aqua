@@ -412,7 +412,7 @@
         filter: grayscale(100%);
         animation-name: colour-increase;
         animation-timing-function: ease-in;
-        animation-duration: 5s;
+        animation-duration: 3s;
         animation-fill-mode: forwards;    /* retain colour animation after running on webpage opening */
     }
 
@@ -565,6 +565,7 @@
         /* background-color: purple; */
         grid-column: 1 / 4;
         grid-row: 12 / 13;
+
     }
 
     .footer {
@@ -609,15 +610,6 @@
     margin: 0;
     border-radius: 3px 3px 0 0;
     padding: 0.25rem 0;
-    }
-
-    /* introduced this class as grid layout out of alignment from cherry shrimp to plants title on row 11., Bad planning */
-    .plants h3 {                                   
-    background-color: rgba(var(--theme-five), 1);
-    color: white;
-    border-radius: 10px;
-    font-family: 'Cormorant';
-    padding: 0.5rem 0;
     }
     
     .video {
