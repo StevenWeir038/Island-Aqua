@@ -411,7 +411,7 @@
 
         filter: grayscale(100%);
         animation-name: colour-increase;
-        animation-timing-function: ease-out;
+        animation-timing-function: ease-in;
         animation-duration: 5s;
         animation-fill-mode: forwards;    /* retain colour animation after running on webpage opening */
     }
@@ -549,7 +549,7 @@
 
     .fish-neocardina-davidi {
         /* background-color: blue; */
-        grid-column: 1 / 2;
+        grid-column: 2 / 3;
         grid-row: 11 / 12;
         
         border: 7px solid rgba(var(--theme-one), 1);
@@ -563,14 +563,14 @@
 
     .plants {
         /* background-color: purple; */
-        grid-column: 2 / 4;
-        grid-row: 11 / 12;
+        grid-column: 1 / 4;
+        grid-row: 12 / 13;
     }
 
     .footer {
         /* background-color: mediumseagreen; */
         grid-column: 1 / 4;
-        grid-row: 12 / 13;
+        grid-row: 13 / 14;
     }
 
     /*BODY========================================================================================*/

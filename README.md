@@ -23,5 +23,7 @@ Existing Features
             Menu does not collapse after selecting link then focusing on other part of page. Hamburger icon must be clicked again to uncheck hidden checkbox
             No know fix using CSS only, JS required judging by search of stack overflow.
 
+            W3C CSS Validation service showing errors for all css rgba values.  Variables were used for reusability.
+
 
     Deployment
