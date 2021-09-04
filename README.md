@@ -75,7 +75,7 @@ On loading the website, note the subtle use of greyscale fading into the standar
                 </section>
 
         - CSS
-            - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator) - No errors found.
+            - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
 ***
 START HERE SUNDAY AM.......
