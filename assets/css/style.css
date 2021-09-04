@@ -353,7 +353,6 @@
         border: 2px solid rgba(var(--theme-two), 1);
         width: 90%
     }
-
     
     /* UNFIXED BUG - tablet resolution hide #image-one and display #image-two instead. Not yet working */
     .image-one {
@@ -362,7 +361,6 @@
     .image-two {
         display: block;
     }
-    
 
     /* UNFIXED BUG - tablet and desktop sizing over riding mobile video sizing */
     .video {
@@ -752,6 +750,7 @@
             filter: grayscale(0%);
         }
     }
+    
     /* Grid setup as per Wes Bos presentation https://www.youtube.com/watch?v=DCZdCKjnBCs */
     .aquascaping {
         grid-column: 1 / 4;

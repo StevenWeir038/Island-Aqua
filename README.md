@@ -64,12 +64,21 @@ On loading the website, note the subtle use of greyscale fading into the standar
 
 - ## **Testing**
     - ### **Validator Testing**
-    HTML
-        Passed through the offical W3C validator - 11 errors cleared pon 217.8.21 17:30
-    CSS
-        Passed through the offical Jigswa validator - 66 errors to clear on 27.8.21 18:00
-            mostly invalid rgb functions using variable - root:  for example --theme-five: 112, 166, 31;   background-color: rgba(var(--theme-five), 1);
+        - HTML
+        Code passed through the offical [W3C Markup Validator](https://validator.w3.org/) on 3.9.21 @ 20:15. 2 errors remaining.  Intentionally left as sections meant for holding background image content only.
 
+                <section id="hero-bg" class="hero-bg">
+                    <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
+                </section>
+                <section class="left-fish-background">
+                    <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
+                </section>
+
+        - CSS
+            - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator) - No errors found.
+
+***
+START HERE SUNDAY AM.......
 ### Unfixed Bugs
     Mobile nav menu
         Menu does not collapse after selecting link then focusing on other part of page. Hamburger icon must be clicked again to uncheck hidden checkbox
