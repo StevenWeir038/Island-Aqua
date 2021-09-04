@@ -167,6 +167,7 @@
         padding: 0.25em;
         margin-top: 0.5em;
         border-radius: 10px;
+        max-width: 90%;
     }
 
     footer input:focus {
