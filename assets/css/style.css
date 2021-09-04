@@ -422,11 +422,8 @@
     }
 
     #menu a:hover {
-        color: black;
+        border-top: 5px solid rgba(var(--theme-two), 1);
         border-bottom: 5px solid rgba(var(--theme-two), 1);
-        background: white;
-        color: black;
-        border-radius: 10px;
         padding: 4px;
         transform: scale(1.1);
     }
