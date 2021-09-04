@@ -68,7 +68,7 @@
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
         width: 90%;
-        height: 250px;
+        height: 200px;
     }
 
     .hero-bg {
@@ -296,6 +296,14 @@
 
     } 
 }
+
+.mob-wood {
+    display: block;
+}
+.wood {
+    display: none;
+}
+
 /*end of media query max-width: 640px(mobile)=================================================================*/ 
 
 
@@ -313,93 +321,218 @@
 
 
 
-/*TABLET SITE > 640px < 1250px =================================================================================*/
-     
-@media only screen and (min-width: 640px) {
-    /* Basic formatting for formdump.  Not a target of ability to professionally style, 
-    more than I can direct to a location, in this case GET method but with a backend in 
-    place use POST method */
+/*TABLET 640px-1250px =======================================================================*/
+   /* learning thoughts - should have coded tablet before desktop Ask yourself why! */
+/*BODY ========================================================================================*/
 
-        /*BODY========================================================================================*/
-        html {
-            scroll-behavior: smooth;  /* mentor Timmy Nelson feedback - better user experience especially in one page sites with multiple sections */
-        }
-    
-        body {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;                         
-            grid-auto-flow: row;
-            height: 100vh;
-            font-family: 'Montserrat';
-            margin: 0;
-
-        }
-
-        a {
-            text-decoration: none;
-        }
-    
-        h1 span {
-            font-family: 'Montserrat';
-            color: rgba(var(--theme-three), 1);
-            font-size: 0.6em;                          /*  take advantage of em cascading effect */
-        }
-    
-        h2 {
-        background-color: rgba(var(--theme-one), 1);
-        color: white;
-        font-family: 'Cormorant';
-        padding: 0.25rem 0;
-        }
-    
-        h3 {
-        background-color: rgba(var(--theme-two), 1);
-        color: white;
-        font-family: 'Cormorant';
+@media only screen and (max-width: 1250px)
+{
+    body {
+        min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
-        border-radius: 3px 3px 0 0;
-        padding: 0.25rem 0;
-        }
-
-    /*elements touching, gap needed. Add gap to .container explicit grid set up */
-    .container {
-        display: grid;
+        height: 100vh;
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 400;
         text-align: center;
     }
- 
-        .header {
-        grid-column: 1 / 4;
-        grid-row: 1 / 2;
-        z-index: 50;                                      /* set index # high to display in front of hero-bg */
-        background: rgba(var(--theme-five), 1);
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        background-color: rgba(var(--theme-one),1);
+        color:white;
+        border-radius: 10px;
+        font-family: 'Cormorant';
+        padding: 0.25rem 0;
+    }
+
+    h3 {
+        background-color: rgba(var(--theme-two), 1);
+        color:white;
+        border-radius: 10px;
+        font-family: 'Cormorant';
+        padding: 0.25rem 0;
+}
+    .main-quote {
+        background-color: rgba(var(--theme-five), 0.85);
+        font-family: 'Caveat', Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        padding: 0.5em;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom right, rgba(var(--theme-five)), rgba(var(--theme-four)));
+        color: black;
+    }
+
+    .images {
+        border-radius: 10px;
+        border: 2px solid rgba(var(--theme-two), 1);
+        width: 90%
+    }
+
+    .video {
+        border-radius: 10px;
+        border: 2px solid rgba(var(--theme-two), 1);
+        width: 90%;
+    }
+
+    .hero-bg {
+        background: url(../images/hero-bg.jpg) no-repeat center center;
+        position: relative;
+        overflow: hidden;
+        min-height: 900px;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    h1 span {
+        font-family: 'Montserrat';
+        color: rgba(var(--theme-three), 1);
+        font-size: 0.6em;                          /*  take advantage of em cascading effect */
+    }
+
+    figcaption {
+        font-family: 'Montserrat';
+        font-style: italic;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    /*TABLES ========================================================================================*/
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table th {
+        background-color: rgba(var(--theme-two), 1);
+        color: white;
+    }
+
+    table th, table td {
+        border: 1px solid rgba(var(--theme-two), 1);
+        border-radius: 10px;
+        padding: 5px;
+        }
+
+    table tr:nth-child(even) {
+        background-color: rgba(var(--theme-three), 1);   /* alternate cover every 2nd row for improved readability */
+        color: black;
+    }
+
+    table tr:hover {
+        background-color: rgba(var(--theme-four), 1)    /* help user focus on table content */
+    }
+
+    /* FOOTER ==========================================================================================*/
+
+    footer {
+        background: rgba(var(--theme-two), 1);
+        text-align: center;
+        z-index: 50;
+        width: 100%;
         text-align: center;
         margin: 0;
         color: white;
-        background: linear-gradient(to bottom, rgba(var(--theme-one), 1), rgba(var(--theme-one), 0.9));
-        position: relative;
+        margin: 0;
+        border-top: 2px solid rgba(var(--theme-five), 1);
     }
 
-    /* hide unsightly nav-toggle checkbox on desktop, hamburger icon no longer needed as space for full menu format */
-    .nav-toggle, .nav-toggle-label {
-        display: none;
+    footer > form {
+        padding: 0 0.5rem;
     }
 
+    footer a {
+        color: white;
+        font-size: 3rem;
+        padding: 0 1rem;
+    }
+
+    .social {
+        display: inline;
+    }
+
+    /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html
+    20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
+    website for social media */
+
+    .social :hover {
+        transform: scale(1.2);
+    }
+
+    footer p {
+        color: white;
+        margin: 0.5rem 0;
+    }
+
+    footer input {
+        font-size: 1.2em;
+        padding: 0.25em;
+        margin-top: 0.5em;
+        border-radius: 10px;
+        max-width: 90%;
+    }
+
+    footer input:focus {
+        border: 4px solid rgba(var(--theme-one), 1);
+    }
+
+    footer input[type="submit"] {
+        /* color: white; */
+        background: rgba(var(--theme-one), 1);
+        color: white;
+        font-size: 1.2em;
+    }
+
+    footer input[type="submit"]:hover {
+        color: white;
+        background: rgba(var(--theme-one), 1);
+    }
+
+    /*HEADER ========================================================================================*/
+    /* fix header to top of page so menu is accessible to user rather than having to scroll all the 
+    way to top or bottom for nav links when in middle of page */
+    /* take header out of the flow therefore loses padding applied to whole body */
+    /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
+     /* removed as semantics wrong in html */
+
+     .container {
+     padding: 0px 0.5rem;
+    }                                                       /* padding to keep elements away from very edge of screen without affecting fixed header */
+
+    .header {
+        background: rgba(var(--theme-one), 1);
+        position: fixed;
+        /* transform: translateX(-1.5%);            */
+        z-index: 50;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-bottom: 2px solid rgba(var(--theme-two), 1);
+        color: white;
+    }
+
+    /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
     .logo {
         font-family: 'Garamond';
         color: rgba(var(--theme-two), 1);
-        font-size: clamp(0.5rem, 4vw + 1rem, 4rem);   /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+        font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
         background-color: white;
         padding: 0.5rem;
         border: 2px solid rgba(var(--theme-two), 1);
         border-radius: 10px;
-        margin: 0.5rem 0.5rem;
+        margin: 1rem 1rem;
         float: left;
     }
 
-    /*NAVIGATION (use mobile nav style due to lack of screen space) ========================================================================== */
+    .logo:hover {
+        transform: scale(1.1);
+    }
+
+    /*NAVIGATION (mobile) ========================================================================================================= */
     /* nav toggle using textbox courtesy of Kevin Powel tutorial @ https://www.youtube.com/watch?v=8QKOaTYvYUA */
     /* hide unsightly nav-toggle checkbox */
     #nav-toggle {
@@ -469,329 +602,7 @@
 
     } 
 }
-
-    .hero-bg {
-        /* background-color: azure; */
-        grid-column: 1 / 4;
-        grid-row: 1 / 2;
-
-        background: url(../images/hero-bg.jpg) no-repeat center center;
-        overflow: hidden;
-        min-height: 925px;
-        border-radius: 0 0 10px 10px;
-        
-        /* include LOVE RUNNING hero animation.  Nice effect. Adapt from grey filtered image to colour image 
-        instead of zoom. Also don't want to make outer container to hide zoom effect.  Will hav to change 
-        html and grid code written for css. Something for another time perhaps*/
-
-        filter: grayscale(100%);
-        animation-name: colour-increase;
-        animation-timing-function: ease-in;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;    /* retain colour animation after running on webpage opening */
-    }
-
-    @keyframes colour-increase {
-        from{
-            /* transform: scale(1); */
-            filter: grayscale(100%);
-        }
-        to{
-            /* transform: scale(1.05); */
-            filter: grayscale(0%);
-        }
-    }
-
-    .aquascaping {
-        grid-column: 1 / 4;
-        grid-row: 2 / 3;
-    }
-
-    .components {
-        grid-column: 1 / 4;
-        grid-row: 3 / 4;
-    }
-
-    .components-wood {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-
-    .components-rock {
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
-
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-    .components-substrate {
-        grid-column: 3 / 4;
-        grid-row: 4 / 5;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-        .components-wood p, .components-rock p,.components-substrate p {
-            color: black;
-            padding: 0 20px;
-        }
-
-    .styles {
-        grid-column: 1 / 4;
-        grid-row: 5 / 6;
-    }
-
-    .styles-dutch {
-        grid-column: 1 / 2;
-        grid-row: 6 / 7;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-
-    .styles-iwagumi {
-        grid-column: 2 / 3;
-        grid-row: 6 / 7;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-    .styles-nature {
-        grid-column: 3 / 4;
-        grid-row: 6 / 7;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-        .styles-dutch p, .styles-iwagumi p,.styles-nature p {
-            color: black;
-            padding: 0 20px;
-        }
-
-    .fish {
-        grid-column: 1 / 4;
-        grid-row: 7 / 8;
-    }
-
-    .fish-cardinal-tetra {
-        grid-column: 1 / 2;
-        grid-row: 9 / 10;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-
-    .fish-dwarf-gourami {
-        grid-column: 2 / 3;
-        grid-row: 9 / 10;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-
-    .fish-amano-shrimp {
-        grid-column: 3 / 4;
-        grid-row: 9 / 10;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-
-    .left-fish-background {       /* poor planning. noticed whitespace.  Filled in with background until future content update */
-        grid-column: 1 / 4;
-        grid-row: 10 / 11;
-        background: url(../images/AquascapeWallpapers.jpg);
-        background-size: cover;
-        overflow: hidden;
-        min-height: 800px;
-        border-radius: 10px;
-        width: 100%;
-        z-index: -50;
-        border-radius: 10px;
-        /* include LOVE RUNNING hero animation.  Nice effect. Adapt from grey filtered image to colour image 
-        instead of zoom. Also don't want to make outer container to hide zoom effect.  Will hav to change 
-        html and grid code written for css. Something for another time perhaps*/
-
-        filter: grayscale(100%);
-    }
-
-    .fish-neocardina-davidi {
-        grid-column: 2 / 3;
-        grid-row: 10 / 11;
-        
-        border: 7px solid rgba(var(--theme-one), 1);
-        border-radius: 5px;
-        margin: 4px;
-        background-color: rgba(var(--theme-three), 1);
-    }
-
-        .fish-cardinal-tetra p, .fish-dwarf-gourami p, .fish-amano-shrimp p, .fish-neocardina-davidi p {
-            padding: 0 5%;
-            color: black;
-        }
-
-    .plants {
-        grid-column: 1 / 4;
-        grid-row: 11 / 12;
-
-    }
-
-    .footer {
-        grid-column: 1 / 4;
-        grid-row: 13 / 14;
-    }
-    
-    .video {
-        border-radius: 10px;
-        width: 90%;
-        height: 600px;
-        margin-bottom: 1rem;
-    }
-
-    .main-quote {
-    background-color: rgba(var(--theme-two), 1);
-    font-family: 'Caveat', Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    padding: 0.5em;
-    border-radius: 10px;
-    background-image: linear-gradient(to bottom right, rgba(var(--theme-four)), rgba(var(--theme-five)));
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    }
-
-    figcaption {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: bold;
-        color: black;
-        text-decoration: none;
-    }
-
-    .images {
-        border-radius: 10px;
-        border: 2px solid rgba(var(--theme-two), 1);
-        width: 90%;
-    }
-
-    /*TABLE==============================================================================================*/
-
-        table {
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%
-        }
-    
-        table th {
-            background-color: rgba(var(--theme-two), 1);
-            color: white;
-        }
-    
-        table th, table td {
-            border: 1px solid rgba(var(--theme-two), 1);
-            border-radius: 10px;
-            padding: 5px;
-            }
-
-            table tr:nth-child(odd) {
-                background-color: whitesmoke;   /* alternate cover every 2nd row for improved readability */
-            }
-        table tr:nth-child(even) {
-            background-color: rgba(var(--theme-four), 1);   /* alternate cover every 2nd row for improved readability */
-            color: black;
-        }
-    
-        table tr:hover {
-            background-color: rgba(var(--theme-one), 1);    /* help user focus on table content */
-            color: white;
-        }
-
-   /* FOOTER ==========================================================================================*/
-    footer {
-        background: rgba(var(--theme-two), 0.85);
-        text-align: center;
-        z-index: 50;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        color: white;
-        margin: 0;
-        border-top: 2px solid rgba(var(--theme-five), 1);
-    }
-
-    footer > form {
-        padding: 0 0.5rem;
-    }
-
-    footer a {
-        color: white;
-        font-size: 3rem;
-        padding: 0 1rem;
-    }
-
-    .social {
-        display: inline;
-    }
-
-    /*Increase link icon size by 20% when hovered over - intuitive for user to then click. Associate with social class in html*/
-    /* NB. keyframes not required for this simple action*/
-
-    .social :hover {
-        transform: scale(1.2);
-    }
-
-    footer p {
-        color: white;
-        margin: 0.5rem 0;
-    }
-
-    footer input {
-        font-size: 1.2em;
-        padding: 0.25em;
-        margin-top: 0.5em;
-        border-radius: 10px;
-    }
-
-    footer input:focus {
-        border: 4px solid rgba(var(--theme-five), 1);
-    }
-
-    footer input[type="submit"] {
-        /* color: white; */
-        background: rgba(var(--theme-five), 1);
-        color: white;
-        font-size: 1.2em;
-    }
-
-    footer input[type="submit"]:hover {
-        color: white;
-        background: rgba(var(--theme-one), 1);
-    } 
-}
-
-/*end of media query min-width: > 640px < 1250px (tablet)==========================================================*/
+/*end of media query (tablet) ==============================================================*/
 
 
 
@@ -808,13 +619,10 @@
 
 
 
-/*DESKTOP 1250px/ca. 75em=======================================================================*/
-/*learning thought - once small viewport coded for, insrease width to revert to basic html view again*/
+/*DESKTOP 1250px/75em ===============================================================================*/
+/*learning thought - once small viewport coded for, increase width to revert to basic html view again*/
 
 @media only screen and (min-width: 1250px) {
-    /* Basic formatting for formdump.  Not a target of ability to professionally style, 
-    more than I can direct to a location, in this case GET method but with a backend in 
-    place use POST method */
 
         /*BODY========================================================================================*/
         html {
@@ -1250,4 +1058,4 @@
         background: rgba(var(--theme-one), 1);
     } 
 }
-/*end of media query min-width: 1200px/75em (desktop)========================================================*/
+/*end of media query min-width: 1250px/75em (desktop)========================================================*/
