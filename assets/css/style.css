@@ -15,6 +15,10 @@
     box-sizing: border-box;           
 }
 
+#image-two {
+    display: none;
+}
+
 /*MOBILE SITE =================================================================================*/
 /*BODY ========================================================================================*/
 
@@ -294,16 +298,9 @@
     .nav-toggle:checked ~ nav {
         display: block;
 
-    } 
-}
+    }
 
-.mob-wood {
-    display: block;
 }
-.wood {
-    display: none;
-}
-
 /*end of media query max-width: 640px(mobile)=================================================================*/ 
 
 
@@ -370,6 +367,16 @@
         border: 2px solid rgba(var(--theme-two), 1);
         width: 90%
     }
+
+    
+    /* unfixed bug - tablet resolution hide #image-one and display #image-two instead */
+    .image-one {
+        display: none;
+    }
+    .image-two {
+        display: block;
+    }
+    
 
     .video {
         border-radius: 10px;
@@ -867,8 +874,8 @@
     }
 
     .fish-dwarf-gourami {
-        grid-column: 2 / 3;
-        grid-row: 9 / 10;
+        grid-column: 1 / 2;
+        grid-row: 10 / 11;
         
         border: 7px solid rgba(var(--theme-one), 1);
         border-radius: 5px;
@@ -906,7 +913,7 @@
 
     .fish-neocardina-davidi {
         grid-column: 2 / 3;
-        grid-row: 10 / 11;
+        grid-row: 9 / 10;
         
         border: 7px solid rgba(var(--theme-one), 1);
         border-radius: 5px;
