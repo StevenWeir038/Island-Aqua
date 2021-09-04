@@ -27,8 +27,6 @@
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         font-weight: 400;
         text-align: center;
-        margin: 0;
-        padding: 0px 0.5rem;                                                       /* padding to keep elements away from very edge of screen */
     }
 
     a {
@@ -194,16 +192,19 @@
     /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
      /* removed as semantics wrong in html */
 
+     .container {
+     padding: 0px 0.5rem;
+    }                                                       /* padding to keep elements away from very edge of screen without affecting fixed header */
+
     .header {
         background: rgba(var(--theme-one), 1);
         position: fixed;
-        transform: translateX(-1.5%);           
+        /* transform: translateX(-1.5%);            */
         z-index: 50;
         width: 100%;
         text-align: center;
         margin: 0;
-        border: 2px solid rgba(var(--theme-two), 1);
-        border-radius: 0 0 10px 10px;
+        border-bottom: 2px solid rgba(var(--theme-two), 1);
         color: white;
     }
 
