@@ -135,7 +135,6 @@
         color: white;
         margin: 0;
         border: 2px solid rgba(var(--theme-five), 1);
-        border-radius: 10px 10px 0 0;
     }
 
     footer > form {
@@ -578,7 +577,7 @@
         background-color: rgba(var(--theme-three), 1);
     }
 
-    .left-fish-background {       /* poor planning. noticed whitespace.  Filled in with backgrounf until future content update */
+    .left-fish-background {       /* poor planning. noticed whitespace.  Filled in with background until future content update */
         grid-column: 1 / 4;
         grid-row: 10 / 11;
         background: url(../images/AquascapeWallpapers.jpg);
@@ -699,7 +698,6 @@
         color: white;
         margin: 0;
         border: 2px solid rgba(var(--theme-five), 1);
-        border-radius: 10px 10px 0 0;
     }
 
     footer > form {
