@@ -67,7 +67,7 @@
     .video {
         border-radius: 10px;
         border: 2px solid rgba(var(--theme-two), 1);
-        width: 80%;
+        width: 90%;
         height: 250px;
     }
 
@@ -132,7 +132,7 @@
         margin: 0;
         color: white;
         margin: 0;
-        border: 2px solid rgba(var(--theme-five), 1);
+        border-top: 2px solid rgba(var(--theme-five), 1);
     }
 
     footer > form {
