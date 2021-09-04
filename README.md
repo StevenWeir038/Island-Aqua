@@ -12,7 +12,6 @@ It aims to give the site user:
 ***
 
 ## **Existing Features**
-
 - #### **Header logo & Navigation**
     - The *header* logo automatically sizes with the viewport on all resolutions.
     On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
@@ -33,7 +32,7 @@ On loading the website, note the subtle use of greyscale fading into the standar
 ![Mockup](/assets/images/landing_page.PNG "Website landing page and preview of header/nav at desktop resolution") 
 
 - #### **Footer**
-    - The footer offers the user three options:
+    - The *footer* offers the user three options:
         - A Means to provide an email address to sign-up to a newsletter.
         - Links that open to new social media tabs for yet to be developed supporting content.
         - A link to the rop of the page by clicking the favicon.
@@ -42,30 +41,29 @@ On loading the website, note the subtle use of greyscale fading into the standar
 
 ***
 
-- #### **CSS Grid to layout desktop site**
-    - 
+- #### **CSS Grid used to layout desktop site**
+    - *Grid* was utilised to as it has superior responsiveness and is more adaptable for placing sections than using archaic floats etc.
+      It offers more flexibility for moving / adding sections to the site in future and ultimately requires less code.
 
 ![Mockup](/assets/images/grid_view_chrome_dev_tools.PNG "Image of Grid view enabled using Google Chrome developer Tools section")
 
 ***
 
-#### Colour Scheme
-The colour schema was devised by taking an image of the creators home aquarium.
-This image was passed through <https://color.adobe.com/create/image-gradient>
+- #### **Colour Scheme and Accessibility**
+    - The *colour scheme* was devised by taking an image of the creators home aquarium.
+    The image was passed through <https://color.adobe.com/create/image-gradient>
+    - The above colour scheme was then passed to <http://www.eightshapes.com> for the output linked below:
+    This was to be sure the site meet WCAG 2.0 criteria.
+
+ <https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%238C4830%0D%0A%2360731A%0D%0A%23AEBF88%0D%0A%2370A61F%0D%0A%235%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp>
 
 ![Mockup](/assets/images/colour_scheme_genetated_from_home_aquarium.PNG "Website landing page")
 
-For font accesibility purposes the above colour scheme was passed to eightspapes.com for the following output:
- <https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%238C4830%0D%0A%2360731A%0D%0A%23AEBF88%0D%0A%2370A61F%0D%0A%235%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp>
+***
 
 
-
-
-
-
-## Testing
-
-### Validator Testing
+- ## **Testing**
+    - ### **Validator Testing**
     HTML
         Passed through the offical W3C validator - 11 errors cleared pon 217.8.21 17:30
     CSS
