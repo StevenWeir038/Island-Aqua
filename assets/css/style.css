@@ -337,7 +337,7 @@
     }
 
     section[id] {
-        scroll-margin-top: 150px;
+        scroll-margin-top: 150px;    /* see https://codepen.io/cferdinandi/pen/GRJvozN for solution */
     }
 
     h2 {
