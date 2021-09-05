@@ -87,12 +87,16 @@ It aims to give the site user:
             - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
 ***
-START HERE SUNDAY AM.......
+
 ### Unfixed Bugs
     Mobile nav menu
         Menu does not collapse after selecting link then focusing on other part of page. Hamburger icon must be clicked again to uncheck hidden checkbox
-        No know fix using CSS only, JS required judging by search of stack overflow.
+        A review of stack overflow .com .No known fix using CSS only, JS required judging by search of stack overflow.
 
-        W3C CSS Validation service showing errors for all css rgba values.  Variables were used for reusability. (do screenshot)
+        
+
+        Can bypass email field validation by directly clicking the submit button in footer 
 
 ## Deployment
+
+## Credits
