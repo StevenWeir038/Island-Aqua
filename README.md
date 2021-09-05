@@ -93,7 +93,7 @@ It aims to give the site user:
         Menu does not collapse after selecting link then focusing on other part of page. Hamburger icon must be clicked again to uncheck hidden checkbox
         A review of stack overflow .com .No known fix using CSS only, JS required judging by search of stack overflow.
 
-        
+        On mobile/tablet site fixed header obscures
 
         Can bypass email field validation by directly clicking the submit button in footer 
 

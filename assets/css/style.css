@@ -28,7 +28,7 @@
     html {
         scroll-behavior: smooth;  /* mentor Timmy Nelson feedback - better user experience especially in one page sites with multiple sections */
     }
-    
+
     body {
         min-width: 300px;              /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
         margin: 0;
@@ -42,12 +42,16 @@
         text-decoration: none;
     }
 
+    section[id] {
+        scroll-margin-top: 121px;
+    }
+
     h2 {
         background-color: rgba(var(--theme-one),1);
         color:white;
         border-radius: 10px;
         font-family: 'Cormorant';
-        padding: 121px 0 0.25rem;
+        padding: 0 0.25rem;
     }
 
     h3 {
@@ -330,6 +334,10 @@
 
     a {
         text-decoration: none;
+    }
+
+    section[id] {
+        scroll-margin-top: 150px;
     }
 
     h2 {
