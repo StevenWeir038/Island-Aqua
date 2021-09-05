@@ -24,12 +24,21 @@ It aims to give the site user:
 ***
 
 - #### **Landing page**
-The *landing page* hero background is designed to draw the user into the topic as a picture paints a thousand words.
-As a hobby, a good aquascape is aesthetically pleasing therefore conveys an implicit message to the visitor.
-
-On loading the website, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
+    - The *landing page* hero background is designed to draw the user into the topic as a picture paints a thousand words.
+    As a hobby, a good aquascape is aesthetically pleasing therefore conveys an implicit message to the visitor.
+    - On loading the website, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
 
 ![Mockup](/assets/images/landing_page.PNG "Website landing page and preview of header/nav at desktop resolution") 
+
+***
+
+- #### **External Links**
+    - *External links* provide a launching point for the user to explore the hobby in more detail. These are carefully selected and reputable.
+    - Each link opens in a new tab so the user can easily refer back to main site.
+
+![Mockup](/assets/images/external_links.PNG "Links are provided to external sites by clicking the image or its caption") 
+
+***
 
 - #### **Footer**
     - The *footer* offers the user three options:
