@@ -113,9 +113,9 @@ The live link can be found here - https://stevenweir038.github.io/islandAQUAdesi
 ***
 
 ## **Credits**
-- Thankyou you to [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo) for CSS grid tutorials to develop th desktop site.
-
 ### **Content**
+- Thankyou you to [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo) for CSS grid tutorials to develop my understanding of responsive web design.
+- Thankyou you to my mentor [Tim Nelson](https://github.com/TravelTimN) for his advice on html structure, semantics and improved user experience [https://css-tricks.com/snippets/jquery/smooth-scrolling/] .
 
 ### **Media**
 
