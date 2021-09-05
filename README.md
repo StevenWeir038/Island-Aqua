@@ -70,7 +70,6 @@ It aims to give the site user:
 
 ***
 
-
 - ## **Testing**
     - ### **Validator Testing**
         - HTML
@@ -95,11 +94,13 @@ It aims to give the site user:
                 section[id] {
                 scroll-margin-top: 150px;    
                 }
+***
 
-### Unfixed Bugs
-    Mobile nav menu
-        Menu does not collapse after selecting link then focusing on other part of page. Hamburger icon must be clicked again to uncheck hidden checkbox
-        A review of stack overflow .com .No known fix using CSS only, JS required judging by search of stack overflow.
+- ### Unfixed Bugs
+    - *Mobile nav menu* does not collapse after selecting link then focusing on other parts of page. The Hamburger menu icon must be clicked again to uncheck hidden checkbox
+        A review of [Stack Overflow](https://stack.overflow.com) suggests no known fix using CSS only and that JS is required.
+        
+        ![Mobile/Tablet nav menu will not collapse when no longer in focus](/assets/images/mobile_nav.PNG)
 
         Can bypass email field validation by directly clicking the submit button in footer. JS needed to prevent activation.
 
