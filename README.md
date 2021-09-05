@@ -85,25 +85,33 @@ It aims to give the site user:
         - CSS
             - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
+    - ### **Fixed Bugs**
+        - Mobile/Tablet *fixed header* obscures section links
+        - Utilised [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to mitigate.
+
+                    section[id] {
+                    scroll-margin-top: 150px;    
+                    }
+
+    - ### **Unfixed Bugs**
+        - Email field validation can be bypassed by directly clicking the submit button in footer. JS needed to prevent activation of submit button prior to email input being correctly populated.
+        - *Mobile nav menu* does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck hidden checkbox
+            A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only and that JS is required.
+            
+            ![Mobile/Tablet nav menu will not collapse when no longer in focus](/assets/images/mobile_nav.PNG)
+
+    ***
+
+- ## **Deployment**
+    - The site was deployed to *GitHub* pages. The steps to deploy are as follows:
+        - In the GitHub repository, navigate to the *Settings* tab
+        - From the source section drop-down menu, select the Master Branch
+        - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - (https://stevenweir038.github.io/islandAQUAdesign/index.html)
+
 ***
-
-- ### Fixed Bugs.
-    - Mobile/Tablet *fixed header* obscures section links
-    - Utilised [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to mitigate.
-
-                section[id] {
-                scroll-margin-top: 150px;    
-                }
-***
-
-- ### Unfixed Bugs
-    - *Mobile nav menu* does not collapse after selecting link then focusing on other parts of page. The Hamburger menu icon must be clicked again to uncheck hidden checkbox
-        A review of [Stack Overflow](https://stack.overflow.com) suggests no known fix using CSS only and that JS is required.
-        
-        ![Mobile/Tablet nav menu will not collapse when no longer in focus](/assets/images/mobile_nav.PNG)
-
-        Can bypass email field validation by directly clicking the submit button in footer. JS needed to prevent activation.
-
-## Deployment
 
 ## Credits
+
+***
