@@ -1,17 +1,54 @@
 # **islandAQUAdesign**
-**islandAQUAdesign** is a website whose purpose is to introduce amateur aquarists to the sub-genre of aquascaping.  
-It aims to give the site user: 
+
+**islandAQUAdesign** is a website whose purpose is to introduce amateur aquarists to the sub-genre of aquascaping.
+
+Note, this is a hypothetical business, inspired but in no way affiliated to ADA (AquaDesignAmono).
+
+<br>
+
+![Mockup](/assets/images/website_mockup.PNG "Website preview at different resolutions") 
+
+<br>
+
+## **UX Design**
+
+***
+
+As a topic aquascaping is too expansive to contain within one small site given project time constraints and my current developer skill level.
+
+A conscious decision was taken to make the content general and not too technical as this may put off the aspiring hobbyist.
+Using UX principles, namely user stories the *scope* of the site was succesfully narrowed to give the user:
+
 - A broad overview of the aquascaping hobby. 
 - The core materials used.
 - An overview of popular style arrangements.  
 - Suitable flora and fauna for a beginner.
 - Embedded links that provide launching points to explore other sites to the hobby in more detail.
 
-![Mockup](/assets/images/website_mockup.PNG "Website preview at different resolutions") 
+<br>
+
+- ## **Wireframing**
+    - To follow best practice, wireframes were developed for mobile, tablet and desktop based on the advice of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/)
+    - These were created using [Balsamiq](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development before starting coding.
+
+<br>
+
+- ## **Colour Scheme and Accessibility**
+    - The *colour scheme* was devised by taking an image of a home aquarium.
+    The image was passed to <https://color.adobe.com/create/image-gradient>
+    - To meet WCAG 2.0 criteria, the generated colour scheme was then passed to <http://www.eightshapes.com> for the [linked output](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%238C4830%0D%0A%2360731A%0D%0A%23AEBF88%0D%0A%2370A61F%0D%0A%235%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp).
+
+<br>
+
+![Mockup](/assets/images/colour_scheme_genetated_from_home_aquarium.PNG "Website landing page")
 
 ***
 
+
 ## **Existing Features**
+
+***
+
 - #### **Header logo & Navigation**
     - The *header* logo automatically sizes with the viewport on all resolutions.
     On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
@@ -55,18 +92,6 @@ It aims to give the site user:
       It offers more flexibility for moving / adding sections to the site in future and ultimately requires less code.
 
 ![Mockup](/assets/images/grid_view_chrome_dev_tools.PNG "Image of Grid view enabled using Google Chrome developer Tools section")
-
-***
-
-- #### **Colour Scheme and Accessibility**
-    - The *colour scheme* was devised by taking an image of the creators home aquarium.
-    The image was passed through <https://color.adobe.com/create/image-gradient>
-    - The above colour scheme was then passed to <http://www.eightshapes.com> for the output linked below:
-    This was to be sure the site meet WCAG 2.0 criteria.
-
- <https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%238C4830%0D%0A%2360731A%0D%0A%23AEBF88%0D%0A%2370A61F%0D%0A%235%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp>
-
-![Mockup](/assets/images/colour_scheme_genetated_from_home_aquarium.PNG "Website landing page")
 
 ***
 
