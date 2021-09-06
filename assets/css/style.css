@@ -43,7 +43,7 @@
     }
 
     section[id] {
-        scroll-margin-top: 121px;
+        scroll-margin-top: 108px;
     }
 
     h2 {
@@ -337,7 +337,7 @@
     }
 
     section[id] {
-        scroll-margin-top: 150px;    /* see https://codepen.io/cferdinandi/pen/GRJvozN for solution */
+        scroll-margin-top: 121px;    /* see https://codepen.io/cferdinandi/pen/GRJvozN for solution */
     }
 
     h2 {
@@ -676,7 +676,6 @@
         grid-column: 1 / 4;
         grid-row: 1 / 2;
         z-index: 50;                                      /* set index # high to display in front of hero-bg */
-        background: rgba(var(--theme-five), 1);
         text-align: center;
         margin: 0;
         color: white;
