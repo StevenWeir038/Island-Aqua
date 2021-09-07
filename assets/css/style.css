@@ -25,8 +25,8 @@
 /* MOBILE SITE */
 /* BODY */
 
-/* @media only screen and (max-width: 640px)
-{ */
+@media only screen and (max-width: 640px)
+{
 
 html {
     scroll-behavior: smooth;
@@ -322,7 +322,7 @@ nav a:hover {
 
 }
 
-/* } */
+}
 /*end of media query max-width: 640px(mobile)=================================================================*/
 
 
