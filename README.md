@@ -4,11 +4,11 @@
 
 Note, this is a hypothetical business idea.
 
-<br>
+---
 
-![Mockup](/assets/images/website_mockup.PNG "Website preview at different resolutions") 
+![Mockup](docs/readme/website_mockup.png "Website preview at different resolutions") 
 
-<br>
+---
 
 ## **UX Design**
 
@@ -25,95 +25,89 @@ Using UX principles, namely user stories the *scope* of the site was succesfully
 - Suitable flora and fauna for a beginner.
 - Embedded links that provide launching points to explore other sites to the hobby in more detail.
 
-<br>
+---
 
-- ### **Wireframing**
-    - To follow best practice, wireframes were developed for mobile, tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice I developed the mobile site before the desktop.
-    - Wireframes were created using [Balsamiq](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I abandoned a previous iteration of theproject as it lacked direction.  A good learning experience)
+### **Wireframing**
+- To follow best practice, wireframes were developed for mobile, tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice I developed the mobile site before the desktop.
+- Wireframes were created using [Balsamiq](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I abandoned a previous iteration of theproject as it lacked direction.  A good learning experience)
 
-<br>
+---
 
-- ### **Colour Scheme and Accessibility**
-    - The *colour scheme* was devised by taking an image of a home aquarium.
-    The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradient).
-    - To meet WCAG 2.0 criteria, the generated colour scheme was then passed to [eightshapes.com](http://www.eightshapes.com) for the [linked output](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23F2F2F2%0D%0A%23DDDDDD%0D%0A%23CCCCCC%0D%0A%23888888%0D%0A%238C4830%0D%0A%2360731A%0D%0A%23AEBF88%0D%0A%2370A61F%0D%0A%235%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp).
+### **Colour Scheme and Accessibility**
+- The *colour scheme* was devised by taking an image of a home aquarium.
+The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradient).
+- To meet WCAG 2.0 criteria, the generated colour scheme was then passed to [eightshapes.com](http://www.eightshapes.com) for the accesibility table. [linked output]
 
-<br>
+---
 
-![Mockup](/assets/images/colour_scheme_genetated_from_home_aquarium.PNG "Website landing page")
+![Mockup](docs/readme/color_scheme.png "Color Accessibilty")
 
-<br>
+### **Code Reusability**
+- CSS variables were used to improve code reusability.  RGB values were saved into the *:root* level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution (saves time) as changing the code in one place changes multiple elements rather than individually having to change their aesthetic.  I also want the option of controlling the *alpha* value.
+- Classes were reused insofar as possible to promote homogeneity across the site. See below for an example of code utilising css variables.
 
-- ### **Code Reusability**
-    - CSS variables were used to improve code reusability.  RGB values were saved into the *:root* level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution (saves time) as changing the code in one place changes multiple elements rather than individually having to change their aesthetic.  I also want the option of controlling the *alpha* value.
-    - Classes were reused insofar as possible to promote homogeneity across the site. See below for an example of code utilising css variables.
+```css
+:root {
+    --theme-one: 96, 115, 26;
+}
 
-            :root {
-                --theme-one: 96, 115, 26;
-            }
-            
-            h2 {
-                background-color: rgba(var(--theme-one),1)
-            }
+h2 {
+    background-color: rgba(var(--theme-one),1);
+}
+```
 
-    <br>  
+### **CSS Grid used to layout desktop site**
+- At an early stage upon the advice of my mentor, I learned *CSS Grid* in order to develop the desktop site.  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than overusing relative/absolute displays and archaic floats.
+- I opted to explicity place sections as opposed to declaring grid areas in this instance as the site is small.
+- Also noted is the importance of *html structure*. Sections that are nested have an affect on the grid behaviour.
+- Generally *grid* offers more flexibility for moving / adding sections to the site in future and ultimately requires less code. It is more readable therefore is easier to maintain.
 
-- ### **CSS Grid used to layout desktop site**
-    - At an early stage upon the advice of my mentor, I learned *CSS Grid* in order to develop the desktop site.  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than overusing relative/absolute displays and archaic floats.
-    - I opted to explicity place sections as opposed to declaring grid areas in this instance as the site is small.
-    - Also noted is the importance of *html structure*. Sections that are nested have an affect on the grid behaviour.
-    - Generally *grid* offers more flexibility for moving / adding sections to the site in future and ultimately requires less code. It is more readable therefore is easier to maintain.
-
-<br>
-
-![Mockup](/assets/images/grid_view_chrome_dev_tools.PNG "Image of Grid view enabled using Google Chrome developer Tools section")
-
+![Mockup](docs/readme/grid_view_chrome_dev_tools.png "Image of Grid view enabled using Google Chrome developer Tools section")
 
 ## **Existing Features**
 
 ***
 
-- ### **One Page Site / Future Implementations**
-    - This is merely a personal preference. A *top level* to convey general information.  Future development could include more technical aspects of being an aquarist maintained of separate pages.  For example, the Nitrogen cycle, Co2 injections systems, specialist lighting setups, best products on the market etc. 
+### **One Page Site / Future Implementations**
+- This is merely a personal preference. A *top level* to convey general information.  Future development could include more technical aspects of being an aquarist maintained of separate pages.  For example, the Nitrogen cycle, Co2 injections systems, specialist lighting setups, best products on the market etc. 
 
-<br>
 
-- ### **Header logo & Navigation**
-    - The *header* logo automatically sizes with the viewport on all resolutions.
-    On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
-    It also serves as a link to to the top of page as the website is on one page.
+### **Header logo & Navigation**
+- The *header* logo automatically sizes with the viewport on all resolutions.
+On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
+It also serves as a link to to the top of page as the website is on one page.
 
-    - The site has two Navigation bar styles.  A Hamburger style for mobile and tablet screens with limited screen space and a standard navbar as viewed on the desktop landing page in the next section.
+- The site has two Navigation bar styles.  A Hamburger style for mobile and tablet screens with limited screen space and a standard navbar as viewed on the desktop landing page in the next section.
 
-![Mockup](/assets/images/mobile_tablet_nav.PNG "Preview of header/nav with logo at mobile/tablet resolutions")
+![Mockup](docs/readme/mobile_tablet_nav.png "Preview of header/nav with logo at mobile/tablet resolutions")
 
-<br>
+---
 
-- ### **Landing page**
-    - The *landing page* hero background is designed to draw the user into the topic as a picture paints a thousand words.
-    As a hobby, a good aquascape is aesthetically pleasing therefore conveys an implicit message to the visitor.
-    - On loading the desktop site, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
+### **Landing page**
+- The *landing page* hero background is designed to draw the user into the topic as a picture paints a thousand words.
+As a hobby, a good aquascape is aesthetically pleasing therefore conveys an implicit message to the visitor.
+- On loading the desktop site, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
 
-![Mockup](/assets/images/landing_page.PNG "Website landing page and preview of header/nav at desktop resolution") 
+![Mockup](assets/images/landing_page.png "Website landing page and preview of header/nav at desktop resolution") 
 
-<br>
+---
 
-- ### **External Links**
-    - *External links* provide a launching point for the user to explore the hobby in more detail. These are carefully selected and reputable.
-    - Each link opens in a new tab so the user can easily refer back to main site.
+### **External Links**
+- *External links* provide a launching point for the user to explore the hobby in more detail. These are carefully selected and reputable.
+- Each link opens in a new tab so the user can easily refer back to main site.
 
-![Mockup](/assets/images/external_links.PNG "Links are provided to external sites by clicking the image or its caption") 
+![Mockup](assets/images/external_links.png "Links are provided to external sites by clicking the image or its caption") 
 
-<br>
+---
 
-- ### **Footer**
+### **Footer**
     - The *footer* offers the user three options:
      - A means to provide an email address to sign-up to a newsletter. Note an extensive form page isn't needed for the website's purposes.
     - Links that open to new social media tabs for yet to be developed supporting content. Social media icons scale up on muse hovewr to improve user experience.
 
      - A link to the top of the page by clicking the favicon.
      
-![Mockup](/assets/images/footer_img.PNG "Footer section") 
+![Mockup](assets/images/footer_img.png "Footer section") 
 
 ***
 
@@ -121,40 +115,43 @@ Using UX principles, namely user stories the *scope* of the site was succesfully
 
 ***
 
-- ### **Validator Testing**
+### **Validator Testing**
     - HTML
     Code passed through the offical [W3C Markup Validator](https://validator.w3.org/) on 3.9.21 @ 20:15. 2 errors remaining.  Intentionally left as sections meant for holding background image content only.
 
-            <section id="hero-bg" class="hero-bg">
-                <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
-            </section>
-            <section class="left-fish-background">
-                <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
-            </section>
+```html
+<section id="hero-bg" class="hero-bg">
+    <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
+</section>
+<section class="left-fish-background">
+    <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
+</section>
+```
 
     - CSS
         - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
-- ### **Fixed Bugs**
+### **Fixed Bugs**
     - Mobile/Tablet *fixed header* obscures section links
     - Utilised [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to mitigate.
-
-                section[id] {
-                scroll-margin-top: 150px;    
-                }
-
-- ### **Unfixed Bugs**
     - Email field validation can be bypassed by directly clicking the submit button in footer. JS needed to prevent activation of submit button prior to email input being correctly populated.
+    
+```css
+section[id] {
+scroll-margin-top: 150px;    
+}
+```
+
+### **Unfixed Bugs**
+
     - *Mobile nav menu* does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck hidden checkbox
         A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only and that JS is required.
         
-        ![Mobile/Tablet nav menu will not collapse when no longer in focus](/assets/images/mobile_nav.PNG)
+        ![Mobile/Tablet nav menu will not collapse when no longer in focus](assets/images/mobile_nav.png)
 
-<br>
+---
 
 ## **Deployment**
-
-***
 
 The site was deployed to *GitHub* pages. The steps to deploy are as follows:
 - In the GitHub repository, navigate to the *Settings* tab
@@ -163,19 +160,25 @@ The site was deployed to *GitHub* pages. The steps to deploy are as follows:
 
 The live link can be found here - https://stevenweir038.github.io/islandAQUAdesign/index.html
 
-<br>
+### **Local Deployment**
+
+In order to make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
+- `git clone https://github.com/StevenWeir038/islandAQUAdesign.git`
+
+Alternatively if using gitpod you can click [here](https://gitpod.io/#https://github.com/StevenWeir038/islandAQUAdesign)
+
+---
 
 ## **Credits**
 
-***
 
 ### **Content**
 - Thankyou you to [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo) for CSS grid tutorials to develop my understanding of responsive web design.
 - Use of CSS variables supported by the [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
 - Thankyou you to my mentor [Tim Nelson](https://github.com/TravelTimN) for his advice on html structure, semantics and improved user experience [https://css-tricks.com/snippets/jquery/smooth-scrolling/].
 
-<br>
+---
 
 ### **Media**
 
-***
+
