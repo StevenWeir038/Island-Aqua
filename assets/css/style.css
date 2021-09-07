@@ -84,7 +84,7 @@ h3 {
     border-radius: 10px;
     border: 2px solid rgba(var(--theme-two), 1);
     width: 90%;
-    height: 200px;
+    /* height: 200px; */
 }
 
 .hero-bg {
@@ -356,7 +356,7 @@ h3 {
 .video {
     border-radius: 10px;
     width: 90%;
-    height: 600px;
+    /* height: 600px; */
     margin-bottom: 1rem;
 }
 
@@ -856,7 +856,7 @@ h3 {
 .video {
     border-radius: 10px;
     width: 90%;
-    height: 600px;
+    /* height: 600px; */
     margin-bottom: 1rem;
 }
 

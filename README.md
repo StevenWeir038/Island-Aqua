@@ -2,44 +2,31 @@
 
 **islandAQUAdesign** is a website whose purpose is to introduce amateur aquarists to the sub-genre of aquascaping.
 
-Note, this is a hypothetical business idea.
-
----
-
 ![Mockup](docs/readme/website_mockup.png "Website preview at different resolutions") 
 
----
 
 ## **UX Design**
-
-***
-
+---
 As a topic aquascaping is too expansive to contain within one small site given project time constraints and my current developer skill level.
 
-A conscious decision was taken to make the content general and not too technical as this may put off the aspiring hobbyist.
-Using UX principles, namely user stories the *scope* of the site was succesfully narrowed to give the user:
+A conscious decision was taken to generalise content and not be too technical as this may dissuade the aspiring hobbyist.
 
-- A broad overview of the aquascaping hobby. 
+Using UX principles, user stories narrowed the *scope* of the site directing it to provide:
+- A broad overview of the aquascaping hobby.
 - The core materials used.
 - An overview of popular style arrangements.  
 - Suitable flora and fauna for a beginner.
 - Embedded links that provide launching points to explore other sites to the hobby in more detail.
 
----
-
 ### **Wireframing**
 - To follow best practice, wireframes were developed for mobile, tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice I developed the mobile site before the desktop.
-- Wireframes were created using [Balsamiq](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I abandoned a previous iteration of theproject as it lacked direction.  A good learning experience)
+- Wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I abandoned a previous iteration of the project as it lacked direction. This was a good early learning experience which deserves mentioning. UX defines proper development practices!)
 
----
-
-### **Colour Scheme and Accessibility**
-- The *colour scheme* was devised by taking an image of a home aquarium.
+### **Color Scheme and Accessibility**
+- The *color scheme* was devised by taking an image of a home aquarium.
 The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradient).
 - To meet WCAG 2.0 criteria, the generated colour scheme was then passed to [eightshapes.com](http://www.eightshapes.com) for the accesibility table. [linked output]
-
 ---
-
 ![Mockup](docs/readme/color_scheme.png "Color Accessibilty")
 
 ### **Code Reusability**
@@ -65,8 +52,6 @@ h2 {
 ![Mockup](docs/readme/grid_view_chrome_dev_tools.png "Image of Grid view enabled using Google Chrome developer Tools section")
 
 ## **Existing Features**
-
-***
 
 ### **One Page Site / Future Implementations**
 - This is merely a personal preference. A *top level* to convey general information.  Future development could include more technical aspects of being an aquarist maintained of separate pages.  For example, the Nitrogen cycle, Co2 injections systems, specialist lighting setups, best products on the market etc. 
@@ -113,17 +98,12 @@ As a hobby, a good aquascape is aesthetically pleasing therefore conveys an impl
 
 ## **Testing**
 
-***
-
 ### **Validator Testing**
-    - HTML
-    Code passed through the offical [W3C Markup Validator](https://validator.w3.org/) on 3.9.21 @ 20:15. 2 errors remaining.  Intentionally left as sections meant for holding background image content only.
+- HTML
+Code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as sections meant for holding background image content only.
 
 ```html
 <section id="hero-bg" class="hero-bg">
-    <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
-</section>
-<section class="left-fish-background">
     <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
 </section>
 ```
