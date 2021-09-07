@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:ital,wght@1,300&family=Montserrat&display=swap');
 
 :root {
-    /* universal colour styling variables, Feed vars insto rgba to give addiional control over opacity*/
+/* universal colour styling variables, Feed vars insto rgba to give addiional control over opacity */
 
     --theme-one: 96, 115, 26;
     --theme-two: 140, 72, 48;
@@ -11,28 +11,20 @@
 }
 
 /* Add box sizing to include padding and border in measurements */
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-#image-two {
-    display: none;
-}
-
 /* MOBILE SITE */
-/* BODY */
-
 @media only screen and (max-width: 640px)
 {
-
+/* BODY */
 html {
     scroll-behavior: smooth;
 }
 
-/* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
 body {
     min-width: 300px;
 
@@ -41,6 +33,11 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 400;
     text-align: center;
+}
+
+/* padding to keep elements away from very edge of screen without affecting fixed header */
+.container {
+    padding: 0px 0.5rem;
 }
 
 a {
@@ -88,7 +85,6 @@ h3 {
     border: 2px solid rgba(var(--theme-two), 1);
     width: 90%;
     height: 200px;
-    /* ask Tim - specificity same in tablet and desktop resolutions code.  Why is this overriding */
 }
 
 .hero-bg {
@@ -104,7 +100,6 @@ h1 span {
     font-family: 'Montserrat';
     color: rgba(var(--theme-three), 1);
     font-size: 0.6em;
-    /*  take advantage of em cascading effect */
 }
 
 figcaption {
@@ -116,7 +111,6 @@ figcaption {
 }
 
 /* TABLES */
-
 table {
     margin-left: auto;
     margin-right: auto;
@@ -146,7 +140,6 @@ table tr:hover {
 }
 
 /* FOOTER */
-
 footer {
     background: rgba(var(--theme-two), 1);
     text-align: center;
@@ -159,7 +152,7 @@ footer {
     border-top: 2px solid rgba(var(--theme-five), 1);
 }
 
-footer>form {
+footer > form {
     padding: 0 0.5rem;
 }
 
@@ -172,10 +165,6 @@ footer a {
 .social {
     display: inline;
 }
-
-/* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html
-    20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
-    website for social media */
 
 .social :hover {
     transform: scale(1.2);
@@ -211,22 +200,9 @@ footer input[type="submit"]:hover {
 }
 
 /* HEADER */
-/* fix header to top of page so menu is accessible to user rather than having to scroll all the 
-    way to top or bottom for nav links when in middle of page */
-/* take header out of the flow therefore loses padding applied to whole body */
-/* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
-/* removed as semantics wrong in html */
-
-.container {
-    padding: 0px 0.5rem;
-}
-
-/* padding to keep elements away from very edge of screen without affecting fixed header */
-
 .header {
     background: rgba(var(--theme-one), 1);
     position: fixed;
-    /* transform: translateX(-1.5%);            */
     z-index: 50;
     width: 100%;
     text-align: center;
@@ -235,7 +211,6 @@ footer input[type="submit"]:hover {
     color: white;
 }
 
-/* use clamp function to modify logo font size based on viewport size, tidier, responsive */
 .logo {
     font-family: 'Garamond';
     color: rgba(var(--theme-two), 1);
@@ -252,9 +227,8 @@ footer input[type="submit"]:hover {
     transform: scale(1.1);
 }
 
-/*NAVIGATION (mobile) ========================================================================================================= */
-/* nav toggle using textbox courtesy of Kevin Powel tutorial @ https://www.youtube.com/watch?v=8QKOaTYvYUA */
-/* hide unsightly nav-toggle checkbox */
+/* NAVIGATION (mobile) */
+/* nav toggle using textbox courtesy of Kevin Powell tutorial @ https://www.youtube.com/watch?v=8QKOaTYvYUA */
 #nav-toggle {
     display: none;
 }
@@ -276,7 +250,6 @@ footer input[type="submit"]:hover {
     transform: scale(1.2);
 }
 
-/* problem with nav after selecting option in menu it doesn't automatically hide. Have to click nav toggle-label to uncheck hidden nav-toggle */
 nav {
     background: rgba(var(--theme-one), 1);
     width: 100%;
@@ -312,334 +285,285 @@ nav a:hover {
     border-bottom: 5px solid rgba(var(--theme-two), 1);
 }
 
-/* 
-    Look for nav which is a sibling of nav toggle (ie the checkbox added to the index html code.
-    When check box is checked display:block will show menu which is defaulted to hidden by display: none in nav
-*/
+.nav-toggle:checked~nav {
+    display: block;
+}
+}
+/* end of MOBILE media query max-width: 640px */
+
+/* TABLET 640px-1250px */
+@media only screen and (max-width: 1250px) 
+{
+/* BODY */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 300px;
+
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.container {
+    padding: 0px 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+section[id] {
+    scroll-margin-top: 121px;
+}
+
+h2 {
+    background-color: rgba(var(--theme-one), 1);
+    color: white;
+    border-radius: 10px;
+    font-family: 'Cormorant';
+    padding: 0 0.25rem;
+}
+
+h3 {
+    background-color: rgba(var(--theme-two), 1);
+    color: white;
+    border-radius: 10px;
+    font-family: 'Cormorant';
+    padding: 0.25rem 0;
+}
+
+.main-quote {
+    background-color: rgba(var(--theme-five), 0.85);
+    font-family: 'Caveat', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, rgba(var(--theme-five)), rgba(var(--theme-four)));
+    color: black;
+}
+
+.images {
+    border-radius: 10px;
+    border: 2px solid rgba(var(--theme-two), 1);
+    width: 90%
+}
+
+/* UNFIXED BUG - tablet and desktop sizing over riding mobile video sizing */
+.video {
+    border-radius: 10px;
+    width: 90%;
+    height: 600px;
+    margin-bottom: 1rem;
+}
+
+.hero-bg {
+    background: url(../images/hero-bg.jpg) no-repeat center center;
+    position: relative;
+    overflow: hidden;
+    min-height: 900px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+h1 span {
+    font-family: 'Montserrat';
+    color: rgba(var(--theme-three), 1);
+    font-size: 0.6em;
+}
+
+figcaption {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* TABLES */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th {
+    background-color: rgba(var(--theme-two), 1);
+    color: white;
+}
+
+table th,
+table td {
+    border: 1px solid rgba(var(--theme-two), 1);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(var(--theme-three), 1);
+    color: black;
+}
+
+table tr:hover {
+    background-color: rgba(var(--theme-four), 1)
+}
+
+/* FOOTER */
+footer {
+    background: rgba(var(--theme-two), 1);
+    text-align: center;
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: white;
+    margin: 0;
+    border-top: 2px solid rgba(var(--theme-five), 1);
+}
+
+footer > form {
+    padding: 0 0.5rem;
+}
+
+footer a {
+    color: white;
+    font-size: 3rem;
+    padding: 0 1rem;
+}
+
+.social {
+    display: inline;
+}
+
+.social :hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    color: white;
+    margin: 0.5rem 0;
+}
+
+footer input {
+    font-size: 1.2em;
+    padding: 0.25em;
+    margin-top: 0.5em;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+footer input:focus {
+    border: 4px solid rgba(var(--theme-one), 1);
+    color: black;
+    background: rgba(var(--theme-three), 1);
+}
+
+footer input[type="submit"] {
+    background: rgba(var(--theme-one), 1);
+    color: white;
+    font-size: 1.2em;
+}
+
+footer input[type="submit"]:hover {
+    color: black;
+    background: rgba(var(--theme-three), 1);
+}
+
+/* HEADER */
+.header {
+    background: rgba(var(--theme-one), 1);
+    position: fixed;
+    /* transform: translateX(-1.5%);            */
+    z-index: 50;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    border-bottom: 2px solid rgba(var(--theme-two), 1);
+    color: white;
+}
+
+/* use clamp function to modify logo font size based on viewport size, tidier, responsive */
+.logo {
+    font-family: 'Garamond';
+    color: rgba(var(--theme-two), 1);
+    font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
+    background-color: white;
+    padding: 0.5rem;
+    border: 2px solid rgba(var(--theme-two), 1);
+    border-radius: 10px;
+    margin: 1rem 1rem;
+    float: left;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* NAVIGATION (tablet) */
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 1rem;
+}
+
+.nav-toggle-label:hover {
+    transform: scale(1.2);
+}
+
+nav {
+    background: rgba(var(--theme-one), 1);
+    width: 100%;
+    position: absolute;
+    text-align: right;
+    top: 100%;
+    right: 0;
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 1rem;
+
+}
+
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: white;
+    border-top: 5px solid rgba(var(--theme-two), 1);
+    border-bottom: 5px solid rgba(var(--theme-two), 1);
+}
 
 .nav-toggle:checked~nav {
     display: block;
 
 }
-
 }
-/*end of media query max-width: 640px(mobile)=================================================================*/
-
-
-/*TABLET 640px-1250px =======================================================================*/
-/* learning thoughts - should have coded tablet before desktop Ask yourself why! */
-/*BODY ========================================================================================*/
-
-@media only screen and (max-width: 1250px) {
-    html {
-        scroll-behavior: smooth;
-        /* mentor Timmy Nelson feedback - better user experience especially in one page sites with multiple sections */
-    }
-
-    body {
-        min-width: 300px;
-        /* initially set to 480px too big for mobile screens, cut off images which were 466px wide.  resize images to 300px wide. for small mobile */
-        margin: 0;
-        height: 100vh;
-        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        text-align: center;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    section[id] {
-        scroll-margin-top: 121px;
-        /* see https://codepen.io/cferdinandi/pen/GRJvozN for solution */
-    }
-
-    h2 {
-        background-color: rgba(var(--theme-one), 1);
-        color: white;
-        border-radius: 10px;
-        font-family: 'Cormorant';
-        padding: 0 0.25rem;
-    }
-
-    h3 {
-        background-color: rgba(var(--theme-two), 1);
-        color: white;
-        border-radius: 10px;
-        font-family: 'Cormorant';
-        padding: 0.25rem 0;
-    }
-
-    .main-quote {
-        background-color: rgba(var(--theme-five), 0.85);
-        font-family: 'Caveat', Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        padding: 0.5em;
-        border-radius: 10px;
-        background-image: linear-gradient(to bottom right, rgba(var(--theme-five)), rgba(var(--theme-four)));
-        color: black;
-    }
-
-    .images {
-        border-radius: 10px;
-        border: 2px solid rgba(var(--theme-two), 1);
-        width: 90%
-    }
-
-    /* UNFIXED BUG - tablet resolution hide #image-one and display #image-two instead. Not yet working */
-    .image-one {
-        display: none;
-    }
-
-    .image-two {
-        display: block;
-    }
-
-    /* UNFIXED BUG - tablet and desktop sizing over riding mobile video sizing */
-    .video {
-        border-radius: 10px;
-        width: 90%;
-        height: 600px;
-        margin-bottom: 1rem;
-    }
-
-    .hero-bg {
-        background: url(../images/hero-bg.jpg) no-repeat center center;
-        position: relative;
-        overflow: hidden;
-        min-height: 900px;
-        width: 100%;
-        border-radius: 0 0 10px 10px;
-    }
-
-    h1 span {
-        font-family: 'Montserrat';
-        color: rgba(var(--theme-three), 1);
-        font-size: 0.6em;
-        /*  take advantage of em cascading effect */
-    }
-
-    figcaption {
-        font-family: 'Montserrat';
-        font-style: italic;
-        font-weight: bold;
-        color: black;
-        text-decoration: none;
-    }
-
-    /*TABLES ========================================================================================*/
-
-    table {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    table th {
-        background-color: rgba(var(--theme-two), 1);
-        color: white;
-    }
-
-    table th,
-    table td {
-        border: 1px solid rgba(var(--theme-two), 1);
-        border-radius: 10px;
-        padding: 5px;
-    }
-
-    table tr:nth-child(even) {
-        background-color: rgba(var(--theme-three), 1);
-        /* alternate cover every 2nd row for improved readability */
-        color: black;
-    }
-
-    table tr:hover {
-        background-color: rgba(var(--theme-four), 1)
-            /* help user focus on table content */
-    }
-
-    /* FOOTER ==========================================================================================*/
-
-    footer {
-        background: rgba(var(--theme-two), 1);
-        text-align: center;
-        z-index: 50;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        color: white;
-        margin: 0;
-        border-top: 2px solid rgba(var(--theme-five), 1);
-    }
-
-    footer>form {
-        padding: 0 0.5rem;
-    }
-
-    footer a {
-        color: white;
-        font-size: 3rem;
-        padding: 0 1rem;
-    }
-
-    .social {
-        display: inline;
-    }
-
-    /* Increase size of link icons when hovered over - intuitive for user to then click. Associate with link-zoom class in html
-    20% zoom in and colour change pinched from love running essentials project, saw same technique used on Gobbins Cliff Path 
-    website for social media */
-
-    .social :hover {
-        transform: scale(1.2);
-    }
-
-    footer p {
-        color: white;
-        margin: 0.5rem 0;
-    }
-
-    footer input {
-        font-size: 1.2em;
-        padding: 0.25em;
-        margin-top: 0.5em;
-        border-radius: 10px;
-        max-width: 90%;
-    }
-
-    footer input:focus {
-        border: 4px solid rgba(var(--theme-one), 1);
-        color: black;
-        background: rgba(var(--theme-three), 1);
-    }
-
-    footer input[type="submit"] {
-        /* color: white; */
-        background: rgba(var(--theme-one), 1);
-        color: white;
-        font-size: 1.2em;
-    }
-
-    footer input[type="submit"]:hover {
-        color: black;
-        background: rgba(var(--theme-three), 1);
-    }
-
-    /*HEADER ========================================================================================*/
-    /* fix header to top of page so menu is accessible to user rather than having to scroll all the 
-    way to top or bottom for nav links when in middle of page */
-    /* take header out of the flow therefore loses padding applied to whole body */
-    /* stackoverflow hack - translateX to move header to left to appear more centered -0.5% is best fit */
-    /* removed as semantics wrong in html */
-
-    .container {
-        padding: 0px 0.5rem;
-    }
-
-    /* padding to keep elements away from very edge of screen without affecting fixed header */
-
-    .header {
-        background: rgba(var(--theme-one), 1);
-        position: fixed;
-        /* transform: translateX(-1.5%);            */
-        z-index: 50;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        border-bottom: 2px solid rgba(var(--theme-two), 1);
-        color: white;
-    }
-
-    /* use clamp function to modify logo font size based on viewport size, tidier, responsive */
-    .logo {
-        font-family: 'Garamond';
-        color: rgba(var(--theme-two), 1);
-        font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
-        background-color: white;
-        padding: 0.5rem;
-        border: 2px solid rgba(var(--theme-two), 1);
-        border-radius: 10px;
-        margin: 1rem 1rem;
-        float: left;
-    }
-
-    .logo:hover {
-        transform: scale(1.1);
-    }
-
-    /*NAVIGATION (mobile) ========================================================================================================= */
-    /* nav toggle using textbox courtesy of Kevin Powel tutorial @ https://www.youtube.com/watch?v=8QKOaTYvYUA */
-    /* hide unsightly nav-toggle checkbox */
-    #nav-toggle {
-        display: none;
-    }
-
-    .nav-toggle-label {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-right: 1rem;
-        font-size: 1.5rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        color: white;
-        border-radius: 1rem;
-    }
-
-    .nav-toggle-label:hover {
-        transform: scale(1.2);
-    }
-
-    /* problem with nav after selecting option in menu it doesn't automatically hide. Have to click nav toggle-label to uncheck hidden nav-toggle */
-    nav {
-        background: rgba(var(--theme-one), 1);
-        width: 100%;
-        position: absolute;
-        text-align: right;
-        top: 100%;
-        right: 0;
-        display: none;
-    }
-
-    nav ul {
-        margin: 0;
-        padding: 1rem;
-
-    }
-
-    nav li {
-        margin-bottom: 1rem;
-        margin-left: 1rem;
-        list-style: none;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
-
-    nav a:hover {
-        color: white;
-        border-top: 5px solid rgba(var(--theme-two), 1);
-        border-bottom: 5px solid rgba(var(--theme-two), 1);
-    }
-
-    /* 
-    Look for nav which is a sibling of nav toggle (ie the checkbox added to the index html code.
-    When check box is checked display:block will show menu which is defaulted to hidden by display: none in nav
-    */
-
-    .nav-toggle:checked~nav {
-        display: block;
-
-    }
-}
-
-/*end of media query (tablet) ==============================================================*/
-
+/* end of media query (tablet) */
 
 /*DESKTOP 1250px/75em */
 /*learning thought - once small viewport coded for, increase width to revert to basic html view again*/
@@ -649,7 +573,6 @@ nav a:hover {
     /*BODY========================================================================================*/
     html {
         scroll-behavior: smooth;
-        /* mentor Timmy Nelson feedback - better user experience especially in one page sites with multiple sections */
     }
 
     body {
@@ -936,6 +859,7 @@ nav a:hover {
         width: 100%;
         z-index: -50;
         border-radius: 10px;
+
         /* include LOVE RUNNING hero animation.  Nice effect. Adapt from grey filtered image to colour image 
         instead of zoom. Also don't want to make outer container to hide zoom effect.  Will hav to change 
         html and grid code written for css. Something for another time perhaps*/
