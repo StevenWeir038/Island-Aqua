@@ -99,17 +99,14 @@ As a hobby, a good aquascape is aesthetically pleasing therefore conveys an impl
 ## **Testing**
 
 ### **Validator Testing**
-- HTML
-Code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as sections meant for holding background image content only.
+- HTML code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as section meant for holding background image content only.
 
 ```html
 <section id="hero-bg" class="hero-bg">
     <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
 </section>
 ```
-
-    - CSS
-        - Code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
+- CSS code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
 ### **Fixed Bugs**
     - Mobile/Tablet *fixed header* obscures section links

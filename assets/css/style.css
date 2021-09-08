@@ -224,7 +224,7 @@ footer input[type="submit"]:hover {
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* NAVIGATION (mobile) */
@@ -484,11 +484,9 @@ footer input[type="submit"]:hover {
     color: white;
 }
 
-/* use clamp function to modify logo font size based on viewport size, tidier, responsive */
 .logo {
     font-family: 'Garamond';
     color: rgba(var(--theme-two), 1);
-    font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
     background-color: white;
     padding: 0.5rem;
     border: 2px solid rgba(var(--theme-two), 1);
@@ -498,7 +496,7 @@ footer input[type="submit"]:hover {
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* NAVIGATION (tablet) */
@@ -810,7 +808,7 @@ h3 {
 
 .fish-dwarf-gourami {
     grid-column: 2 / 3;
-    grid-row: 10 / 11;
+    grid-row: 9 / 10;
     border: 7px solid rgba(var(--theme-one), 1);
     border-radius: 5px;
     margin: 4px;
@@ -819,15 +817,6 @@ h3 {
 
 .fish-amano-shrimp {
     grid-column: 3 / 4;
-    grid-row: 9 / 10;
-    border: 7px solid rgba(var(--theme-one), 1);
-    border-radius: 5px;
-    margin: 4px;
-    background-color: rgba(var(--theme-three), 1);
-}
-
-.fish-neocardina-davidi {
-    grid-column: 2 / 3;
     grid-row: 9 / 10;
     border: 7px solid rgba(var(--theme-one), 1);
     border-radius: 5px;
