@@ -5,11 +5,11 @@
 ![Mockup](docs/readme/website_mockup.png "Website preview at different resolutions") 
 
 
-## **UX Design**
----
+# UX Design
+
 As a topic aquascaping is too expansive to contain within one small site given project time constraints and my current developer skill level.
 
-A conscious decision was taken to generalise content and not be too technical as this may dissuade the aspiring hobbyist.
+A conscious decision was taken to generalise content and not be too technical as this could dissuade the aspiring hobbyist.
 
 Using UX principles, user stories narrowed the *scope* of the site directing it to provide:
 - A broad overview of the aquascaping hobby.
@@ -18,32 +18,32 @@ Using UX principles, user stories narrowed the *scope* of the site directing it 
 - Suitable flora and fauna for a beginner.
 - Embedded links that provide launching points to explore other sites to the hobby in more detail.
 
-### **Wireframing**
-- To follow best practice, wireframes were developed for mobile, tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice I developed the mobile site before the desktop.
+## Wireframing
+- To follow best practice, wireframes were developed for mobile / tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice I developed the mobile site before the desktop.
 - Wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I abandoned a previous iteration of the project as it lacked direction. This was a good early learning experience which deserves mentioning. UX defines proper development practices!)
 
-### **Color Scheme and Accessibility**
+## Color Scheme and Accessibility
 - The *color scheme* was devised by taking an image of a home aquarium.
 The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradient).
 - To meet WCAG 2.0 criteria, the generated colour scheme was then passed to [eightshapes.com](http://www.eightshapes.com) for the accesibility table. [linked output]
 ---
 ![Mockup](docs/readme/color_scheme.png "Color Accessibilty")
 
-### **Code Reusability**
+## Code Reusability
 - CSS variables were used to improve code reusability.  RGB values were saved into the *:root* level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution (saves time) as changing the code in one place changes multiple elements rather than individually having to change their aesthetic.  I also want the option of controlling the *alpha* value.
 - Classes were reused insofar as possible to promote homogeneity across the site. See below for an example of code utilising css variables.
 
-```css
-:root {
-    --theme-one: 96, 115, 26;
-}
+    ```css
+    :root {
+        --theme-one: 96, 115, 26;
+    }
 
-h2 {
-    background-color: rgba(var(--theme-one),1);
-}
-```
+    h2 {
+        background-color: rgba(var(--theme-one),1);
+    }
+    ```
 
-### **CSS Grid used to layout desktop site**
+## CSS Grid used to layout desktop site
 - At an early stage upon the advice of my mentor, I learned *CSS Grid* in order to develop the desktop site.  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than overusing relative/absolute displays and archaic floats.
 - I opted to explicity place sections as opposed to declaring grid areas in this instance as the site is small.
 - Also noted is the importance of *html structure*. Sections that are nested have an affect on the grid behaviour.
@@ -51,9 +51,9 @@ h2 {
 
 ![Mockup](docs/readme/grid_view_chrome_dev_tools.png "Image of Grid view enabled using Google Chrome developer Tools section")
 
-## **Existing Features**
+## Existing Features
 
-### **One Page Site / Future Implementations**
+## **One Page Site / Future Implementations**
 - This is merely a personal preference. A *top level* to convey general information.  Future development could include more technical aspects of being an aquarist maintained of separate pages.  For example, the Nitrogen cycle, Co2 injections systems, specialist lighting setups, best products on the market etc. 
 
 
@@ -94,18 +94,18 @@ As a hobby, a good aquascape is aesthetically pleasing therefore conveys an impl
      
 ![Mockup](assets/images/footer_img.png "Footer section") 
 
-***
+---
 
 ## **Testing**
 
 ### **Validator Testing**
 - HTML code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as section meant for holding background image content only.
 
-```html
-<section id="hero-bg" class="hero-bg">
-    <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
-</section>
-```
+    ```html
+    <section id="hero-bg" class="hero-bg">
+        <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
+    </section>
+    ```
 - CSS code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
 ### **Fixed Bugs**
