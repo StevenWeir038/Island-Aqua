@@ -27,7 +27,6 @@ html {
 
 body {
     min-width: 300px;
-
     margin: 0;
     height: 100vh;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -45,7 +44,7 @@ a {
 }
 
 section[id] {
-    scroll-margin-top: 108px;
+    scroll-margin-top: 121px;
 }
 
 h2 {
@@ -214,7 +213,6 @@ footer input[type="submit"]:hover {
 .logo {
     font-family: 'Garamond';
     color: rgba(var(--theme-two), 1);
-    font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
     background-color: white;
     padding: 0.5rem;
     border: 2px solid rgba(var(--theme-two), 1);
@@ -363,7 +361,6 @@ h3 {
 .logo {
     font-family: 'Garamond';
     color: rgba(var(--theme-two), 1);
-    font-size: clamp(0.5rem, 4vw + 1rem, 4rem);
     background-color: white;
     padding: 0.5rem;
     border: 2px solid rgba(var(--theme-two), 1);
