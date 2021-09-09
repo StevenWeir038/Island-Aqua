@@ -92,6 +92,10 @@ GET SNAPSHOT
 
 GET SNAPSHOT
 
+## Lighthouse
+- 98% performance for [*desktop*](docs/readme/lighthouse_desktop.png "Chrome Developer Tools desktop score") site.
+- 57% performance for [*mobile*](docs/readme/lighthouse_mobile.png "Chrome Developer Tools mobile score") site.
+
 ## Fixed Bugs
 - Mobile *fixed header* obscured section links leading to a negative user experience.
 Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scroll-margin-top` to scroll 121px above the section links. Incidentially this is the height of the mobile fixed header + 10px of white background space.
