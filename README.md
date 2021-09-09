@@ -50,23 +50,19 @@ Generally *grid* offers more flexibility for moving / adding sections to the sit
 # Existing Features
 
 ## One Page Site / Future Implementations
-Developing a single page site with multiple sections was merely a personal preference. It's considered a *top level* to convey general information.  Future development could include more technical aspects of being an aquarist maintained of separate pages.  For example, the Nitrogen cycle, Co2 injections systems, specialist lighting setups, best products on the market etc.
+Developing a single page site with multiple sections was merely a personal preference. It's considered a *top level* to convey general information.  Future developments could include more technical aspects of being an aquarist maintained on separate pages.  For example, the nitrogen cycle, Co2 injection systems, lighting setups, filtration etc.
 Another idea was to fix the header to the top of the desktop page. When hovering/focusing on a particular section the relevant link in the menu would appear active. This would provide the user a further indicatiojn of were they were in the web document.
 
 ## Header logo & Navigation
 On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
-This serves as a link to the home of the website in line with intuitive user experience on mobile / tablet resolutions.
+This serves as a link to the home of the website in line with practices intuitive user experience on smaller resolutions.
 
-- The site has two Navigation bar styles.  A Hamburger style for mobile and tablet screens with limited screen space and a standard navbar as viewed on the desktop landing page in the next section.
-
-![Mockup](docs/readme/mobile_tablet_nav.png "Preview of header/nav with logo at mobile/tablet resolutions")
+- The site has two Navigation bar styles.  A Hamburger style for [smaller screens](docs/readme/mobile_tablet_nav.png "Preview of header/nav with logo at lower resolutions") with limited width and a standard navbar as viewed on [desktop](docs/readme/desktop_nav.png "Preview of header/nav for higher resolution screens") sized screens.
 
 ## Landing page
-- The *landing page* hero background is designed to draw the user into the topic as a picture paints a thousand words.
-As a hobby, a good aquascape is aesthetically pleasing therefore conveys an implicit message to the visitor.
+- The [*landing page*](docs/readme/landing_page.png "Website landing page and preview of header/nav at desktop resolution") has a hero background to pique the users interest.
+A well designed/maintained aquascape is aesthetically pleasing therefore conveys an *implicit* message to the visitor.
 - On loading the desktop site, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
-
-![Mockup](assets/images/landing_page.png "Website landing page and preview of header/nav at desktop resolution") 
 
 ## External Links
 - *External links* provide a launching point for the user to explore the hobby in more detail. These are carefully selected and reputable.
@@ -75,14 +71,10 @@ As a hobby, a good aquascape is aesthetically pleasing therefore conveys an impl
 ![Mockup](assets/images/external_links.png "Links are provided to external sites by clicking the image or its caption") 
 
 ## Footer
-    - The *footer* offers the user three options:
-     - A means to provide an email address to sign-up to a newsletter. Note an extensive form page isn't needed for the website's purposes.
-    - Links that open to new social media tabs for yet to be developed supporting content. Social media icons scale up on muse hovewr to improve user experience.
-
-     - A link to the top of the page by clicking the favicon.
-     
-![Mockup](assets/images/footer_img.png "Footer section") 
-
+- The [*footer*](docs/readme/footer.png "Footer section") offers the user three options:
+- A means to provide an email address to sign-up to a newsletter. Note an extensive form page isn't needed for the website's purposes.
+- Links that open to new social media tabs for yet to be developed supporting content. Social media icons scale up on mouse hover to improve user experience.
+- In the desktop site, a link to the top of the page is available by clicking the favicon.  To save space the favicon is hidden in the mobile site.  Additionally it is not required as the fixed header is always available for links.
 
 # Testing
 
@@ -97,30 +89,27 @@ As a hobby, a good aquascape is aesthetically pleasing therefore conveys an impl
 - CSS code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
 ## Fixed Bugs
-- Mobile/Tablet *fixed header* obscures section links leading to a negative user experience.
-Utilised [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to scroll 121px above the ection links. Incidentially this is the height of the fixed header + 10px of white background space.
+- Mobile *fixed header* obscured section links leading to a negative user experience.
+Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to scroll 121px above the ection links. Incidentially this is the height of the fixed header + 10px of white background space.
 
     ```css
     section[id] {
-    scroll-margin-top: 111px;    
+    scroll-margin-top: 121px;    
     }
-- Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added *required* to the end of input tag as below.
+    ```    
+- Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added ``required`` to the end of input tag as below.
 
     ```html
     <input id="email-field" type="email" name="user-email" placeholder="Email address"
                 aria-label="Type your email address here" required>
     ```
-    
 
-```
+- ``.video`` dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an ``iframe``. For formatting purposes I wanted the video to fill 90% of the screen width at all times.
+Thee dimension issue by solved placing the iframe inside a ``div``. The iframe was styled to fit the full height and width of the div which in turn had a ``padding-top`` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
 
 ## Unfixed Bugs
-
-    - *Mobile nav menu* does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck hidden checkbox
-        A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only and that JS is required.
-        
-        ![Mobile/Tablet nav menu will not collapse when no longer in focus](assets/images/mobile_nav.png)
-
+- [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
+A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only solution and that JavaScript is required.
 
 # Deployment
 

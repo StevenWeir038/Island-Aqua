@@ -83,7 +83,7 @@ h3 {
     border-radius: 10px;
     border: 2px solid rgba(var(--theme-two), 1);
     width: 90%;
-    /* height: 200px; */
+    height: 400px;
 }
 
 .hero-bg {
@@ -127,15 +127,16 @@ table td {
     padding: 5px;
 }
 
+/* alternate cover every 2nd row for improved readability */
 table tr:nth-child(even) {
     background-color: rgba(var(--theme-three), 1);
-    /* alternate cover every 2nd row for improved readability */
     color: black;
 }
 
+/* help user focus on table content */
 table tr:hover {
-    background-color: rgba(var(--theme-four), 1)
-        /* help user focus on table content */
+    background-color: rgba(var(--theme-four), 1);
+    color: black;
 }
 
 /* FOOTER */
