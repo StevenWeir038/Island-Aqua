@@ -79,11 +79,27 @@ h3 {
     width: 90%
 }
 
-.video {
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    padding-top: 56.25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:  1rem;
+}
+
+.responsive-iframe {
     border-radius: 10px;
     border: 2px solid rgba(var(--theme-two), 1);
-    width: 90%;
-    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
 }
 
 .hero-bg {
@@ -424,6 +440,29 @@ h3 {
     /* retain colour animation after running on webpage opening */
 }
 
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    padding-top: 56.25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:  1rem;
+}
+
+.responsive-iframe {
+    border-radius: 10px;
+    border: 2px solid rgba(var(--theme-two), 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
 @keyframes color-increase {
     from {
         /* transform: scale(1); */
@@ -568,13 +607,6 @@ h3 {
 .footer {
     grid-column: 1 / 4;
     grid-row: 13 / 14;
-}
-
-.video {
-    border-radius: 10px;
-    width: 90%;
-    /* height: 600px; */
-    margin-bottom: 1rem;
 }
 
 .main-quote {

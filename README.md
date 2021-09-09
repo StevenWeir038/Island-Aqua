@@ -23,13 +23,13 @@ Using UX principles, *user stories* narrowed the *scope* of the site directing i
 - Wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I consider it fair to admit I abandoned a previous iteration of the project as it lacked direction and was proving to be frustrating. This was a good early learning experience which deserves mentioning). UX defines proper development practices!
 
 ## Color Scheme and Accessibility
-- The *color scheme* was devised by taking an image of a home aquarium.
+- The [*color scheme*](docs/readme/color_scheme.png "Color Accessibilty") was devised by taking an image of a home aquarium.
 The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradient).
-- To meet WCAG 2.0 criteria, the generated colour scheme was then passed to [eightshapes.com](http://www.eightshapes.com) for an [accesibility table](docs/readme/color_scheme.png "Color Accessibilty").
+- To meet WCAG 2.0 criteria, the generated color scheme was then passed to [eightshapes.com](http://www.eightshapes.com) to generate an [accesibility table](docs/readme/color_accessibility.png "Color Accessibilty").
 
 ## Code Reusability
-- CSS variables were used to improve code reusability.  RGB values were saved into the `:root` level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution as it saves time by changing the code in one place to changes multiple elements simultaneously.  It also provided the option to easily control the *alpha* value if required.
-- Classes were reused insofar as possible to promote homogeneity across the site. See below for an example of code utilising css variables.
+- CSS variables were used to improve code reusability.  RGB values were saved into the `:root` level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution. It saves time by changing the code in one place to multiple elements simultaneously.  It also provided the option to easily control the *alpha* value if required.
+- Classes were reused insofar as possible *to promote homogeneity across the site*. See below for an example of code utilising css variables helped facilitate this principle.
 
     ```css
     :root {
@@ -42,7 +42,7 @@ The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradi
     ```
 
 ## CSS Grid used to layout desktop site
-At an early stage upon the advice of my mentor, I learned *CSS Grid* in order to develop the [desktop site](docs/readme/desktop_grid_view.png "Image of Grid view enabled using Google Chrome developer Tools section").  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than utitising relative/absolute displays and archaic floats.  Consider it a bespoke version of Bootstrap.
+At an early stage upon the advice of my mentor, I learned *CSS Grid* in order to develop the [desktop site](docs/readme/desktop_grid_view.png "Image of Grid view enabled using Google Chrome developer Tools section").  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than utitising relative/absolute displays and archaic floats.  They do still have a place in modern development though are now more limited in scope.
 I opted to explicity place sections as opposed to declaring grid areas in this instance as the site is small.
 Also noted is the importance of *html structure*. Sections that are nested have an affect on the grid behaviour.
 Generally *grid* offers more flexibility for moving / adding sections to the site in future and ultimately requires less code. It is more readable therefore is easier to maintain.
@@ -76,7 +76,7 @@ A well designed/maintained aquascape is aesthetically pleasing therefore conveys
 
 # Testing
 
-LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT!
+CHROME DEV TOOLS - LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT! AIM for > 90%
 
 ## Validator Testing
 - HTML code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as section meant for holding background image content only.
@@ -86,7 +86,11 @@ LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT!
         <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
     </section>
     ```
+GET SNAPSHOT
+
 - CSS code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
+
+GET SNAPSHOT
 
 ## Fixed Bugs
 - Mobile *fixed header* obscured section links leading to a negative user experience.
