@@ -101,7 +101,8 @@ h1 span {
     font-size: 0.6em;
 }
 
-figcaption {
+figcaption,
+#plants a {
     font-family: 'Montserrat';
     font-style: italic;
     font-weight: bold;

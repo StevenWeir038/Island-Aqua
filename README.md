@@ -76,6 +76,8 @@ A well designed/maintained aquascape is aesthetically pleasing therefore conveys
 
 # Testing
 
+LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT!
+
 ## Validator Testing
 - HTML code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as section meant for holding background image content only.
 
@@ -104,6 +106,7 @@ Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scro
 
 - At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times.
 The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
+Conversly, hard coding a value of 800px for the desktop render the iframe too large on a mobile screen. 
 
 ## Unfixed Bugs
 - [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
@@ -132,6 +135,7 @@ Learning on the following topics supported by:
 - CSS Grid / Responsive Web Design - [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo)
 - CSS variables - [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
 - CSS animations - [css-tricks.com](https://css-tricks.com/almanac/properties/a/animation/).
+- Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp)
 
 Also a special mention for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism and guidance on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
 
