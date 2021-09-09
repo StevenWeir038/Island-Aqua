@@ -637,7 +637,7 @@ table tr:hover {
 
 /* FOOTER */
 footer {
-    background: rgba(var(--theme-two), 0.85);
+    background: rgba(var(--theme-two), 1);
     text-align: center;
     z-index: 50;
     width: 100%;
@@ -648,7 +648,7 @@ footer {
     border-top: 2px solid rgba(var(--theme-five), 1);
 }
 
-footer>form {
+footer > form {
     padding: 0 0.5rem;
 }
 

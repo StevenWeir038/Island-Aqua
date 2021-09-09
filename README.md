@@ -51,6 +51,7 @@ Generally *grid* offers more flexibility for moving / adding sections to the sit
 
 ## One Page Site / Future Implementations
 Developing a single page site with multiple sections was merely a personal preference. It's considered a *top level* to convey general information.  Future development could include more technical aspects of being an aquarist maintained of separate pages.  For example, the Nitrogen cycle, Co2 injections systems, specialist lighting setups, best products on the market etc.
+Another idea was to fix the header to the top of the desktop page. When hovering/focusing on a particular section the relevant link in the menu would appear active. This would provide the user a further indicatiojn of were they were in the web document.
 
 ## Header logo & Navigation
 On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
@@ -96,14 +97,21 @@ As a hobby, a good aquascape is aesthetically pleasing therefore conveys an impl
 - CSS code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
 
 ## Fixed Bugs
-    - Mobile/Tablet *fixed header* obscures section links
-    - Utilised [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to mitigate.
-    - Email field validation can be bypassed by directly clicking the submit button in footer. JS needed to prevent activation of submit button prior to email input being correctly populated.
+- Mobile/Tablet *fixed header* obscures section links leading to a negative user experience.
+Utilised [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to scroll 121px above the ection links. Incidentially this is the height of the fixed header + 10px of white background space.
+
+    ```css
+    section[id] {
+    scroll-margin-top: 111px;    
+    }
+- Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added *required* to the end of input tag as below.
+
+    ```html
+    <input id="email-field" type="email" name="user-email" placeholder="Email address"
+                aria-label="Type your email address here" required>
+    ```
     
-```css
-section[id] {
-scroll-margin-top: 150px;    
-}
+
 ```
 
 ## Unfixed Bugs
