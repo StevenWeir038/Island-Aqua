@@ -65,10 +65,8 @@ A well designed/maintained aquascape is aesthetically pleasing therefore conveys
 - On loading the desktop site, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
 
 ## External Links
-- *External links* provide a launching point for the user to explore the hobby in more detail. These are carefully selected and reputable.
+- [*External links*](docs/readme/external_links.png "Links are provided to external sites by clicking the image or its caption") provide a launching point for the user to explore the hobby in more detail. These are popular sources and reputable retailers from the UK.
 - Each link opens in a new tab so the user can easily refer back to main site.
-
-![Mockup](assets/images/external_links.png "Links are provided to external sites by clicking the image or its caption") 
 
 ## Footer
 - The [*footer*](docs/readme/footer.png "Footer section") offers the user three options:
@@ -90,22 +88,22 @@ A well designed/maintained aquascape is aesthetically pleasing therefore conveys
 
 ## Fixed Bugs
 - Mobile *fixed header* obscured section links leading to a negative user experience.
-Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) **scroll-margin-top** to scroll 121px above the ection links. Incidentially this is the height of the fixed header + 10px of white background space.
+Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scroll-margin-top` to scroll 121px above the section links. Incidentially this is the height of the mobile fixed header + 10px of white background space.
 
     ```css
     section[id] {
     scroll-margin-top: 121px;    
     }
     ```    
-- Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added ``required`` to the end of input tag as below.
+- Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added `required` to the end of input tag as below.
 
     ```html
     <input id="email-field" type="email" name="user-email" placeholder="Email address"
                 aria-label="Type your email address here" required>
     ```
 
-- ``.video`` dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an ``iframe``. For formatting purposes I wanted the video to fill 90% of the screen width at all times.
-Thee dimension issue by solved placing the iframe inside a ``div``. The iframe was styled to fit the full height and width of the div which in turn had a ``padding-top`` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
+- At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times.
+The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
 
 ## Unfixed Bugs
 - [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
@@ -130,10 +128,12 @@ Alternatively if using gitpod you can click [here](https://gitpod.io/#https://gi
 # Credits
 
 ## Content
-- Thankyou you to [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo) for CSS grid tutorials to develop my understanding of responsive web design.
-- Use of CSS variables supported by the [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
-- Thankyou you to my mentor [Tim Nelson](https://github.com/TravelTimN) for his advice on html structure, semantics and improved user experience [https://css-tricks.com/snippets/jquery/smooth-scrolling/].
+Learning on the following topics supported by:
+- CSS Grid / Responsive Web Design - [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo)
+- CSS variables - [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
+- CSS animations - [css-tricks.com](https://css-tricks.com/almanac/properties/a/animation/).
 
+Also a special mention for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism and guidance on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
 
 ## Media
 
