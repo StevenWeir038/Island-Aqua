@@ -162,7 +162,7 @@ footer a {
 }
 
 .social {
-    display: inline;
+    display: none;
 }
 
 .social :hover {
@@ -171,7 +171,8 @@ footer a {
 
 footer p {
     color: white;
-    margin: 0.5rem 0;
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
 }
 
 footer input {
