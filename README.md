@@ -28,8 +28,7 @@ The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradi
 - To meet WCAG 2.0 criteria, the generated color scheme was then passed to [eightshapes.com](http://www.eightshapes.com) to generate an [accesibility table](docs/readme/color_accessibility.png "Color Accessibilty").
 
 ## Code Reusability
-- CSS variables were used to improve code reusability.  RGB values were saved into the `:root` level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution. It saves time by changing the code in one place to multiple elements simultaneously.  It also provided the option to easily control the *alpha* value if required.
-- Classes were reused insofar as possible *to promote homogeneity across the site*. See below for an example of code utilising css variables helped facilitate this principle.
+- CSS variables were used to improve code reusability.  RGB values were saved into the `:root` level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution as it saved time. Changing the code in one place affected multiple elements simultaneously.  In this site this primarily was used for borders and backgrounds.
 
     ```css
     :root {
@@ -42,7 +41,7 @@ The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradi
     ```
 
 ## CSS Grid used to layout desktop site
-At an early stage upon the advice of my mentor, I learned *CSS Grid* in order to develop the [desktop site](docs/readme/desktop_grid_view.png "Image of Grid view enabled using Google Chrome developer Tools section").  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than utitising relative/absolute displays and archaic floats.  They do still have a place in modern development though are now more limited in scope.
+I learned *CSS Grid* in order to develop the [desktop site](docs/readme/desktop_grid_view.png "Image of Grid view enabled using Google Chrome developer Tools section").  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than utitising relative/absolute displays and archaic floats.  They do still have a place in modern development though are now more limited in scope.
 I opted to explicity place sections as opposed to declaring grid areas in this instance as the site is small.
 Also noted is the importance of *html structure*. Sections that are nested have an affect on the grid behaviour.
 Generally *grid* offers more flexibility for moving / adding sections to the site in future and ultimately requires less code. It is more readable therefore is easier to maintain.
@@ -140,13 +139,35 @@ Alternatively if using gitpod you can click [here](https://gitpod.io/#https://gi
 
 ## Content
 Learning on the following topics supported by:
-- CSS Grid / Responsive Web Design - [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo)
+- CSS Grid / Responsive Web Design - [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo).
 - CSS variables - [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
 - CSS animations - [css-tricks.com](https://css-tricks.com/almanac/properties/a/animation/).
-- Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp)
+- CSS scrolling in fixed header environments - [Codepen](https://codepen.io/cferdinandi/pen/GRJvozN).
+- Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp).
 
-Also a special mention for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism and guidance on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
+Special mention is reserved for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism.
+His guidance to use CSS grid transformed my approach top the desktop development. 
+
+Also I'd like to thank him for his advice on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
 
 ## Media
+Images
+- Landing page background from [Wallpaper Safari](https://wallpapersafari.com/w/YB8OlH).
+- Cardinal Tetra from [Aquarium Co Op](https://www.aquariumcoop.com/blogs/aquarium/neon-tetras-and-cardinal-tetras?_pos=1&_sid=d1bb27efc&_ss=r).
+- Dwarf Gourami from [Aquarium Co Op](https://www.aquariumcoop.com/blogs/aquarium/top-5-gouramis?_pos=1&_sid=49d4057ec&_ss=r).
+- Amano Shrimp from [Aquarium Co Op](https://www.aquariumcoop.com/blogs/aquarium/a-solution-to-algae-amano-shrimp?_pos=1&_sid=aeba7cc00&_ss=r).
 
+ADD 3 COMPONENTS
 
+WOOD
+ROCK
+SUBSTRATE
+
+ADD 3 STYLES
+
+DUTCH
+IWAGUMI
+NATURE 
+
+Video
+- Top 5 favorite plants from [George Farmer and Jurijs Jutjajevs](https://www.youtube.com/watch?v=jYjlle5rjSk).
