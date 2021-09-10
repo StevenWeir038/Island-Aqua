@@ -50,7 +50,7 @@ Generally *grid* offers more flexibility for moving / adding sections to the sit
 
 ## One Page Site / Future Implementations
 Developing a single page site with multiple sections was merely a personal preference. It's considered a *top level* to convey general information.  Future developments could include more technical aspects of being an aquarist maintained on separate pages.  For example, the nitrogen cycle, Co2 injection systems, lighting setups, filtration etc.
-Another idea was to fix the header to the top of the desktop page. When hovering/focusing on a particular section the relevant link in the menu would appear active. This would provide the user a further indicatiojn of were they were in the web document.
+Another idea was to fix the header to the top of the desktop page. When hovering/focusing on a particular section the relevant link in the menu would appear active. This would provide the user a further indication of were they are in the web document.
 
 ## Header logo & Navigation
 On mobile and tablet the header is *fixed* to keep navigation accessible via the hamburger icon.  
@@ -113,7 +113,7 @@ Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scro
 
 - At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times. Hard coding a value of 800px for the desktop rendered the iframe too large on a mobile screen.
 The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
-Further testing showed the video container was exceeding the screen height due to the 90% container width. Ten percentage points were taken off using `padding-top: 46.25%;`. This gives an aspect ratio of 7.4/16 though distortion remains imperceptible.
+Further testing showed the video container was exceeding the screen height due to the 90% container width. Ten percentage points were taken off using `padding-top: 46.25%;`. This gives an aspect ratio of 7.4/16.
 
 ## Unfixed Bugs
 - [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
@@ -142,7 +142,7 @@ Learning on the following topics supported by:
 - CSS Grid / Responsive Web Design - [Wes Bos](https://www.youtube.com/watch?v=DCZdCKjnBCs) and [Kevin Powell](https://www.youtube.com/watch?v=duH4DLq5yoo).
 - CSS variables - [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
 - CSS animations - [css-tricks.com](https://css-tricks.com/almanac/properties/a/animation/).
-- CSS scrolling in fixed header environments - [Codepen](https://codepen.io/cferdinandi/pen/GRJvozN).
+- CSS scrolling in fixed header environments - [Chris Ferdinandi](https://codepen.io/cferdinandi/pen/GRJvozN).
 - Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp).
 
 Special mention is reserved for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism.
@@ -153,15 +153,12 @@ Also I'd like to thank him for his advice on writing markdown, project deploymen
 ## Media
 Images
 - Landing page background from [Wallpaper Safari](https://wallpapersafari.com/w/YB8OlH).
-- Cardinal Tetra from [Aquarium Co Op](https://www.aquariumcoop.com/blogs/aquarium/neon-tetras-and-cardinal-tetras?_pos=1&_sid=d1bb27efc&_ss=r).
-- Dwarf Gourami from [Aquarium Co Op](https://www.aquariumcoop.com/blogs/aquarium/top-5-gouramis?_pos=1&_sid=49d4057ec&_ss=r).
-- Amano Shrimp from [Aquarium Co Op](https://www.aquariumcoop.com/blogs/aquarium/a-solution-to-algae-amano-shrimp?_pos=1&_sid=aeba7cc00&_ss=r).
-
-ADD 3 COMPONENTS
-
-WOOD
-ROCK
-SUBSTRATE
+- Cardinal Tetra from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/neon-tetras-and-cardinal-tetras?_pos=1&_sid=d1bb27efc&_ss=r).
+- Dwarf Gourami from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/top-5-gouramis?_pos=1&_sid=49d4057ec&_ss=r).
+- Amano Shrimp from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/a-solution-to-algae-amano-shrimp?_pos=1&_sid=aeba7cc00&_ss=r).
+- Wood image from [Fishpond.co.uk](https://www.fishpond.co.uk/Pets/Pisces-30cm-Small-Spiderwood-Varies/9337280001146?utm_source=googleps&utm_medium=ps&utm_campaign=GB).
+- Rock image from [Shopee](https://shopee.ph/Dragon-stone-(ohko-stone)-1kg-i.262018843.5337807506).
+- Substrate image from [Aquascaping Love](https://aquascapinglove.com/learn-aquascaping/elements-of-aquascaping-rocks-driftwood-substrates/).
 
 ADD 3 STYLES
 
