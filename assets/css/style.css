@@ -83,7 +83,7 @@ h3 {
     position: relative;
     overflow: hidden;
     width: 90%;
-    padding-top: 56.25%;
+    padding-top: 46.25%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom:  1rem;
@@ -444,7 +444,7 @@ h3 {
     position: relative;
     overflow: hidden;
     width: 90%;
-    padding-top: 56.25%;
+    padding-top: 46.25%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom:  1rem;
@@ -465,12 +465,10 @@ h3 {
 
 @keyframes color-increase {
     from {
-        /* transform: scale(1); */
         filter: grayscale(100%);
     }
 
     to {
-        /* transform: scale(1.05); */
         filter: grayscale(0%);
     }
 }
@@ -728,4 +726,4 @@ footer input[type="submit"]:hover {
     background: rgba(var(--theme-one), 1);
 }
 }
-/* end of media query min-width: 1250px/75em (desktop) */
+/* end of media query min-width: 1250px (desktop) */

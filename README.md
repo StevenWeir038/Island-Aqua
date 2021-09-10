@@ -68,7 +68,7 @@ A well designed/maintained aquascape is aesthetically pleasing therefore conveys
 - Each link opens in a new tab so the user can easily refer back to main site.
 
 ## Footer
-- The [*footer*](docs/readme/footer.png "Footer section") offers the user three options:
+The [*footer*](docs/readme/footer.png "Footer section") offers the user three options:
 - A means to provide an email address to sign-up to a newsletter. Note an extensive form page isn't needed for the website's purposes.
 - Links that open to new social media tabs for yet to be developed supporting content. Social media icons scale up on mouse hover to improve user experience.
 - In the desktop site, a link to the top of the page is available by clicking the favicon.  To save space the favicon is hidden in the mobile site.  Additionally it is not required as the fixed header is always available for links.
@@ -111,9 +111,9 @@ Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scro
                 aria-label="Type your email address here" required>
     ```
 
-- At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times.
+- At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times. Hard coding a value of 800px for the desktop rendered the iframe too large on a mobile screen.
 The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
-Conversly, hard coding a value of 800px for the desktop render the iframe too large on a mobile screen. 
+Further testing showed the video container was exceeding the screen height due to the 90% container width. Ten percentage points were taken off using `padding-top: 46.25%;`. This gives an aspect ratio of 7.4/16 though distortion remains imperceptible.
 
 ## Unfixed Bugs
 - [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
