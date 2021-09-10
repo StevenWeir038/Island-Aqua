@@ -58,6 +58,8 @@ This serves as a link to the home of the website in line with practices intuitiv
 
 - The site has two Navigation bar styles.  A Hamburger style for [smaller screens](docs/readme/mobile_tablet_nav.png "Preview of header/nav with logo at lower resolutions") with limited width and a standard navbar as viewed on [desktop](docs/readme/desktop_nav.png "Preview of header/nav for higher resolution screens") sized screens.
 
+- Hover effects and vertical components added to desktop to aid user with selection and intuitively understand how the site is arranged.
+
 ## Landing page
 - The [*landing page*](docs/readme/landing_page.png "Website landing page and preview of header/nav at desktop resolution") has a hero background to pique the users interest.
 A well designed/maintained aquascape is aesthetically pleasing therefore conveys an *implicit* message to the visitor.
@@ -152,6 +154,7 @@ Learning on the following topics supported by:
 - CSS animations - [css-tricks.com](https://css-tricks.com/almanac/properties/a/animation/).
 - CSS scrolling in fixed header environments - [Chris Ferdinandi](https://codepen.io/cferdinandi/pen/GRJvozN).
 - Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp).
+- Vertical lines between site menu items from [Site Origin](https://siteorigin.com/thread/vertical-line-between-menu-items/) excluding final item.
 
 Special mention is reserved for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism.
 His guidance to use CSS grid transformed my approach top the desktop development. 
