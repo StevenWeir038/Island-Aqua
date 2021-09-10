@@ -159,10 +159,9 @@ Images
 - Wood image from [Fishpond.co.uk](https://www.fishpond.co.uk/Pets/Pisces-30cm-Small-Spiderwood-Varies/9337280001146?utm_source=googleps&utm_medium=ps&utm_campaign=GB).
 - Rock image from [Shopee](https://shopee.ph/Dragon-stone-(ohko-stone)-1kg-i.262018843.5337807506).
 - Substrate image from [Aquascaping Love](https://aquascapinglove.com/learn-aquascaping/elements-of-aquascaping-rocks-driftwood-substrates/).
+- Dutch style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-dutch-aquascaping-style) article by Adam Edmond.
+- Iwagumi style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-iwagumi-aquascaping-style) article by Adam Edmond.
 
-ADD 3 STYLES
-
-DUTCH
 IWAGUMI
 NATURE 
 
