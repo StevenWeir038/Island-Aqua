@@ -75,6 +75,10 @@ The [*footer*](docs/readme/footer.png "Footer section") offers the user three op
 - Links that open to new social media tabs for yet to be developed supporting content. Social media icons scale up on mouse hover to improve user experience.
 - In the desktop site, a link to the top of the page is available by clicking the favicon.  To save space the favicon is hidden in the mobile site.  Additionally it is not required as the fixed header is always available for links.
 
+## Intentional departure from Standard Practice
+The formdump page is designed as a placeholder for communication with a backend.  The POST method is ordinarily used instead the current simulated GET method.  
+Due to the intended ephemeral nature of the page, CSS code was embedded into the head of the formdump.html file rather than add to the external css file.  In the event a backend is established it is easier to remove one file than to go through the external css again.
+
 # Testing
 
 CHROME DEV TOOLS - LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT! AIM for > 90%
@@ -155,6 +159,7 @@ Learning on the following topics supported by:
 - CSS scrolling in fixed header environments - [Chris Ferdinandi](https://codepen.io/cferdinandi/pen/GRJvozN).
 - Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp).
 - Vertical lines between site menu items from [Site Origin](https://siteorigin.com/thread/vertical-line-between-menu-items/) excluding final item.
+- social media icon [wiggle effect](https://www.w3schools.com/howto/howto_css_shake_image.asp).
 
 Special mention is reserved for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism.
 His guidance to use CSS grid transformed my approach top the desktop development. 

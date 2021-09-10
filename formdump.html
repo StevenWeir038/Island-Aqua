@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=index.html">
+    <meta http-equiv="refresh" content="50000; url=index.html">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="shortcut icon" href="assets/images/fish-icon_.png">
     <title>island AQUA design</title>
-</head>
-<body class="formdump">
+    <style>
+        body {
+            display: grid;
+            text-align: center;  
+        }
 
-    <main>
+        #formdump-header {
+            grid-template-columns: 1 / 2;
+            grid-template-rows: 1 / 4;
+            background: rgba(var(--theme-one), 1);
+            border-bottom: 2px solid rgba(var(--theme-two), 1);    
+            text-align: center;                    
+            width: 100%;
+            top: 0;
+            margin: 0;
+            color: white;
+        }
+        
+        #formdump-main {
+            grid-template-columns: 1 / 2;
+            grid-template-rows: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        #formdump-footer {
+            grid-template-columns: 1 / 2;
+            grid-template-rows: 3 / 4;
+
+            background: rgba(var(--theme-two), 1);
+            border-top: 2px solid rgba(var(--theme-five), 1);              
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+            margin: 0;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="formdump-header">
+        <a href="index.html">
+            <h1 class="logo">
+                <span>island</span>AQUA<span>design</span>
+            </h1>
+        </a>
+    </header>
+    <main id="formdump-main">
         <p>
             Thank you for signing up to our newsletter.
         </p>
     </main>
+
+    <footer id="formdump-footer">
+        <p>
+            &copy;2021 islandAQUAdesign
+        </p>
+    </footer>
+
+    <!-- font awesome script [at bottom of code for faster page loading] -->
+    <script src="https://kit.fontawesome.com/c7dbda0798.js"></script>
 </body>
+
 </html>

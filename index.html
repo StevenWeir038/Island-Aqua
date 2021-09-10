@@ -13,7 +13,6 @@
 <body>
     <header class="header" id="top">
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <!-- nav-toggle id to work with hamburger favicon label as we will hide unsightly checkbox -->
         <a href="index.html">
             <h1 class="logo"> <span>island</span>AQUA<span>design</span></h1>
         </a>
@@ -39,7 +38,6 @@
         <label for="nav-toggle" class="nav-toggle-label">
             <span><i class="fas fa-bars"></i></span>
         </label>
-        <!-- classic menu hamburger icon from fontawesome. As span inside label inherits nav-toggle-label then used in css -->
     </header>
 
     <main class="container">
@@ -499,7 +497,7 @@
 
     <footer class="footer">
         <form action="formdump.html" method="get">
-            <!-- change to page 2 signup relative URL - No backend which would use POST method, use the CI challenge as formdump.html unsupported -->
+            <!-- Should be using POST method. As no backend, substitute with GET to direct to own formdump page -->
             <br>
             <label for="email-field">Recieve weekly tips for a better aquarium directly to your Inbox</label>
             <br>
@@ -523,7 +521,7 @@
         <p>
             &copy;2021 islandAQUAdesign
         </p>
-        <a href="#top" class="social"><i class="fas fa-seedling"></i></a>
+        <a href="#top" id="return-to-top"><i class="fas fa-seedling"></i></a>
 
     </footer>
     <!-- font awesome script [at bottom of code for faster page loading] -->
