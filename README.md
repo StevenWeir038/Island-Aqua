@@ -115,9 +115,17 @@ Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scro
 The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
 Further testing showed the video container was exceeding the screen height due to the 90% container width. Ten percentage points were taken off using `padding-top: 46.25%;`. This gives an aspect ratio of 7.4/16.
 
+- After entering a validated email address the user is directed to a formdump page indicating their success. They are automatically taken back to main site after a predefined amount of time using the following code snippet in the `head`.
+
+    ```html
+    <meta http-equiv="refresh" content="5; url=index.html">
+    ```
+
+A further improvement of this is to provide a countdown timer though this would require JavaScript.
+
 ## Unfixed Bugs
 - [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
-A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only solution and that JavaScript is required.
+A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only and that JavaScript is required.
 
 # Deployment
 
@@ -151,19 +159,21 @@ His guidance to use CSS grid transformed my approach top the desktop development
 Also I'd like to thank him for his advice on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
 
 ## Media
-Images
+**Images**
 - Landing page background from [Wallpaper Safari](https://wallpapersafari.com/w/YB8OlH).
-- Cardinal Tetra from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/neon-tetras-and-cardinal-tetras?_pos=1&_sid=d1bb27efc&_ss=r).
-- Dwarf Gourami from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/top-5-gouramis?_pos=1&_sid=49d4057ec&_ss=r).
-- Amano Shrimp from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/a-solution-to-algae-amano-shrimp?_pos=1&_sid=aeba7cc00&_ss=r).
+- Cardinal Tetra image from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/neon-tetras-and-cardinal-tetras?_pos=1&_sid=d1bb27efc&_ss=r).
+- Dwarf Gourami image from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/top-5-gouramis?_pos=1&_sid=49d4057ec&_ss=r).
+- Amano Shrimp image from [Aquarium Co-Op](https://www.aquariumcoop.com/blogs/aquarium/a-solution-to-algae-amano-shrimp?_pos=1&_sid=aeba7cc00&_ss=r).
 - Wood image from [Fishpond.co.uk](https://www.fishpond.co.uk/Pets/Pisces-30cm-Small-Spiderwood-Varies/9337280001146?utm_source=googleps&utm_medium=ps&utm_campaign=GB).
 - Rock image from [Shopee](https://shopee.ph/Dragon-stone-(ohko-stone)-1kg-i.262018843.5337807506).
 - Substrate image from [Aquascaping Love](https://aquascapinglove.com/learn-aquascaping/elements-of-aquascaping-rocks-driftwood-substrates/).
-- Dutch style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-dutch-aquascaping-style) article by Adam Edmond.
-- Iwagumi style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-iwagumi-aquascaping-style) article by Adam Edmond.
+- Browser tab icon courtesy of [Martin Berube](https://icon-icons.com/icon/fish-animal/36981).
 
-IWAGUMI
-NATURE 
+I'd like to thank Adam Edmond, whose articles on aquascaping styles have inspired me for many years.
 
-Video
-- Top 5 favorite plants from [George Farmer and Jurijs Jutjajevs](https://www.youtube.com/watch?v=jYjlle5rjSk).
+- Dutch style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-dutch-aquascaping-style).
+- Iwagumi style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-iwagumi-aquascaping-style).
+- Nature style image from an [The Aquarium Guide](https://theaquariumguide.com/articles/understanding-nature-aquascaping-style).
+
+**Video**
+- Top 5 favorite plants from [George Farmer and Jurijs Jutjajevs](https://www.youtube.com/watch?v=jYjlle5rjSk) on youtube.
