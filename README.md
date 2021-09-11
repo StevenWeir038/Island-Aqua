@@ -19,29 +19,34 @@ Using UX principles, *user stories* narrowed the *scope* of the site directing i
 - Embedded links that provide launching points to explore other sites to the hobby in more detail.
 
 ## Wireframing
-- To follow best practice, wireframes were developed for mobile / tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice the mobile site was developed before the desktop.
-- Wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I consider it fair to admit I abandoned a previous iteration of the project as it lacked direction and was proving to be frustrating. This was a good early learning experience which deserves mentioning). UX defines proper development practices!
+
+To follow best practice, wireframes were developed for mobile / tablet and desktop based on the webinar of the project lead Matt Boden at the [Code Institute](https://www.codeinstitute.net/). Using his advice the mobile site was developed before the desktop.
+
+Wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I consider it fair to admit I abandoned a previous iteration of the project as it lacked direction and was proving to be frustrating. This was a good early learning experience which deserves mentioning). UX defines proper development practices!
 
 ## Color Scheme and Accessibility
-- The [*color scheme*](docs/readme/color_scheme.png "Color Accessibilty") was devised by taking an image of a home aquarium.
+
+The [*color scheme*](docs/readme/color_scheme.png "Color Accessibilty") was devised by taking an image of a home aquarium.
 The image was passed to [Adobe Color](https://color.adobe.com/create/image-gradient).
-- To meet WCAG 2.0 criteria, the generated color scheme was then passed to [eightshapes.com](http://www.eightshapes.com) to generate an [accesibility table](docs/readme/color_accessibility.png "Color Accessibilty").
+
+To meet WCAG 2.0 criteria, the generated color scheme was then passed to [eightshapes.com](http://www.eightshapes.com) to generate an [accesibility table](docs/readme/color_accessibility.png "Color Accessibilty").
 
 ## Code Reusability
-- CSS variables were used to improve code reusability.  RGB values were saved into the `:root` level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution as it saved time. Changing the code in one place affected multiple elements simultaneously.  In this site this primarily was used for borders and backgrounds.
+CSS variables were used to improve code reusability.  RGB values were saved into the `:root` level of the external CSS file.  These values were then available when declaring rgbA values.  This is a superior solution as it saved time. Changing the code in one place affected multiple elements simultaneously.  In this site this primarily was used for borders and backgrounds.
 
-    ```css
-    :root {
-        --theme-one: 96, 115, 26;
-    }
+```css
+:root {
+    --theme-one: 96, 115, 26;
+}
 
-    h2 {
-        background-color: rgba(var(--theme-one),1);
-    }
-    ```
+h2 {
+    background-color: rgba(var(--theme-one),1);
+}
+```
 
 ## CSS Grid used to layout desktop site
 I learned *CSS Grid* in order to develop the [desktop site](docs/readme/desktop_grid_view.png "Image of Grid view enabled using Google Chrome developer Tools section").  Research credited in the content section demonstrates it has  superior responsiveness and is more adaptable for placing future sections than utitising relative/absolute displays and archaic floats.  They do still have a place in modern development though are now more limited in scope.
+
 I opted to explicity place sections as opposed to declaring grid areas in this instance as the site is small.
 Also noted is the importance of *html structure*. Sections that are nested have an affect on the grid behaviour.
 Generally *grid* offers more flexibility for moving / adding sections to the site in future and ultimately requires less code. It is more readable therefore is easier to maintain.
@@ -50,6 +55,7 @@ Generally *grid* offers more flexibility for moving / adding sections to the sit
 
 ## One Page Site / Future Implementations
 Developing a single page site with multiple sections was merely a personal preference. It's considered a *top level* to convey general information.  Future developments could include more technical aspects of being an aquarist maintained on separate pages.  For example, the nitrogen cycle, Co2 injection systems, lighting setups, filtration etc.
+
 Another idea was to fix the header to the top of the desktop page. When hovering/focusing on a particular section the relevant link in the menu would appear active. This would provide the user a further indication of were they are in the web document.
 
 ## Header logo & Navigation
@@ -61,13 +67,17 @@ This serves as a link to the home of the website in line with practices intuitiv
 - Hover effects and vertical components added to desktop to aid user with selection and intuitively understand how the site is arranged.
 
 ## Landing page
-- The [*landing page*](docs/readme/landing_page.png "Website landing page and preview of header/nav at desktop resolution") has a hero background to pique the users interest.
+
+The [*landing page*](docs/readme/landing_page.png "Website landing page and preview of header/nav at desktop resolution") has a hero background to pique the users interest.
 A well designed/maintained aquascape is aesthetically pleasing therefore conveys an *implicit* message to the visitor.
-- On loading the desktop site, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
+
+On loading the desktop site, note the subtle use of greyscale fading into the standard contrast to emphasise the beauty of nature.
 
 ## External Links
-- [*External links*](docs/readme/external_links.png "Links are provided to external sites by clicking the image or its caption") provide a launching point for the user to explore the hobby in more detail. These are popular sources and reputable retailers from the UK.
-- Each link opens in a new tab so the user can easily refer back to main site.
+
+[*External links*](docs/readme/external_links.png "Links are provided to external sites by clicking the image or its caption") on the `<picture>` elements provide a launching point for the user to explore the hobby in more detail. These are popular sources and reputable retailers from the UK.
+
+Each link opens in a new tab so the user can easily refer back to main site.
 
 ## Footer
 The [*footer*](docs/readme/footer.png "Footer section") offers the user three options:
@@ -76,20 +86,22 @@ The [*footer*](docs/readme/footer.png "Footer section") offers the user three op
 - In the desktop site, a link to the top of the page is available by clicking the favicon.  To save space the favicon is hidden in the mobile site.  Additionally it is not required as the fixed header is always available for links.
 
 ## Formdump page
-- The formdump page is designed as a placeholder for communication with a backend.  The POST method is ordinarily used instead the current simulated GET method.  
+The [*formdump*](docs/readme/formdump.png "formdump page") page is designed as a placeholder for communication with a backend.  The POST method is ordinarily used instead the current simulated GET method.  
+
 As the page is supposed to be a temporary addition, CSS code was embedded into the head of the formdump.html file rather than add to the external css file which is better practice.  In the event a backend is established it is easier to remove one file than to go revisit the external css file again.
-- Flexbox was use for demonstrative purposes to center main content.
+
+[*Flexbox*](https://flexboxfroggy.com/ "Flexbox Froggy was an excellent introduction to the use of flex") was used as it is simple to use and convenient when placing content within an element.
         
-    ```css
-    #formdump-main {
-        grid-template-columns: 1 / 2;
-        grid-template-rows: 2 / 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 80vh;
-    }
-    ```
+```css
+#formdump-main {
+    grid-template-columns: 1 / 2;
+    grid-template-rows: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+```
 # Testing
 
 ## Validator Testing
@@ -112,42 +124,43 @@ CSS directly copied and pasted into the offical [W3C Jigsaw Validator](https://j
 - No errors found in the [external CSS](docs/readme/css_validator_style_page.png "Image of validated external CSS file") file.
 
 ## Lighthouse
-- 96% performance for [*desktop*](docs/readme/lighthouse_desktop.png "Chrome Developer Tools desktop score") site.
-- 54% performance for [*mobile*](docs/readme/lighthouse_mobile.png "Chrome Developer Tools mobile score") site.
+96% performance for [*desktop*](docs/readme/lighthouse_desktop.png "Chrome Developer Tools desktop score") site.
+
+54% performance for [*mobile*](docs/readme/lighthouse_mobile.png "Chrome Developer Tools mobile score") site.
 
 ## Fixed Bugs
-- Mobile *fixed header* obscured section links leading to a negative user experience.
+Mobile *fixed header* obscured section links leading to a negative user experience.
 Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scroll-margin-top` to scroll 121px above the section links. Incidentially this is the height of the mobile fixed header + 10px of white background space.
 
-    ```css
-    section[id] {
-    scroll-margin-top: 121px;    
-    }
-    ```    
-- Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added `required` to the end of input tag as below.
+```css
+section[id] {
+scroll-margin-top: 121px;    
+}
+```    
 
-    ```html
-    <input id="email-field" type="email" name="user-email" placeholder="Email address"
-                aria-label="Type your email address here" required>
-    ```
+Email field validation can be bypassed by directly clicking the submit button or pressing enter. To fix this I added `required` to the end of input tag as below.
 
-- At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times. Hard coding a value of 800px for the desktop rendered the iframe too large on a mobile screen.
+```html
+<input id="email-field" type="email" name="user-email" placeholder="Email address"
+            aria-label="Type your email address here" required>
+```
+
+At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times. Hard coding a value of 800px for the desktop rendered the iframe too large on a mobile screen.
 The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
 Further testing showed the video container was exceeding the screen height due to the 90% container width. Ten percentage points were taken off using `padding-top: 46.25%;`. This gives an aspect ratio of 7.4/16.
 Note there is an experimental CSS property called `aspect-ratio`. I could have replaced the [existing solution](docs/readme/responsive_iframe_solution.png "Code to create a responsive iframe") with `aspect-ratio: 7.4 / 16;`.  I opted not to as MDN indicates it is still experimental and I want to optomise browser support.
 
-- After entering a validated email address the user is directed to a formdump page indicating their success. They are automatically taken back to main site after a predefined amount of time using the following code snippet in the `head`.
+After entering a validated email address the user is directed to a formdump page indicating their success. They are automatically taken back to main site after a predefined amount of time using the following code snippet in the `head`.
 
-    ```html
-    <meta http-equiv="refresh" content="5; url=index.html">
-    ```
-
-A further improvement of this is to provide a countdown timer though this would require JavaScript.
+```html
+<meta http-equiv="refresh" content="5; url=index.html">
+```
 
 ## Unfixed Bugs
-- [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
+[Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
 A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only and that JavaScript is required.
-- In the [formdump](docs/readme/formdump.png "Image of formdump intended to act as a temporary frontend") page, the timer to indicate the site is redirecting back to home requires Javascript to change it's value in `#counter` element.
+
+In the [formdump](docs/readme/formdump.png "Image of formdump intended to act as a temporary frontend") page, the timer to indicate the site is redirecting back to home requires Javascript to change it's value in `#counter` element.  This shows the user the site is active and that they don't need to take any action to go back.
 
 # Deployment
 
@@ -175,12 +188,10 @@ Learning on the following topics supported by:
 - CSS scrolling in fixed header environments - [Chris Ferdinandi](https://codepen.io/cferdinandi/pen/GRJvozN).
 - Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp). A more elegant solution was later found on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio).
 - Vertical lines between site menu items from [Site Origin](https://siteorigin.com/thread/vertical-line-between-menu-items/) excluding final item.
-- Social media icon [wiggle effect](https://www.w3schools.com/howto/howto_css_shake_image.asp).
+- Social media icons given a [wiggle effect](https://www.w3schools.com/howto/howto_css_shake_image.asp).
 
 Special mention is reserved for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism.
-His guidance to use CSS grid transformed my approach top the desktop development. 
-
-Also I'd like to thank him for his advice on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
+His guidance to use CSS grid transformed my approach to the desktop development. Also I'd like to thank him for his advice on writing markdown, project deployment, html semantics and improved user experience including [scrolling behaviours](https://css-tricks.com/snippets/jquery/smooth-scrolling/) on one page sites.
 
 ## Media
 **Images**
