@@ -109,7 +109,7 @@ h3 {
 
 h1 span {
     font-family: 'Montserrat';
-    color: rgba(var(--theme-three), 1);
+    color: rgba(var(--theme-one), 1);
     font-size: 0.6em;
 }
 
@@ -253,14 +253,14 @@ footer input:focus {
 }
 
 footer input[type="submit"] {
-    background: rgba(var(--theme-five), 1);
+    background: rgba(var(--theme-one), 1);
     color: white;
     font-size: 1.2em;
 }
 
 footer input[type="submit"]:hover {
-    color: white;
-    background: rgba(var(--theme-one), 1);
+    color: black;
+    background: rgba(var(--theme-five), 1);
 }
 
 /* HEADER */
@@ -284,10 +284,6 @@ footer input[type="submit"]:hover {
     border-radius: 10px;
     margin: 1rem 1rem;
     float: left;
-}
-
-.logo:hover {
-    transform: scale(1.05);
 }
 
 /* NAVIGATION (mobile) */
@@ -379,7 +375,7 @@ a {
 
 h1 span {
     font-family: 'Montserrat';
-    color: rgba(var(--theme-three), 1);
+    color: rgba(var(--theme-one), 1);
     font-size: 0.6em;
 }
 
@@ -821,14 +817,14 @@ footer input:focus {
 }
 
 footer input[type="submit"] {
-    background: rgba(var(--theme-five), 1);
+    background: rgba(var(--theme-one), 1);
     color: white;
     font-size: 1.2em;
 }
 
 footer input[type="submit"]:hover {
-    color: white;
-    background: rgba(var(--theme-one), 1);
+    color: black;
+    background: rgba(var(--theme-five), 1);
 }
 }
 
