@@ -77,7 +77,7 @@ The [*footer*](docs/readme/footer.png "Footer section") offers the user three op
 
 ## Formdump page
 - The formdump page is designed as a placeholder for communication with a backend.  The POST method is ordinarily used instead the current simulated GET method.  
-Due to the intended ephemeral nature of the page, CSS code was embedded into the head of the formdump.html file rather than add to the external css file.  In the event a backend is established it is easier to remove one file than to go through the external css again.
+As the page is supposed to be a temporary addition, CSS code was embedded into the head of the formdump.html file rather than add to the external css file which is better practice.  In the event a backend is established it is easier to remove one file than to go revisit the external css file again.
 - Flexbox was use for demonstrative purposes to center main content.
         
     ```css
@@ -188,6 +188,7 @@ Also I'd like to thank him for his advice on writing markdown, project deploymen
 - Rock image from [Shopee](https://shopee.ph/Dragon-stone-(ohko-stone)-1kg-i.262018843.5337807506).
 - Substrate image from [Aquascaping Love](https://aquascapinglove.com/learn-aquascaping/elements-of-aquascaping-rocks-driftwood-substrates/).
 - Browser tab icon courtesy of [Martin Berube](https://icon-icons.com/icon/fish-animal/36981).
+- Formdump background courtesy of [Anne Tynne](https://thriveglobal.com/stories/the-world-of-aquascaping-it-s-positive-impact./)
 
 I'd like to thank Adam Edmond, whose articles on aquascaping styles have inspired me for many years.
 

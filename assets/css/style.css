@@ -161,7 +161,7 @@ footer {
     margin: 0;
     color: white;
     margin: 0;
-    border-top: 2px solid rgba(var(--theme-five), 1);
+    border-top: 2px solid rgba(var(--theme-one), 1);
 }
 
 footer>form {
@@ -187,7 +187,7 @@ footer a {
 
 }
 
-/* wiggle animation from W3 Schiils @ https://www.w3schools.com/howto/howto_css_shake_image.asp */
+/* wiggle animation from W3 Schools @ https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes shake {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
@@ -731,7 +731,7 @@ footer {
     margin: 0;
     color: white;
     margin: 0;
-    border-top: 2px solid rgba(var(--theme-five), 1);
+    border-top: 2px solid rgba(var(--theme-one), 1);
 }
 
 footer>form {
@@ -757,7 +757,7 @@ footer a {
 
 }
 
-/* wiggle animation from W3 Schiils @ https://www.w3schools.com/howto/howto_css_shake_image.asp */
+/* wiggle animation from W3 Schools @ https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes shake {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
