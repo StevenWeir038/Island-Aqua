@@ -90,7 +90,7 @@ The [*formdump*](docs/readme/formdump.png "formdump page") page is designed as a
 
 As the page is supposed to be a temporary addition, CSS code was embedded into the head of the formdump.html file rather than add to the external css file which is better practice.  In the event a backend is established it is easier to remove one file than to go revisit the external css file again.
 
-[*Flexbox*](https://flexboxfroggy.com/ "Flexbox Froggy was an excellent introduction to the use of flex") was used as it is simple to use and convenient when placing content within an element.
+[*Flexbox*](https://flexboxfroggy.com/ "Flexbox Froggy is a fun introduction to the use of flexbox") was used as it is simple to use and convenient when placing content within an element.
         
 ```css
 #formdump-main {
@@ -127,6 +127,9 @@ CSS directly copied and pasted into the offical [W3C Jigsaw Validator](https://j
 96% performance for [*desktop*](docs/readme/lighthouse_desktop.png "Chrome Developer Tools desktop score") site.
 
 54% performance for [*mobile*](docs/readme/lighthouse_mobile.png "Chrome Developer Tools mobile score") site.
+
+## Browsers
+The site was developed and tested using Chrome.  It's also ran with no discernable issues on Firefox Developer Edition and Opera. 
 
 ## Fixed Bugs
 Mobile *fixed header* obscured section links leading to a negative user experience.
