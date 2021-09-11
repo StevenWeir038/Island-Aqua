@@ -75,10 +75,21 @@ The [*footer*](docs/readme/footer.png "Footer section") offers the user three op
 - Links that open to new social media tabs for yet to be developed supporting content. Social media icons scale up on mouse hover to improve user experience.
 - In the desktop site, a link to the top of the page is available by clicking the favicon.  To save space the favicon is hidden in the mobile site.  Additionally it is not required as the fixed header is always available for links.
 
-## Intentional departure from Standard Practice
-The formdump page is designed as a placeholder for communication with a backend.  The POST method is ordinarily used instead the current simulated GET method.  
+## Formdump page
+- The formdump page is designed as a placeholder for communication with a backend.  The POST method is ordinarily used instead the current simulated GET method.  
 Due to the intended ephemeral nature of the page, CSS code was embedded into the head of the formdump.html file rather than add to the external css file.  In the event a backend is established it is easier to remove one file than to go through the external css again.
-
+- Flexbox was use for demonstrative purposes to center main content.
+        
+    ```css
+    #formdump-main {
+        grid-template-columns: 1 / 2;
+        grid-template-rows: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+    }
+    ```
 # Testing
 
 CHROME DEV TOOLS - LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT! AIM for > 90%
@@ -120,6 +131,7 @@ Utilised a [css only solution](https://codepen.io/cferdinandi/pen/GRJvozN) `scro
 - At higher resolutions the `.video` class dimensions became [distorted](docs/readme/distorted_video.png) from standard 16:9 aspect ratio in plants section due to being within an `iframe`. For formatting purposes I wanted the video to fill 90% of the screen width at all times. Hard coding a value of 800px for the desktop rendered the iframe too large on a mobile screen.
 The dimension issue by solved placing the iframe inside a `div`. The iframe was styled to fit the full height and width of the div which in turn had a `padding-top` value of 56.25%.  This was calcuated using the aspect ratio (9/16 = 0.5625).
 Further testing showed the video container was exceeding the screen height due to the 90% container width. Ten percentage points were taken off using `padding-top: 46.25%;`. This gives an aspect ratio of 7.4/16.
+Note there is an experimental CSS property called `aspect-ratio`. I could have replaced the [existing solution](docs/readme/responsive_iframe_solution.png "Code to create a responsive iframe") with `aspect-ratio: 7.4 / 16;`.  I opted not to as MDN indicates it is still experimental and I want to optomise browser support.
 
 - After entering a validated email address the user is directed to a formdump page indicating their success. They are automatically taken back to main site after a predefined amount of time using the following code snippet in the `head`.
 
@@ -157,9 +169,9 @@ Learning on the following topics supported by:
 - CSS variables - [Web Dev Simplified channel on YouTube](https://www.youtube.com/watch?v=oZPR_78wCnY).
 - CSS animations - [css-tricks.com](https://css-tricks.com/almanac/properties/a/animation/).
 - CSS scrolling in fixed header environments - [Chris Ferdinandi](https://codepen.io/cferdinandi/pen/GRJvozN).
-- Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp).
+- Responsive Iframes - [w3schools.com](https://w3schools.com/howto/howto_css_responsive_iframes.asp). A more elegant solution was later found on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio).
 - Vertical lines between site menu items from [Site Origin](https://siteorigin.com/thread/vertical-line-between-menu-items/) excluding final item.
-- social media icon [wiggle effect](https://www.w3schools.com/howto/howto_css_shake_image.asp).
+- Social media icon [wiggle effect](https://www.w3schools.com/howto/howto_css_shake_image.asp).
 
 Special mention is reserved for my mentor [Tim Nelson](https://github.com/TravelTimN) for his professionalism.
 His guidance to use CSS grid transformed my approach top the desktop development. 
