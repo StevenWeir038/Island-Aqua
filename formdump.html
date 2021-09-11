@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=index.html">
+    <meta http-equiv="refresh" content="5000; url=index.html">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="shortcut icon" href="assets/images/fish-icon_.png">
     <title>island AQUA design</title>
@@ -57,17 +57,19 @@
             border: 3px solid rgba(var(--theme-one), 1);
             padding: 0.5rem;
             border-radius: 5px;
-            width: 90%;
         }
         #formdump-main p:last-child {
-            color: white;
+            color:black;
             font-size: small;
             font-style: italic;
-            background: rgba(var(--theme-one), 1);
-            border: 3px solid rgba(var(--theme-two), 1);
+            background: whitesmoke;
+            border: 1px solid rgba(var(--theme-two), 1);
             padding: 0.5rem;
             border-radius: 5px;
-            width: 90%;
+        }
+
+        #counter {
+            font-size: large;
         }
 
         #formdump-footer {
@@ -99,7 +101,7 @@
         </p>
 
         <p>
-            Redirecting you back to our site in 5.4.3.2.1.
+            Redirecting you back to our site in <span id="counter">5</span>.
         </p>
     </main>
 

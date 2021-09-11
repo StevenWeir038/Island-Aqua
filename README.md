@@ -144,6 +144,7 @@ A further improvement of this is to provide a countdown timer though this would 
 ## Unfixed Bugs
 - [Mobile nav menu](docs/readme/mobile_nav.png) does not collapse after selecting link then focusing on other parts of page. The menu icon must be clicked again to uncheck the hidden checkbox.
 A review of [Stack Overflow](https://stackoverflow.com/) suggests no known fix using CSS only and that JavaScript is required.
+- In the [formdump](docs/readme/formdump.png "Image of formdump intended to act as a temporary frontend") page, the timer to tell user site is redirecting back to home requires Javascript to change counter value in `#counter` element.
 
 # Deployment
 
