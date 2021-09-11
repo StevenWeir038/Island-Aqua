@@ -92,25 +92,28 @@ As the page is supposed to be a temporary addition, CSS code was embedded into t
     ```
 # Testing
 
-CHROME DEV TOOLS - LIGHTHOUSE DONT FORGET TO RUN FINAL CODE THROUGH AND SNAPSHOT! AIM for > 90%
-
 ## Validator Testing
-- HTML code passed through the offical [W3C Markup Validator](https://validator.w3.org/). 1 error remaining.  Intentionally left as section meant for holding background image content only.
+HTML directly copied and pasted into offical [W3C Markup Validator](https://validator.w3.org/). 
+- 1 *warning* for the [index](docs/readme/html_validator_index_page.png "Image of validated HTML for index.html") page.  This has been intentially left as the section is to hold the hero image only.
 
     ```html
     <section id="hero-bg" class="hero-bg">
         <!-- no heading required as suggested by validator check.  Section to hold a background image only -->
     </section>
     ```
-GET SNAPSHOT
+- *6 warnings* for the [formdump](docs/readme/html_validator_formdump_page.png "Image of validated HTML for formdump.html") page. There are no issues with the internal css used to define grid-template in the `head`. Numbers are the only units required.  
 
-- CSS code passed through the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) - No errors found.
+    ```css
+        grid-template-columns: 1 / 2;
+        grid-template-rows: 3 / 4;
+    ```
 
-GET SNAPSHOT
+CSS directly copied and pasted into the offical [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/).
+- No errors found in the [external CSS](docs/readme/css_validator_style_page.png "Image of validated external CSS file") file.
 
 ## Lighthouse
-- 98% performance for [*desktop*](docs/readme/lighthouse_desktop.png "Chrome Developer Tools desktop score") site.
-- 57% performance for [*mobile*](docs/readme/lighthouse_mobile.png "Chrome Developer Tools mobile score") site.
+- 96% performance for [*desktop*](docs/readme/lighthouse_desktop.png "Chrome Developer Tools desktop score") site.
+- 54% performance for [*mobile*](docs/readme/lighthouse_mobile.png "Chrome Developer Tools mobile score") site.
 
 ## Fixed Bugs
 - Mobile *fixed header* obscured section links leading to a negative user experience.

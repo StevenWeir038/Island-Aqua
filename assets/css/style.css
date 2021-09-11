@@ -178,7 +178,7 @@ footer a {
     display: inline;
 }
 
-#return-to-top {
+#scrollup {
     display: none;
 }
 
@@ -740,7 +740,7 @@ footer a {
     padding: 0 1rem;
 }
 
-#return-to-top {
+#scrollup {
     display: block;
 }
 
