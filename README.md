@@ -24,6 +24,14 @@ To follow best practice, wireframes were developed for mobile / tablet and deskt
 
 Basic [wireframes](docs/wireframes) were created using [Balsamiq Cloud](https://balsamiq.cloud/sqiyfsu/pr12ogh/r2278#). I went a little further almost to mockup level to help visualise the development needed.  Having the *skeleton* in place focused subsequent coding. (Note I consider it fair to admit I abandoned a previous iteration of the project as it lacked direction and was proving to be frustrating. This was a good early learning experience which deserves mentioning). UX defines proper development practices!
 
+![Desktop Landing](docs/wireframes/wireframe_desktop_landing.png "Basic wireframe of the main pages desktop landing")
+
+![Mobile Site](docs/wireframes/wireframe_mobile.png "Basic wireframe of the mobile site")
+
+![Mobile Site Footer](docs/wireframes/wireframe_mobile_footer.png "Basic wireframe of the mobile site footer")
+
+![Formdump](docs/wireframes/wireframe_formdump.png "Basic wireframe of the formdump page")
+
 ## Color Scheme and Accessibility
 
 The [*color scheme*](docs/readme/color_scheme.png "Color Scheme") was devised by taking an image of a home aquarium.
